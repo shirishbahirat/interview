@@ -8,6 +8,34 @@ using namespace std;
 class Solution {
 public:
 
+    int bin_search(vector<int>& nums, int left, int right, int target)
+    {
+
+        while (left <= right)
+        {
+
+            int mid = left + (right - left)/2;
+
+            if (target == nums[mid])
+            {
+                cout << mid << endl;
+                return 0;
+            }
+
+            if (target > nums[mid])
+            {
+                left = mid + 1;
+            } 
+            else if ( target < nums[mid])
+            {
+                right = mid;
+            }
+
+        }
+
+
+    }
+
     int get_pivot(vector<int>& nums)
     {
 
