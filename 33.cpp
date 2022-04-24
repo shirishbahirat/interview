@@ -14,11 +14,6 @@ public:
         while (left <= right)
         {
 
-           if (left == right)
-            {
-                return -1;
-            }
-
             int mid = left + (right - left)/2;
 
             if (target == nums[mid])
@@ -34,6 +29,14 @@ public:
             {
                 right = mid;
             }
+
+            if (left == right)
+            {
+                if (nums[left] == target)
+                    return left;
+
+                return -1;
+            }            
 
         }
 
@@ -99,7 +102,7 @@ int main(int argc, char const *argv[])
 
     Solution *obj = new Solution();
 
-    int index = obj->search(arr, 0);
+    int index = obj->search(arr, 2);
 
     cout << index << endl;
 
