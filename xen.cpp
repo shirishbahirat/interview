@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
   fs << "{" << endl;
   fs << "    Solution *obj = new Solution();" << endl;
   fs << "    return 0;" << endl;
-  fs << "  }" << endl;
+  fs << "}" << endl;
 
   fs.close();
 
