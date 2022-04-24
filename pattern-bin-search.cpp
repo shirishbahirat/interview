@@ -27,7 +27,7 @@ int main(const int argc, const char* argv[])
 		if (val == arr[mid])
 		{
 			cout << mid << endl;
-			return;
+			return 0;
 		}
 
 		if (val > arr[mid])
