@@ -65,7 +65,7 @@ public:
         
         int mid = get_pivot(nums);
 
-        if (mid <= 0)
+        if (mid < 0)
             return -1;
 
         int idx = bin_search(nums,0, mid - 1, target);
