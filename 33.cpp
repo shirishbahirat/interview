@@ -10,6 +10,8 @@ public:
 
     int get_pivot(vector<int>& nums)
     {
+
+
         if (nums.empty())
         {
             return -1;
@@ -20,6 +22,15 @@ public:
             return 0;
         }
 
+        for (int i = 0; i < nums.size() - 1; ++i)
+        {
+            if (nums[i+1] < nums[0])
+            {
+                return i + 1;
+            } 
+        }
+
+        return -1;
     }
 
     int search(vector<int>& nums, int target) {
