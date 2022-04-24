@@ -33,6 +33,7 @@ int main(int argc, char const *argv[])
   fs << "         return 0;" << endl;
   fs << "    }" << endl;
   fs << "};" << endl;
+  fs << "" << endl;
 
   fs << "int main(int argc, char const *argv[])" << endl;
   fs << "{" << endl;
