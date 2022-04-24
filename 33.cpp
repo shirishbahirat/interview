@@ -18,8 +18,7 @@ public:
 
             if (target == nums[mid])
             {
-                cout << mid << endl;
-                return 0;
+                return mid;
             }
 
             if (target > nums[mid])
@@ -76,9 +75,9 @@ public:
             return idx;
         }
 
-        int idy = bin_search(nums,mid, nums.size() - 1, target);
+        int idy = bin_search(nums, mid, nums.size() - 1, target);
 
-       if (idy >= mid)
+        if (idy >= mid)
         {
             return idy;
         }
@@ -95,7 +94,9 @@ int main(int argc, char const *argv[])
 
     Solution *obj = new Solution();
 
-    int index = obj->search(arr, 7);
+    int index = obj->search(arr, 5);
+
+    cout << index << endl;
 
     return 0;
 }
