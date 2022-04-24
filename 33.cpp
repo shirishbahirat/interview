@@ -94,7 +94,7 @@ int main(int argc, char const *argv[])
 
     Solution *obj = new Solution();
 
-    int index = obj->search(arr, 1);
+    int index = obj->search(arr, 2);
 
     cout << index << endl;
 
