@@ -5,10 +5,13 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  if (argc < 2)
+  if (argc < 3)
     return 0;
 
   string name = argv[1];
+  string cmnt = argv[2];
+
+  cout << cmnt << endl;
 
   name += ".cpp";
 
@@ -17,6 +20,8 @@ int main(int argc, char const *argv[])
 
   fs << "#include <iostream>" << endl;
   fs << "#include <vector>" << endl;
+  fs << "" << endl;
+  fs << "//Title: " << cmnt << endl;
   fs << "" << endl;
   fs << "using namespace std;" << endl;
   fs << "" << endl;
