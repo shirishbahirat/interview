@@ -69,7 +69,21 @@ public:
         if (mid <= 0)
             return -1;
 
-        return 0;
+        int idx = bin_search(nums,0, mid - 1, target);
+
+        if (idx >= 0)
+        {
+            return idx;
+        }
+
+        int idy = bin_search(nums,mid, nums.size() - 1, target);
+
+       if (idy >= mid)
+        {
+            return idy;
+        }
+
+        return -1;
     }
 };
 
