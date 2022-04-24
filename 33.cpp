@@ -34,6 +34,9 @@ public:
         }
 
 
+        return -1;
+
+
     }
 
     int get_pivot(vector<int>& nums)
