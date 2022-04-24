@@ -21,5 +21,8 @@ int main(int argc, char const *argv[])
 
 
     Solution *obj = new Solution();
+
+    int index = obj->search(arr, 7);
+    
     return 0;
 }
