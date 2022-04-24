@@ -17,7 +17,7 @@ int main(const int argc, const char* argv[])
 
 	int right = len - 1;
 
-	int val = 15;
+	int val = 7;
 
 	while (left <= right)
 	{
