@@ -53,12 +53,9 @@ public:
             return -1;
         }
 
-        if (nums.size() < 2)
-        {
-            return 0;
-        }
+        int i = 0;
 
-        for (int i = 0; i < nums.size() - 1; ++i)
+        for (i = 0; i < nums.size() - 1; ++i)
         {
             if (nums[i+1] < nums[0])
             {
@@ -66,7 +63,7 @@ public:
             } 
         }
 
-        return -1;
+        return i;
     }
 
     int search(vector<int>& nums, int target) {
@@ -75,6 +72,13 @@ public:
 
         if (mid < 0)
             return -1;
+
+        if (nums.size() == 1)
+        {
+            if (target == nums[0]) return 0;
+
+            return -1;
+        }
 
         int idx = bin_search(nums,0, mid - 1, target);
 
