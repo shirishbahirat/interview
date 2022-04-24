@@ -9,7 +9,7 @@ using namespace std;
 int main(const int argc, const char* argv[])
 {
 
-	int arr[] = {2,5,7,8,9,10,11};
+	int arr[] = {2,5,7,8,9,10,11,15};
 
 	int len = sizeof(arr)/sizeof(arr[0]);
 
@@ -17,9 +17,9 @@ int main(const int argc, const char* argv[])
 
 	int right = len - 1;
 
-	int val = 10;
+	int val = 15;
 
-	while (left < right)
+	while (left <= right)
 	{
 
 		int mid = left + (right - left)/2;
