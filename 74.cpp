@@ -7,6 +7,37 @@ using namespace std;
 
 class Solution {
 public:
+
+   int search(vector<int>& nums, int target) {
+        
+        int mid = get_pivot(nums);
+
+        if (mid < 0)
+            return -1;
+
+        if (nums.size() == 1)
+        {
+            if (target == nums[0]) return 0;
+
+            return -1;
+        }
+
+        int idx = bin_search(nums,0, mid - 1, target);
+
+        if (idx >= 0)
+        {
+            return idx;
+        }
+
+        int idy = bin_search(nums, mid, nums.size() - 1, target);
+
+        if (idy >= mid)
+        {
+            return idy;
+        }
+
+    }
+
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
         return true;
