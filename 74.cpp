@@ -8,33 +8,39 @@ using namespace std;
 class Solution {
 public:
 
-   int search(vector<int>& nums, int target) {
-        
-        int mid = get_pivot(nums);
+    bool bin_search(vector<int>& nums, int left, int right, int target)
+    {
 
-        if (mid < 0)
-            return -1;
-
-        if (nums.size() == 1)
+        while (left <= right)
         {
-            if (target == nums[0]) return 0;
 
-            return -1;
+            int mid = left + (right - left)/2;
+
+            if (target == nums[mid])
+            {
+                return true;
+            }
+
+            if (target > nums[mid])
+            {
+                left = mid + 1;
+            } 
+            else if ( target < nums[mid])
+            {
+                right = mid;
+            }
+
+            if (left == right)
+            {
+                if (nums[left] == target)
+                    return left;
+
+                return false;
+            }            
+
         }
 
-        int idx = bin_search(nums,0, mid - 1, target);
-
-        if (idx >= 0)
-        {
-            return idx;
-        }
-
-        int idy = bin_search(nums, mid, nums.size() - 1, target);
-
-        if (idy >= mid)
-        {
-            return idy;
-        }
+        return false;
 
     }
 
