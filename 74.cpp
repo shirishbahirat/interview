@@ -33,7 +33,7 @@ public:
             if (left == right)
             {
                 if (nums[left] == target)
-                    return left;
+                    return true;
 
                 return false;
             }            
