@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
 
     vector<vector<int>> matrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
 
-    cout << matrix.size() << endl;
+    cout << matrix[0].size() << endl;
 
     return 0;
 }
