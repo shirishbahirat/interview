@@ -48,7 +48,7 @@ public:
         
         for (int i = 0; i < matrix.size(); ++i)
         {
-            bool val = bin_search(matrix[i], 0, matrix[i].size(), target);
+            bool val = bin_search(matrix[i], 0, matrix[i].size() - 1, target);
 
             if (val)
                 return val;
