@@ -46,7 +46,16 @@ public:
 
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
-        return true;
+        for (int i = 0; i < matrix.size(); ++i)
+        {
+            bool val = bin_search(matrix[i], 0, matrix[i].size(), target);
+
+            if (val)
+                return val;
+        }
+
+
+        return false;
     }
 };
 int main(int argc, char const *argv[])
