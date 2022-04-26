@@ -9,6 +9,7 @@ class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
+        return true;
     }
 };
 int main(int argc, char const *argv[])
