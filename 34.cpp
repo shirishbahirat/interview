@@ -34,10 +34,54 @@ using namespace std;
 class Solution
 {
 public:
-    int pivotIndex(vector<int> &nums)
+
+    int bin_search(vector<int>& nums, int left, int right, int target)
     {
-         return 0;
+
+        while (left <= right)
+        {
+
+            int mid = left + (right - left)/2;
+
+            if (target == nums[mid])
+            {
+                return mid;
+            }
+
+            if (target > nums[mid])
+            {
+                left = mid + 1;
+            } 
+            else if ( target < nums[mid])
+            {
+                right = mid;
+            }
+
+            if (left == right)
+            {
+                if (nums[left] == target)
+                    return left;
+
+                return -1;
+            }            
+
+        }
+
+        return -1;
+
     }
+
+
+class Solution {
+public:
+
+    vector<int> results = {-1, -1};
+
+    vector<int> searchRange(vector<int>& nums, int target) {
+     
+     return results;   
+    }
+};
 };
 
 int main(int argc, char const *argv[])
