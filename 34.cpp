@@ -79,7 +79,7 @@ public:
     int idx = bin_search(nums, 0, nums.size() - 1, target);
 
 
-    if (idy != -1)
+    if (idx != -1)
     {
 
         int idy = idx;
