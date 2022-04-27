@@ -97,7 +97,7 @@ public:
 
         int idy = idx;
 
-        while ((nums[idy] == target) && (idy >= 0))
+        while ((idy >= 0) && (nums[idy] == target))
         {
 
             results[0] = idy;
@@ -106,7 +106,7 @@ public:
 
         idy = idx;
 
-        while ((nums[idy] == target) && (idy < nums.size()))
+        while ((idy < nums.size()) && (nums[idy] == target))
         {
 
             results[1] = idy;
