@@ -76,6 +76,18 @@ public:
 
     vector<int> searchRange(vector<int>& nums, int target) {
      
+   if (nums.size() == 1)
+    {
+        if (target == nums[0])
+        {
+           results[0] = 0;
+           results[1] = 0;
+           return results;
+        }
+        
+        return results;
+    }
+
     int idx = bin_search(nums, 0, nums.size() - 1, target);
 
 
@@ -111,5 +123,15 @@ public:
 int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
+
+    vector<int> nums = {2,2};
+
+    vector<int> results;
+
+    results = obj->searchRange(nums, 2);
+
+    cout << results[0] << endl;
+    cout << results[1] << endl;
+
     return 0;
 }
