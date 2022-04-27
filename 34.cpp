@@ -97,7 +97,7 @@ public:
 
         int idy = idx;
 
-        while ((nums[idy] == target) && (idy > 0))
+        while ((nums[idy] == target) && (idy >= 0))
         {
 
             results[0] = idy;
