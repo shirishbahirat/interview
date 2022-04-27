@@ -72,9 +72,6 @@ public:
     }
 
 
-class Solution {
-public:
-
     vector<int> results = {-1, -1};
 
     vector<int> searchRange(vector<int>& nums, int target) {
