@@ -76,6 +76,8 @@ public:
 
     vector<int> searchRange(vector<int>& nums, int target) {
      
+    int idx = bin_search(nums, 0, nums.size() - 1, target);
+
      return results;   
     }
 };
