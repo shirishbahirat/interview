@@ -82,7 +82,7 @@ public:
      return results;   
     }
 };
-};
+
 
 int main(int argc, char const *argv[])
 {
