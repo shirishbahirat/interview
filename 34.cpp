@@ -78,6 +78,31 @@ public:
      
     int idx = bin_search(nums, 0, nums.size() - 1, target);
 
+
+    if (idy =! -1)
+    {
+
+        int idy = idx;
+
+        while ((nums[idy] == target) && (idy > 0))
+        {
+
+            results[0] = idy;
+            --idy;
+        }
+
+        idy = idx;
+
+        while ((nums[idy] == target) && (idy < nums.size()))
+        {
+
+            results[1] = idy;
+            ++idy;
+        }
+
+
+    }
+
      return results;   
     }
 };
