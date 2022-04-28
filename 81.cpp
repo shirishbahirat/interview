@@ -105,7 +105,7 @@ public:
             return false;
 
 
-        cout << "pivot " << mid << endl;
+
 
         int idm = mid;
 
@@ -114,6 +114,7 @@ public:
             --idm;
         }
 
+        cout << "pivot " << idm << endl;
 
         int idx = bin_search(nums,0, idm, target);
 
