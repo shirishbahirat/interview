@@ -90,7 +90,7 @@ public:
         return i;
     }
 
-    int search(vector<int>& nums, int target) {
+    bool search(vector<int>& nums, int target) {
         
         if (nums.size() == 1)
         {
@@ -109,8 +109,6 @@ public:
 
         while ((idy >= 0) && (nums[idy] == nums[mid]))
         {
-
-            results[0] = idy;
             --idy;
         }
 
@@ -119,17 +117,17 @@ public:
 
         if (idx >= 0)
         {
-            return idx;
+            return true;
         }
 
         int idy = bin_search(nums, idy+1, nums.size() - 1, target);
 
         if (idy >= mid)
         {
-            return idy;
+            return true;
         }
 
-        return -1;
+        return false;
     }
 };
 
