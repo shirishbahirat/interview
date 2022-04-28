@@ -105,22 +105,22 @@ public:
             return false;
 
 
-        int idy = mid;
+        int idm = mid;
 
-        while ((idy >= 0) && (nums[idy] == nums[mid]))
+        while ((idm >= 0) && (nums[idm] == nums[mid]))
         {
-            --idy;
+            --idm;
         }
 
 
-        int idx = bin_search(nums,0, idy, target);
+        int idx = bin_search(nums,0, idm, target);
 
         if (idx >= 0)
         {
             return true;
         }
 
-        int idy = bin_search(nums, idy+1, nums.size() - 1, target);
+        int idy = bin_search(nums, idm+1, nums.size() - 1, target);
 
         if (idy >= mid)
         {
