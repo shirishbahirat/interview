@@ -123,9 +123,11 @@ public:
             return true;
         }
 
-        cout << "pivot " << idm << endl;
+
 
         int idy = bin_search(nums, idm+1, nums.size() - 1, target);
+
+        cout << "pivot " << idy << endl;
 
         if (idy >= mid)
         {
