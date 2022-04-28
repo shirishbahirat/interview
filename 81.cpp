@@ -138,7 +138,7 @@ public:
 int main(int argc, char const *argv[])
 {
 
-    vector<int> arr = {0,1,2,2,2,2}
+    vector<int> arr = {0,1,2,2,2,2};
 
     Solution *obj = new Solution();
 
