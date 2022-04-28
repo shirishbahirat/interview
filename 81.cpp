@@ -105,6 +105,8 @@ public:
             return false;
 
 
+        cout << "pivot " << mid << endl;
+
         int idm = mid;
 
         while ((idm >= 0) && (nums[idm] == nums[mid]))
