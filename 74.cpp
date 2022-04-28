@@ -58,6 +58,7 @@ public:
         return false;
     }
 };
+
 int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
