@@ -109,7 +109,7 @@ public:
 
         int idm = mid;
 
-        while ((idm >= 0) && (nums[idm] == nums[mid]))
+        while ((idm > 0) && (nums[idm] == nums[mid]))
         {
             --idm;
         }
