@@ -5,14 +5,21 @@
 
 using namespace std;
 
-class Solution
-{
+class TimeMap {
 public:
-    int pivotIndex(vector<int> &nums)
-    {
-         return 0;
+    TimeMap() {
+        
+    }
+    
+    void set(string key, string value, int timestamp) {
+        
+    }
+    
+    string get(string key, int timestamp) {
+        
     }
 };
+
 
 int main(int argc, char const *argv[])
 {
