@@ -115,7 +115,6 @@ public:
         }
 
 
-
         int idx = bin_search(nums,0, idm, target);
 
         if (idx >= 0)
@@ -124,12 +123,11 @@ public:
         }
 
 
-
         int idy = bin_search(nums, idm+1, nums.size() - 1, target);
 
         cout << "pivot " << idy << endl;
 
-        if (idy >= mid)
+        if (idy >= idm+1)
         {
             return true;
         }
