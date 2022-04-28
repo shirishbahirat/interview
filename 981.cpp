@@ -5,6 +5,14 @@
 
 using namespace std;
 
+/**
+ * Your TimeMap object will be instantiated and called as such:
+ * TimeMap* obj = new TimeMap();
+ * obj->set(key,value,timestamp);
+ * string param_2 = obj->get(key,timestamp);
+ */
+ 
+
 class TimeMap {
 public:
     TimeMap() {
