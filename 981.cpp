@@ -31,6 +31,8 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    Solution *obj = new Solution();
+    TimeMap* obj = new TimeMap();
+    obj->set(key,value,timestamp);
+    string param_2 = obj->get(key,timestamp);
     return 0;
 }
