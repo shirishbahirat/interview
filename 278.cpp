@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
 
-    cout << obj->firstBadVersion(7) << endl;
-    
+    cout << obj->firstBadVersion(4) << endl;
+
     return 0;
 }
