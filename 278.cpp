@@ -23,7 +23,7 @@ public:
         
         int left = 0, right = n;
 
-        while (left < right)
+        while (left <= right)
         {
             int mid = left + (right - left)/2;
 
