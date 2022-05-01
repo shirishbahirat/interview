@@ -23,10 +23,9 @@ public:
             else
                 right = mid + 1;
 
-            return left; 
-
         }
 
+        return left; 
 
     }
 };
@@ -36,6 +35,6 @@ int main(int argc, char const *argv[])
     Solution *obj = new Solution();
 
     cout << obj->mySqrt(4) << endl;
-    
+
     return 0;
 }
