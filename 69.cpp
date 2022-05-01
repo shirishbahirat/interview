@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
 
-    cout << obj->mySqrt(9) << endl;
+    cout << obj->mySqrt(81) << endl;
 
     return 0;
 }
