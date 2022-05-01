@@ -16,16 +16,14 @@ public:
 
             int mid = left + (right - left)/2;
 
-            if ((mid*mid) == x)
-                return mid;
-            else if (mid*mid > x)
-                left = mid;
+            if ((mid*mid) <= x)
+                left = mid + 1;
             else
-                right = mid + 1;
+                right = mid;
 
         }
 
-        return left; 
+        return left - 1; 
 
     }
 };
@@ -34,7 +32,7 @@ int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
 
-    cout << obj->mySqrt(4) << endl;
+    cout << obj->mySqrt(36) << endl;
 
     return 0;
 }
