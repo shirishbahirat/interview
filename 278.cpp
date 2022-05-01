@@ -25,9 +25,9 @@ public:
 
         while (left < right)
         {
-            int mid = left + (left - right)/2;
+            int mid = left + (right - left)/2;
 
-            if (isBadVersion(mid)) return true;
+            if (isBadVersion(mid)) return mid;
 
             left = mid + 1;
 
