@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <numeric>
 
 //Title: Capacity To Ship Packages Within D Days
 
