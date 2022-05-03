@@ -19,7 +19,7 @@ public:
 
             if (total > capacity)
             {
-                total = weight;
+                total = weights[i];
                 day += 1;
 
                 if (day > days)
