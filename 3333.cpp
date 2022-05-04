@@ -25,10 +25,11 @@ public:
         {
             int mid = start + (end - start) / 2;
 
+            cout << mid << endl;
+
             if (nums[mid] == val)
                 return val;
 
-  
             ans = nums[start];
 
             if (val > nums[mid])
