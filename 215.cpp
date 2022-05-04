@@ -12,6 +12,10 @@ public:
 
     int findKthLargest(vector<int>& nums, int k) {
         
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            data.push(nums[i]);
+        }
 
         return 0;
     }
