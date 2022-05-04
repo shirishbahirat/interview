@@ -31,9 +31,9 @@ public:
                 return val;
 
             if (start < part)
-                ans = nums[mid]
+                ans = nums[mid];
             else
-                ans = nums[start]
+                ans = nums[start];
                 
 
             if (val > nums[mid])
