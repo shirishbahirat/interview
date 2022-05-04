@@ -30,7 +30,7 @@ public:
             if (nums[mid] == val)
                 return val;
 
-            if (start < part)
+            if (mid < part)
                 ans = nums[mid];
             else
                 ans = nums[start];
