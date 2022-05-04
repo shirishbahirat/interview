@@ -28,10 +28,8 @@ public:
             if (nums[mid] == val)
                 return val;
 
-            if (mid < part)
-                ans = nums[mid];
-            else
-                ans = nums[start];
+  
+            ans = nums[start];
 
             if (val > nums[mid])
             {
