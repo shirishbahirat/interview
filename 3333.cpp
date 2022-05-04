@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 {
     Solution *obj = new Solution();
 
-    vector<int> nums = {2,5,7,12,17,19,22};
+    vector<int> nums = {2,5,7,12,17,19,20};
 
     cout << obj->ExactOrMin(nums, 4) << endl;
 
