@@ -17,7 +17,17 @@ public:
             data.push(nums[i]);
         }
 
-        return 0;
+        int i = 0;
+        int results = -1;
+
+        while (!data.empty() && (i < k))
+        {
+            ++i;
+            data.pop();
+            results = data[0];
+        }
+
+        return results;
     }
 };
 
