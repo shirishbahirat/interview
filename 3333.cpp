@@ -17,7 +17,7 @@ public:
         int ans = -1;
 
         int start = 0;
-        int end = nums.size();
+        int end = nums.size() - 1;
 
         int part = start + (end - start) / 2;
 
