@@ -38,11 +38,11 @@ public:
 
             if (val > nums[mid])
             {
-                start = mid + 1;
+                start = mid;
             }
             else if (val < nums[mid])
             {
-                end = mid;
+                end = mid - 1;
             }
 
         }
