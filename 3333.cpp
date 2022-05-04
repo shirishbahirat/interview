@@ -19,25 +19,30 @@ public:
         int start = 0;
         int end = nums.size();
 
+        int part = start + (end - start) / 2;
+
         while (start < end)
         {
             int mid = start + (end - start) / 2;
 
             cout << mid << endl;
 
-
             if (nums[mid] == val)
                 return val;
 
+            if (start < part)
+                ans = nums[mid]
+            else
+                ans = nums[start]
+                
+
             if (val > nums[mid])
             {
-                ans = nums[start];
                 start = mid + 1;
             }
             else if (val < nums[mid])
             {
                 end = mid;
-                ans = nums[mid];
             }
 
         }
