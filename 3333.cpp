@@ -32,15 +32,14 @@ public:
                 ans = nums[mid];
             else
                 ans = nums[start];
-                
 
             if (val > nums[mid])
             {
-                start = mid;
+                start = mid + 1;
             }
             else if (val < nums[mid])
             {
-                end = mid - 1;
+                end = mid;
             }
 
         }
