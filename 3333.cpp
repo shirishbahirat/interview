@@ -25,15 +25,20 @@ public:
 
             cout << mid << endl;
 
-            ans = nums[mid];
 
             if (nums[mid] == val)
                 return val;
 
             if (val > nums[mid])
+            {
+                ans = nums[start];
                 start = mid + 1;
+            }
             else if (val < nums[mid])
+            {
                 end = mid;
+                ans = nums[mid];
+            }
 
         }
 
