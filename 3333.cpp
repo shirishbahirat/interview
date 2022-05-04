@@ -8,9 +8,11 @@ using namespace std;
 class Solution
 {
 public:
-    int pivotIndex(vector<int> &nums)
+    int ExactOrMin(vector<int> &nums, int val)
     {
-         return 0;
+
+        
+         return val;
     }
 };
 
