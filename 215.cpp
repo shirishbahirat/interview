@@ -24,7 +24,7 @@ public:
         {
             ++i;
             data.pop();
-            results = data.front();
+            results = data.top();
         }
 
         return results;
