@@ -23,8 +23,8 @@ public:
         while (!data.empty() && (i < k))
         {
             ++i;
-            data.pop();
             results = data.top();
+            data.pop();
         }
 
         return results;
