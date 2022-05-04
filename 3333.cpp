@@ -25,6 +25,8 @@ public:
 
             cout << mid << endl;
 
+            ans = nums[mid];
+
             if (nums[mid] == val)
                 return val;
 
