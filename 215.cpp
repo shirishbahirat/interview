@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int pivotIndex(vector<int> &nums)
-    {
-         return 0;
+    int findKthLargest(vector<int>& nums, int k) {
+        
+
+        return 0;
     }
 };
 
