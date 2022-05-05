@@ -30,7 +30,7 @@ public:
             if (nums[mid] == val)
                 return val;
 
-            
+            ans = nums[start];
 
             if (val > nums[mid])
             {
@@ -39,7 +39,6 @@ public:
             else if (val < nums[mid])
             {
                 end = mid;
-                ans = nums[start];
             }
 
         }
