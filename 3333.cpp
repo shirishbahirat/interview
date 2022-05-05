@@ -19,6 +19,9 @@ public:
         int start = 0;
         int end = nums.size();
 
+        if (val > nums[end - 1])
+            return nums[end - 1];
+
         while (start < end)
         {
             int mid = start + (end - start) / 2;
