@@ -22,6 +22,9 @@ public:
         if (val > nums[end - 1])
             return nums[end - 1];
 
+        if (val < nums[0])
+            return -1;
+
         while (start < end)
         {
             int mid = start + (end - start) / 2;
