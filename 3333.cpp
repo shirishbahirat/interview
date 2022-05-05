@@ -28,7 +28,7 @@ public:
             if (nums[mid] == val)
                 return val;
 
-            ans = nums[start];
+            ans = nums[start - 1];
 
             if (val > nums[mid])
             {
