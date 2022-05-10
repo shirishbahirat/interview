@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 {
 
 	map<string, vector<string>> graph = {
-		{"a", {"b", "c"}},
+		{"a", {"c", "b"}},
 		{"b", {"d"}},
 		{"c", {"e"}},
 		{"d", {"f"}},
