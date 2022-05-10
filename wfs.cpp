@@ -22,7 +22,6 @@ int main(int argc, char* argv[])
 
 	stack <string> dfs;
 
-	dfs.push
 
 
 
