@@ -11,6 +11,9 @@ int main(int argc, char* argv[])
 
 	map<string, vector<string>> graph;
 
+	graph["a"] = {"b", "c"};
+	
+
 
 
 
