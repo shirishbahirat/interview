@@ -32,7 +32,6 @@ int main(int argc, char* argv[])
 
 		for (int i = 0; i < graph[c].size(); ++i)
 		{
-
 			dfs.push(graph[c][i]);
 		}
 
@@ -43,6 +42,18 @@ int main(int argc, char* argv[])
 
 	bfs.push("a");
 
+	while (!bfs.empty())
+	{
+		string c = bfs.front();
+		cout << c << endl;
+		bfs.pop();
+
+		for (int i = 0; i < graph[c].size(); ++i)
+		{
+			bfs.push(graph[c][i]);
+		}
+
+	}
 
 
 
