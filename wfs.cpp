@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 	}
 
 
-	stack <string> bfs;
+	queue <string> bfs;
 
 	bfs.push("a");
 
