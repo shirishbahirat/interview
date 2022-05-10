@@ -13,8 +13,14 @@ int main(int argc, char* argv[])
 	stack <string> stc;
 
 	if (graph.empty()) return 0;
-	
+
 	stc.push(graph[0][0]);
+
+	while (!stc.empty())
+	{
+		string c = stack.pop();
+
+	}
 
 
 
