@@ -9,6 +9,8 @@ int main(int argc, char* argv[])
 
 	vector<vector<string>> graph;
 
+	graph.push_back("c");
+
 
 
 	return 0;
