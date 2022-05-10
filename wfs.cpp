@@ -21,6 +21,8 @@ int main(int argc, char* argv[])
 		string c = stc.top();
 		stc.pop();
 
+		cout << c << endl;
+
 	}
 
 
