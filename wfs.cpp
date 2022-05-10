@@ -18,7 +18,8 @@ int main(int argc, char* argv[])
 
 	while (!stc.empty())
 	{
-		string c = stc.pop();
+		string c = stc.top();
+		stc.pop();
 
 	}
 
