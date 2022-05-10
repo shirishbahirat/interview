@@ -20,6 +20,22 @@ int main(int argc, char* argv[])
 
 	stack <string> dfs;
 
+	dfs.push("a");
+
+	while (!dfs.empty())
+	{
+		string c = dfs.top();
+		cout << c << endl;
+		dfs.pop();
+
+		for (int i = 0; i < dfs[c].size(); ++i)
+		{
+			dfs.push(dfs[c][i]);
+		}
+		
+
+	}
+
 
 
 
