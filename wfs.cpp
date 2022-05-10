@@ -11,12 +11,18 @@ int main(int argc, char* argv[])
 
 	map<string, vector<string>> graph;
 
-	graph["a"] = {"b", "c"};
-	graph["b"] = {"d"};
-	graph["c"] = {"e"};
-	graph["d"] = {"f"};
-	graph["e"] = { };
-	graph["f"] = { };
+	graph = {
+		{"a", {"b", "c"}};
+		{"b", {"d"}};
+		{"c", {"e"}};
+		{"d", {"f"}};
+		{"e", {}};
+		{"f", {}};
+	};
+
+	stack <string> dfs;
+
+	dfs.push
 
 
 
