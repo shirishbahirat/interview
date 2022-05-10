@@ -28,11 +28,14 @@ int main(int argc, char* argv[])
 		cout << c << endl;
 		dfs.pop();
 
-		for (int i = 0; i < dfs[c].size(); ++i)
+		vector <string> links = graph[c];
+
+		for (int i = 0; i < graph[c].size(); ++i)
 		{
-			dfs.push(dfs[c][i]);
+
+			dfs.push(graph[c][i]);
 		}
-		
+
 
 	}
 
