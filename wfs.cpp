@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
 	while (!stc.empty())
 	{
-		string c = stack.pop();
+		string c = stc.pop();
 
 	}
 
