@@ -7,9 +7,8 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
-	vector<vector<string>> graph;
+	vector<vector<string>> graph = {{"b","c"},{"m"}};
 
-	graph.push_back("c");
 
 
 
