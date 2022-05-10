@@ -27,16 +27,16 @@ int main(int argc, char* argv[])
 	while (!dfs.empty())
 	{
 		string c = dfs.top();
-		cout << c << endl;
+		cout << c << " ";
 		dfs.pop();
 
 		for (int i = 0; i < graph[c].size(); ++i)
 		{
 			dfs.push(graph[c][i]);
 		}
-
 	}
 
+	cout << endl;
 
 	queue <string> bfs;
 
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 	while (!bfs.empty())
 	{
 		string c = bfs.front();
-		cout << c << endl;
+		cout << c << " ";
 		bfs.pop();
 
 		for (int i = 0; i < graph[c].size(); ++i)
@@ -55,6 +55,7 @@ int main(int argc, char* argv[])
 
 	}
 
+	cout << endl;
 
 
 
