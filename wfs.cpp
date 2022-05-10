@@ -10,12 +10,12 @@ int main(int argc, char* argv[])
 {
 
 	map<string, vector<string>> graph = {
-		{"a", {"b", "c"}};
-		{"b", {"d"}};
-		{"c", {"e"}};
-		{"d", {"f"}};
-		{"e", {}};
-		{"f", {}};
+		{"a", {"b", "c"}},
+		{"b", {"d"}},
+		{"c", {"e"}},
+		{"d", {"f"}},
+		{"e", {}},
+		{"f", {}},
 	};
 
 	stack <string> dfs;
