@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
-	vector<vector<string>> graph = {{"b","c"},{"m"}};
+	vector<vector<string>> graph = {{"b","c"},{"m"},{"j", "k"}, {"l"}, {"n, o, p"}};
 
 
 
