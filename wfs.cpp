@@ -2,6 +2,8 @@
 #include <vector>
 #include <map>
 #include <stack>
+#include <queue>
+
 
 
 using namespace std;
@@ -28,19 +30,18 @@ int main(int argc, char* argv[])
 		cout << c << endl;
 		dfs.pop();
 
-		vector <string> links = graph[c];
-
 		for (int i = 0; i < graph[c].size(); ++i)
 		{
 
 			dfs.push(graph[c][i]);
 		}
 
-
 	}
 
 
+	stack <string> bfs;
 
+	bfs.push("a");
 
 
 
