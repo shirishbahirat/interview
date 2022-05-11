@@ -14,6 +14,8 @@ struct control_interface
 	virtual void connect_w(control_interface* wc) = 0;
 	
 	virtual void connect_p(control_interface* pc) = 0;
+
+	virtual void is_ready(void) = 0;
 };
 
 class router: public control_interface
