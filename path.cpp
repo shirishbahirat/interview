@@ -44,7 +44,7 @@ void print(void)
     {
         cout << it->first << endl;
 
-        vector <*string> nodes = it->second;
+        vector <string> nodes = *(it->second);
 
 
     }
