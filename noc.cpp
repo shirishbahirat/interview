@@ -16,7 +16,7 @@ struct control_interface
 	virtual void connect_p(control_interface* pc) = 0;
 };
 
-class router
+class router: public control_interface
 {
 public:
 	router(uint32_t x, uint32_t y):idx(x), idy(y){}
@@ -30,6 +30,17 @@ public:
 		cout << endl;
 	}
 
+	virtual void connect_n(control_interface* nc){north = nc;};
+
+	virtual void connect_s(control_interface* sc){south = sc;};
+	
+	virtual void connect_e(control_interface* ec){east = ec;};
+	
+	virtual void connect_w(control_interface* wc){west = wd;};
+	
+	virtual void connect_p(control_interface* pc){local = pc;};
+
+
 private:
 	uint32_t idx;
 	uint32_t idy;
@@ -41,6 +52,8 @@ private:
 	control_interface* east;
 
 	control_interface* west;
+
+	control_interface* local;
 
 };
 
