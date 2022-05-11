@@ -29,7 +29,14 @@ void links2graph(void)
             cout << "insert" << endl;
         }
 
+       if ( auto it{ graph.find(links[i][1])}; it == end( graph ) ) 
+        {
+            graph[links[i][1]] = {};
+            cout << "insert" << endl;
+        }
+
         graph[links[i][0]].push_back(links[i][1]);
+        graph[links[i][1]].push_back(links[i][0]);
         
     }
 
