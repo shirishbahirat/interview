@@ -32,7 +32,8 @@ struct control_interface
 class router: public control_interface
 {
 public:
-	router(uint32_t x, uint32_t y):idx(x), idy(y){}
+	router(uint32_t x, uint32_t y):
+		idx(x), idy(y), ready(true){}
 
 	~router(){}
 
@@ -104,6 +105,8 @@ private:
 	queue <flit*> virtual_east;
 
 	queue <flit*> virtual_west;
+
+	bool ready;
 
 };
 
