@@ -22,7 +22,12 @@ void links2graph(void)
     {
         for (int j = 0; j < links[i].size(); ++j)
         {
-            
+            auto it {find()}
+
+            if ( auto it{ m.find(links[i][j]) }; it == std::end( m ) ) 
+            {
+                graph[links[i][j]] = {};
+            }
         }
     }
 
