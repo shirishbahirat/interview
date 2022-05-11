@@ -22,8 +22,6 @@ void links2graph(void)
     {
         for (int j = 0; j < links[i].size(); ++j)
         {
-            auto it {find()}
-
             if ( auto it{ graph.find(links[i][j])}; it == std::end( graph ) ) 
             {
                 graph[links[i][j]] = {};
