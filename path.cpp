@@ -23,7 +23,7 @@ void links2graph(void)
 
         if ( auto it{ graph.find(links[i][0])}; it == std::end( graph ) ) 
         {
-            graph[links[i][0]] = {};
+            graph[links[i]] = {};
         }
 
         graph[links[i]].push_back();
