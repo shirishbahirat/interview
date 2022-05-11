@@ -72,9 +72,19 @@ void dfs(string start)
 
         string c = node.top();
         cout << c << " ";
-        visited[c] = true;
         node.pop();
 
+        if  (visited[c] == false) 
+        {
+            visited[c] = true;
+
+            for (int i = 0; i < graph[c].size(); ++i)
+            {
+                node.push(graph[c][i]);
+            }
+
+        }
+        
     }
 
     return;
