@@ -18,8 +18,6 @@ void links2graph(void)
 {
     if (links.size() == 0) return;
 
-    cout << links.size() << endl;
-
     for (int i = 0; i < links.size(); ++i)
     {
         
@@ -44,7 +42,9 @@ void print(void)
 {
     for(auto it = graph.cbegin(); it != graph.cend(); ++it)
     {
-        cout << it->first << endl;
+        cout << it->first << " " << it->second <<endl;
+
+
     }
 }
 
