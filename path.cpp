@@ -16,7 +16,12 @@ map <string, vector<string>> graph;
 
 void links2graph(void)
 {
+    if (links.size() == 0) return;
 
+    for (int i = 0; i < links.size(); ++i)
+    {
+        
+    }
 
 }
 
