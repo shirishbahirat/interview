@@ -80,6 +80,19 @@ int main(int argc, const char* argv[])
 	}
 
 
+	for (int i = 1; i < x_nodes - 1; ++i)
+	{
+		for (int j = 1; j < y_nodes - 1; ++j)
+		{
+			noc[i][j]->connect_n(noc[i - 1][j]);
+			noc[i][j]->connect_s(noc[i + 1][j]);
+			noc[i][j]->connect_e(noc[i][j - 1]);
+			noc[i][j]->connect_w(noc[i][j + 1]);
+		}
+
+	}
+
+
 	for (int i = 0; i < x_nodes; ++i)
 	{
 		for (int j = 0; j < y_nodes; ++j)
@@ -87,7 +100,6 @@ int main(int argc, const char* argv[])
 			noc[i][j]->get_id();
 		}
 	}
-
 
 
 	return 0;
