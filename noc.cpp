@@ -42,13 +42,8 @@ public:
 	
 	virtual void connect_p(control_interface* pc){local = pc;};
 
-
-	virtual void is_ready(void)
+	virtual void check_links(void)
 	{
-		cout << "check" << endl;
-		cout << "x:" << idx;
-		cout << " y:" << idy;
-		cout << endl;
 
 		north->is_ready();
 
@@ -58,6 +53,15 @@ public:
 
 		west->is_ready();
 
+	}
+
+
+	virtual void is_ready(void)
+	{
+		cout << "check" << endl;
+		cout << "x:" << idx;
+		cout << " y:" << idy;
+		cout << endl;
 	}
 
 private:
@@ -120,7 +124,7 @@ int main(int argc, const char* argv[])
 		}
 	}
 
-	noc[1][1]->is_ready();
+	noc[1][1]->check_links();
 
 	return 0;
 }
