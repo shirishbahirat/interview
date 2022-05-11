@@ -38,7 +38,7 @@ void links2graph(void)
 int main(int argc, char* argv[])
 {
 
-
+    links2graph();
 
 
 
