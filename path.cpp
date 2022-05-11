@@ -42,7 +42,9 @@ void print(void)
 {
     for(auto it = graph.cbegin(); it != graph.cend(); ++it)
     {
-        cout << it->first << " " << it->second <<endl;
+        cout << it->first << endl;
+
+        vector<string> *nodes = it->second;
 
 
     }
