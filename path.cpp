@@ -70,6 +70,10 @@ void dfs(string start)
     while(!node.empty())
     {
 
+        string c = node.top();
+        cout << c << " ";
+        visited[c] = true;
+        node.pop();
 
     }
 
