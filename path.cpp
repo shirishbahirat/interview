@@ -12,6 +12,7 @@ vector <vector<string>> links = {
     {"k", "m"}
 };
 
+map <string, vector<string>> graph;
 
 void links2graph(void)
 {
