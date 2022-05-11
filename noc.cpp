@@ -88,6 +88,8 @@ private:
 
 	control_interface* local;
 
+	queue <flit*> incoming_north;
+
 };
 
 
