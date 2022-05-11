@@ -5,15 +5,15 @@ using namespace std;
 
 struct control_interface
 {
-	virtual connect_n(control_interface* nc) = 0;
+	virtual void connect_n(control_interface* nc) = 0;
 
-	virtual connect_s(control_interface* sc) = 0;
+	virtual void connect_s(control_interface* sc) = 0;
 	
-	virtual connect_e(control_interface* ec) = 0;
+	virtual void connect_e(control_interface* ec) = 0;
 	
-	virtual connect_w(control_interface* wc) = 0;
+	virtual void connect_w(control_interface* wc) = 0;
 	
-	virtual connect_p(control_interface* pc) = 0;
+	virtual void connect_p(control_interface* pc) = 0;
 };
 
 class router
