@@ -53,6 +53,7 @@ int main(int argc, char* argv[])
 {
 
     links2graph();
+    print();
 
 
 
