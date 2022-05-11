@@ -36,7 +36,7 @@ public:
 	
 	virtual void connect_e(control_interface* ec){east = ec;};
 	
-	virtual void connect_w(control_interface* wc){west = wd;};
+	virtual void connect_w(control_interface* wc){west = wc;};
 	
 	virtual void connect_p(control_interface* pc){local = pc;};
 
