@@ -29,7 +29,7 @@ void links2graph(void)
             cout << "insert" << endl;
         }
 
-        //graph[links[i]].push_back();
+        graph[links[i][0]].push_back(links[i][1]);
         
     }
 
