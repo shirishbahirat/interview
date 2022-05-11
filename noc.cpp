@@ -12,6 +12,8 @@ struct flit {
 	uint32_t dest_y;
 
 	uint32_t data;
+
+	uint32_t time;
 };
 
 struct control_interface
