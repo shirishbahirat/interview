@@ -50,6 +50,13 @@ public:
 		cout << endl;
 
 		north->is_ready();
+
+		south->is_ready();
+
+		east->is_ready();
+
+		west->is_ready();
+
 	}
 
 private:
