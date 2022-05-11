@@ -46,6 +46,12 @@ void print(void)
 
         vector <string> nodes = graph[it->first];
 
+        for (int i = 0; i < nodes.size(); ++i)
+        {
+            cout << nodes[i] << " ";
+        }
+
+        cout << endl;
 
     }
 }
