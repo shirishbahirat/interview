@@ -11,6 +11,13 @@ public:
 
 	~router(){}
 
+	virtual void get_id(void)
+	{
+		cout << "x:" << idx;
+		cout << " y:" << idy;
+		cout << endl;
+
+	}
 
 private:
 	uint32_t idx;
