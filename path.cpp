@@ -22,13 +22,14 @@ void links2graph(void)
 
     for (int i = 0; i < links.size(); ++i)
     {
-
+        /*
         if ( auto it{ graph.find(links[i][0])}; it == end( graph ) ) 
         {
             graph[links[i]] = {};
         }
 
         graph[links[i]].push_back();
+        */
     }
 
 }
