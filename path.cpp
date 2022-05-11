@@ -18,10 +18,12 @@ void links2graph(void)
 {
     if (links.size() == 0) return;
 
+    cout << links.size() << endl;
+
     for (int i = 0; i < links.size(); ++i)
     {
 
-        if ( auto it{ graph.find(links[i][0])}; it == std::end( graph ) ) 
+        if ( auto it{ graph.find(links[i][0])}; it == end( graph ) ) 
         {
             graph[links[i]] = {};
         }
