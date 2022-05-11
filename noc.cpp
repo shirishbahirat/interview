@@ -31,10 +31,11 @@ int main(int argc, const char* argv[])
 	{
 		
 		noc.push_back({});
-		
+
 		for (int j = 0; j < y_nodes; ++j)
 		{
 			router* r = new router(i, j);
+			noc[i].push_back(r);
 		}
 	}
 
