@@ -26,13 +26,11 @@ void links2graph(void)
         if ( auto it{ graph.find(links[i][0])}; it == end( graph ) ) 
         {
             graph[links[i][0]] = {};
-            cout << "insert" << endl;
         }
 
        if ( auto it{ graph.find(links[i][1])}; it == end( graph ) ) 
         {
             graph[links[i][1]] = {};
-            cout << "insert" << endl;
         }
 
         graph[links[i][0]].push_back(links[i][1]);
@@ -40,6 +38,14 @@ void links2graph(void)
         
     }
 
+}
+
+void print(void)
+{
+    for(auto it = graph.cbegin(); it != graph.cend(); ++it)
+    {
+        cout << it->first << endl;
+    }
 }
 
 
