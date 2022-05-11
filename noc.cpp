@@ -45,6 +45,7 @@ public:
 
 	virtual void is_ready(void)
 	{
+		cout << "check" << endl;
 		cout << "x:" << idx;
 		cout << " y:" << idy;
 		cout << endl;
