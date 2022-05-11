@@ -24,6 +24,8 @@ int main(int argc, const char* argv[])
 	uint32_t x_nodes = 8;
 	uint32_t y_nodes = 8;
 
+	vector<vector<router*>> noc;
+
 	for (int i = 0; i < x_nodes; ++i)
 	{
 		for (int j = 0; j < y_nodes; ++j)
