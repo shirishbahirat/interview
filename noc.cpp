@@ -3,6 +3,18 @@
 
 using namespace std;
 
+struct control_interface
+{
+	virtual connect_n(control_interface* nc) = 0;
+
+	virtual connect_s(control_interface* sc) = 0;
+	
+	virtual connect_e(control_interface* ec) = 0;
+	
+	virtual connect_w(control_interface* wc) = 0;
+	
+	virtual connect_p(control_interface* pc) = 0;
+};
 
 class router
 {
@@ -16,12 +28,20 @@ public:
 		cout << "x:" << idx;
 		cout << " y:" << idy;
 		cout << endl;
-
 	}
 
 private:
 	uint32_t idx;
 	uint32_t idy;
+
+	control_interface* north;
+
+	control_interface* south;
+
+	control_interface* east;
+
+	control_interface* west;
+
 };
 
 
