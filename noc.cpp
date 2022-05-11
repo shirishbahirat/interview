@@ -28,7 +28,7 @@ int main(int argc, const char* argv[])
 	{
 		for (int j = 0; j < y_nodes; ++j)
 		{
-			router* r = new router(i, y);
+			router* r = new router(i, j);
 		}
 	}
 
