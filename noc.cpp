@@ -46,6 +46,8 @@ public:
 		cout << "x:" << idx;
 		cout << " y:" << idy;
 		cout << endl;
+
+		north->is_ready();
 	}
 
 private:
