@@ -41,6 +41,13 @@ public:
 	virtual void connect_p(control_interface* pc){local = pc;};
 
 
+	virtual void is_ready(void)
+	{
+		cout << "x:" << idx;
+		cout << " y:" << idy;
+		cout << endl;
+	}
+
 private:
 	uint32_t idx;
 	uint32_t idy;
@@ -101,6 +108,7 @@ int main(int argc, const char* argv[])
 		}
 	}
 
+	noc[1][1]->is_ready();
 
 	return 0;
 }
