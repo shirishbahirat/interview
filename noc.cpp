@@ -91,6 +91,20 @@ private:
 
 	queue <flit*> incoming_north;
 
+	queue <flit*> incoming_south;
+
+	queue <flit*> incoming_east;
+
+	queue <flit*> incoming_west;
+
+	queue <flit*> virtual_north;
+
+	queue <flit*> virtual_south;
+
+	queue <flit*> virtual_east;
+
+	queue <flit*> virtual_west;
+
 };
 
 
