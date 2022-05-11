@@ -84,7 +84,7 @@ void dfs(string start)
             }
 
         }
-        
+
     }
 
     return;
@@ -95,6 +95,7 @@ int main(int argc, char* argv[])
 
     links2graph();
     print();
+    dfs("i");
 
 
 
