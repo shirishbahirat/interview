@@ -47,6 +47,15 @@ int main(int argc, const char* argv[])
 	}
 
 
+	for (int i = 0; i < x_nodes; ++i)
+	{
+		for (int j = 0; j < y_nodes; ++j)
+		{
+			noc[i][j].get_id();
+		}
+	}
+
+
 
 	return 0;
 }
