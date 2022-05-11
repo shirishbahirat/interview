@@ -3,6 +3,16 @@
 
 using namespace std;
 
+struct flit {
+	uint32_t surc_x;
+	uint32_t surc_y;
+
+	uint32_t dest_x;
+	uint32_t dest_y;
+
+	uint32_t data;
+};
+
 struct control_interface
 {
 	virtual void connect_n(control_interface* nc) = 0;
