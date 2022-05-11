@@ -13,6 +13,7 @@ vector <vector<string>> links = {
 };
 
 map <string, vector<string>> graph;
+map <string, bool> visited;
 
 void links2graph(void)
 {
@@ -24,11 +25,13 @@ void links2graph(void)
         if ( auto it{ graph.find(links[i][0])}; it == end( graph ) ) 
         {
             graph[links[i][0]] = {};
+            visited[links[i][0]] = false;
         }
 
        if ( auto it{ graph.find(links[i][1])}; it == end( graph ) ) 
         {
             graph[links[i][1]] = {};
+            visited[links[i][1]] = false;
         }
 
         graph[links[i][0]].push_back(links[i][1]);
@@ -56,6 +59,21 @@ void print(void)
     }
 }
 
+void dfs(string start)
+{
+
+    stack <string> node;
+
+    node.push(start);
+
+    while(!node.empty())
+    {
+
+
+    }
+
+    return;
+}
 
 int main(int argc, char* argv[])
 {
