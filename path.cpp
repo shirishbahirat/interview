@@ -20,7 +20,10 @@ void links2graph(void)
 
     for (int i = 0; i < links.size(); ++i)
     {
-        
+        for (int j = 0; j < links[i].size(); ++j)
+        {
+            
+        }
     }
 
 }
