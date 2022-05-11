@@ -26,7 +26,7 @@ void links2graph(void)
             graph[links[i][0]] = {};
         }
 
-        graph[links[i][1]].push_back();
+        graph[links[i]].push_back();
     }
 
 }
