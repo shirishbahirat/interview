@@ -62,13 +62,13 @@ public:
 	virtual void check_links(void)
 	{
 
-		north->is_ready();
+		if (north) north->is_ready();
 
-		south->is_ready();
+		if (south) south->is_ready();
 
-		east->is_ready();
+		if (east) east->is_ready();
 
-		west->is_ready();
+		if (west) west->is_ready();
 
 	}
 
