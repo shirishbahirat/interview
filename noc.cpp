@@ -152,6 +152,12 @@ int main(int argc, const char* argv[])
 		noc[0][j]->connect_s(noc[1][j]);
 	}
 
+	for (int j = 0; j < y_nodes; ++j)
+	{
+		noc[x_nodes - 1][j]->connect_n(noc[x_nodes - 2][j]);
+	}
+
+
 	for (int i = 0; i < x_nodes; ++i)
 	{
 		for (int j = 0; j < y_nodes; ++j)
