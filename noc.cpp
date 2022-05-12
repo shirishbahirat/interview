@@ -157,9 +157,9 @@ int main(int argc, const char* argv[])
 		noc[x_nodes - 1][j]->connect_n(noc[x_nodes - 2][j]);
 	}
 
-	for (int i = 1; i < x_nodes - 1; ++i)
+	for (int i = 0; i < x_nodes; ++i)
 	{
-
+		noc[i][0]->connect_w(noc[i][1]);
 	}
 
 	for (int i = 0; i < x_nodes; ++i)
