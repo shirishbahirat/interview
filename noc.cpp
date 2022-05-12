@@ -35,10 +35,10 @@ class router: public control_interface
 {
 public:
 	router(uint32_t x, uint32_t y):
-		idx(x), idy(y), ready(true){}, 
+		idx(x), idy(y), ready(true), 
 		north(nullptr), south(nullptr),
 		east(nullptr), west(nullptr),
-		local(nullptr)
+		local(nullptr) {}
 
 	~router(){}
 
