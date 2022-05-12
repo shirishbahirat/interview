@@ -164,11 +164,19 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < x_nodes; ++i)
 	{
+		noc[i][y_nodes - 1]->connect_e(noc[i][y_nodes - 2]);
+	}
+
+
+	for (int i = 0; i < x_nodes; ++i)
+	{
 		for (int j = 0; j < y_nodes; ++j)
 		{
 			noc[i][j]->get_id();
 		}
 	}
+
+
 
 	noc[1][1]->check_links();
 
