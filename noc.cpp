@@ -35,7 +35,10 @@ class router: public control_interface
 {
 public:
 	router(uint32_t x, uint32_t y):
-		idx(x), idy(y), ready(true){}
+		idx(x), idy(y), ready(true){}, 
+		north(nullptr), south(nullptr),
+		east(nullptr), west(nullptr),
+		local(nullptr)
 
 	~router(){}
 
@@ -166,7 +169,6 @@ int main(int argc, const char* argv[])
 	{
 		noc[i][y_nodes - 1]->connect_e(noc[i][y_nodes - 2]);
 	}
-
 
 	for (int i = 0; i < x_nodes; ++i)
 	{
