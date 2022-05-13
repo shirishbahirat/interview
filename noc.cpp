@@ -231,7 +231,7 @@ int main(int argc, const char* argv[])
     {
         for (int j = 0; j < gty.size(); ++j)
         { 
-            cout << i << " " << j << endl;
+            cout << gtx[i] << " " << gty[j] << endl;
             noc[gtx[i]][gty[j]]->launch_n(noc[gtx[i] - 1][gty[j]]);
             noc[gtx[i]][gty[j]]->launch_s(noc[gtx[i] + 1][gty[j]]);
             noc[gtx[i]][gty[j]]->launch_e(noc[gtx[i]][gty[j] - 1]);
