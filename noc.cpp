@@ -53,7 +53,9 @@ public:
         idx(x), idy(y), ready(true), 
         north(nullptr), south(nullptr),
         east(nullptr), west(nullptr),
-        local(nullptr) {}
+        local(nullptr), gt_north(nullptr),
+        gt_south(nullptr), gt_east(nullptr),
+        gt_west(nullptr) {}
 
     ~router(){}
 
@@ -93,9 +95,13 @@ public:
 
         if (west) west->is_ready();
 
+        if (gt_north) gt_north->is_busy();
+
         if (gt_south) gt_south->is_busy();
 
         if (gt_east) gt_east->is_busy();
+
+        if (gt_west) gt_west->is_busy();
 
     }
 
@@ -254,6 +260,9 @@ int main(int argc, const char* argv[])
     noc[gtx[1]][gty[1]]->launch_w(noc[gtx[1]][gty[0]]);
 
     noc[2][2]->check_links();
+    noc[2][5]->check_links();
+    noc[5][2]->check_links();
+    noc[5][5]->check_links();
 
     return 0;
 }
