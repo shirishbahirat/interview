@@ -224,8 +224,8 @@ int main(int argc, const char* argv[])
 	}
 
 
-	uint32_t gtx = [2, 5];
-	uint32_t gty = [2, 5];
+	uint32_t gtx[] = {2, 5};
+	uint32_t gty[] = {2, 5};
 
 
 	noc[gtx[0]][gty[0]]->launch_n(noc[gtx[0] - 1][gty[0]]);
