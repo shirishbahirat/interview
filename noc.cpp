@@ -165,8 +165,8 @@ private:
 int main(int argc, const char* argv[])
 {
 
-	uint32_t x_nodes = 3;
-	uint32_t y_nodes = 3;
+	uint32_t x_nodes = 8;
+	uint32_t y_nodes = 8;
 
 	vector<vector<router*>> noc;
 
