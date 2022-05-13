@@ -239,7 +239,7 @@ int main(int argc, const char* argv[])
     noc[gtx[1]][gty[1]]->launch_n(noc[gtx[0]][gty[1]]);
     noc[gtx[1]][gty[1]]->launch_w(noc[gtx[1]][gty[0]]);
 
-    noc[1][1]->check_links();
+    noc[2][2]->check_links();
 
     return 0;
 }
