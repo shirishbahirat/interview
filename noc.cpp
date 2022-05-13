@@ -44,12 +44,27 @@ struct gateway_interface
     virtual void is_busy(void) = 0;
 };
 
-
-class router: public control_interface, 
-              public gateway_interface
+class cpu
 {
 public:
-    router(uint32_t x, uint32_t y):
+    cpu(uint32_t x, uint32_t y): idx(x), idy(y){}
+    ~cpu(){}
+
+    virtual void get_cpu_id(void) {
+        cout << "cpu " << idx << " " << idy << endl;
+    }
+
+private:
+    uint32_t idx;
+    uint32_t idy;    
+};
+
+class router: public control_interface, 
+              public gateway_interface,
+              public cpu
+{
+public:
+    router(uint32_t x, uint32_t y): cpu(x,y),
         idx(x), idy(y), ready(true), 
         north(nullptr), south(nullptr),
         east(nullptr), west(nullptr),
@@ -64,6 +79,8 @@ public:
         cout << "x:" << idx;
         cout << " y:" << idy;
         cout << endl;
+
+        get_cpu_id();
     }
 
     virtual void connect_n(control_interface* nc){north = nc;};
