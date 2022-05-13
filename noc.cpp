@@ -31,7 +31,20 @@ struct control_interface
 	virtual void is_ready(void) = 0;
 };
 
-class router: public control_interface
+struct gateway_interface
+{
+	virtual void launch_n(gateway_interface* ng) = 0;
+
+	virtual void launch_s(gateway_interface* sg) = 0;
+
+	virtual void launch_e(gateway_interface* eg) = 0;
+
+	virtual void launch_w(gateway_interface* wg) = 0;
+};
+
+
+class router: public control_interface, 
+			  public gateway_interface
 {
 public:
 	router(uint32_t x, uint32_t y):
@@ -58,6 +71,14 @@ public:
 	virtual void connect_w(control_interface* wc){west = wc;};
 	
 	virtual void connect_p(control_interface* pc){local = pc;};
+
+	virtual void launch_n(gateway_interface* ng){gt_north = ng;};
+
+	virtual void launch_s(gateway_interface* sg){gt_south = sg;};
+
+	virtual void launch_e(gateway_interface* eg){gt_east = eg;};
+
+	virtual void launch_w(gateway_interface* wg){gt_west = wg;};
 
 	virtual void check_links(void)
 	{
@@ -95,6 +116,14 @@ private:
 
 	control_interface* local;
 
+	gateway_interface* gt_north;
+
+	gateway_interface* gt_south;
+
+	gateway_interface* gt_east;
+
+	gateway_interface* gt_west;
+
 	queue <flit*> incoming_north;
 
 	queue <flit*> incoming_south;
@@ -110,6 +139,22 @@ private:
 	queue <flit*> virtual_east;
 
 	queue <flit*> virtual_west;
+
+	queue <flit*> gateway_north;
+
+	queue <flit*> gateway_south;
+
+	queue <flit*> gateway_east;
+
+	queue <flit*> gateway_west;
+
+	queue <flit*> virt_gt_north;
+
+	queue <flit*> virt_gt_south;
+
+	queue <flit*> virt_gt_east;
+
+	queue <flit*> virt_gt_west;
 
 	bool ready;
 
