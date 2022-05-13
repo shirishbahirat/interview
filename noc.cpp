@@ -93,7 +93,7 @@ public:
 
         if (west) west->is_ready();
 
-        if (gt_north) gt_north->is_busy();
+        if (gt_south) gt_south->is_busy();
 
     }
 
