@@ -227,17 +227,12 @@ int main(int argc, const char* argv[])
     vector<uint32_t> gtx = {2, 5};
     vector<uint32_t> gty = {2, 5};
 
-    for (int i = 0; i < gtx.size(); ++i)
-    {
-        for (int j = 0; j < gty.size(); ++j)
-        { 
-            cout << gtx[i] << " " << gty[j] << endl;
-            noc[gtx[i]][gty[j]]->launch_n(noc[gtx[i] - 1][gty[j]]);
-            noc[gtx[i]][gty[j]]->launch_s(noc[gtx[i] + 1][gty[j]]);
-            noc[gtx[i]][gty[j]]->launch_e(noc[gtx[i]][gty[j] - 1]);
-            noc[gtx[i]][gty[j]]->launch_w(noc[gtx[i]][gty[j] + 1]);
-        }
-    }   
+    noc[gtx[0]][gty[0]]->launch_s(noc[gtx[1]][gty[0]]);
+    noc[gtx[0]][gty[0]]->launch_e(noc[gtx[0]][gty[1]]);
+
+    noc[gtx[0]][gty[1]]->launch_s(noc[gtx[1]][gty[1]]);
+    noc[gtx[0]][gty[1]]->launch_w(noc[gtx[0]][gty[0]]);
+
 
 
     noc[1][1]->check_links();
