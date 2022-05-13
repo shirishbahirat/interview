@@ -229,10 +229,10 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < gtx.size(); ++i)
 	{
-		noc[gtx[0]][gty[0]]->launch_n(noc[gtx[0] - 1][gty[0]]);
-		noc[gtx[0]][gty[0]]->launch_s(noc[gtx[0] + 1][gty[0]]);
-		noc[gtx[0]][gty[0]]->launch_e(noc[gtx[0]][gty[0] - 1]);
-		noc[gtx[0]][gty[0]]->launch_w(noc[gtx[0]][gty[0] + 1]);
+		noc[gtx[i]][gty[0]]->launch_n(noc[gtx[i] - 1][gty[0]]);
+		noc[gtx[i]][gty[0]]->launch_s(noc[gtx[i] + 1][gty[0]]);
+		noc[gtx[i]][gty[0]]->launch_e(noc[gtx[i]][gty[0] - 1]);
+		noc[gtx[i]][gty[0]]->launch_w(noc[gtx[i]][gty[0] + 1]);
 	}	
 
 
