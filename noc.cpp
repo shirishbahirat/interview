@@ -40,6 +40,8 @@ struct gateway_interface
     virtual void launch_e(gateway_interface* eg) = 0;
 
     virtual void launch_w(gateway_interface* wg) = 0;
+
+    virtual void is_busy(void) = 0;
 };
 
 
@@ -91,12 +93,22 @@ public:
 
         if (west) west->is_ready();
 
+        if (gt_north) gt_north->is_busy();
+
     }
 
 
     virtual void is_ready(void)
     {
         cout << "check" << endl;
+        cout << "x:" << idx;
+        cout << " y:" << idy;
+        cout << endl;
+    }
+
+    virtual void is_busy(void)
+    {
+        cout << "busy" << endl;
         cout << "x:" << idx;
         cout << " y:" << idy;
         cout << endl;
