@@ -95,6 +95,8 @@ public:
 
         if (gt_south) gt_south->is_busy();
 
+        if (gt_east) gt_east->is_busy();
+
     }
 
 
