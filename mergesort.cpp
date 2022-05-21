@@ -11,7 +11,7 @@ int merge(int xarr[], int yarr[], int lenx, int leny)
 
 	while ((idx < lenx) && (idy < leny))
 	{
-		if (xarr[idx] <= yarr[idx])
+		if (xarr[idx] <= yarr[idy])
 		{
 			zarr[idz++] = xarr[idx++];
 		}
@@ -21,7 +21,7 @@ int merge(int xarr[], int yarr[], int lenx, int leny)
 		}
 	}
 
-	while (idx < lenx)
+		while (idx < lenx)
 	{
 		zarr[idz++] = xarr[idx++];
 	}
@@ -30,8 +30,9 @@ int merge(int xarr[], int yarr[], int lenx, int leny)
 	{
 		zarr[idz++] = yarr[idy++];
 	}
+	
 
-	for (int i = 0; i < (lenx+leny); ++i)
+	for (int i = 0; i < idz; ++i)
 	{
 		cout << zarr[i] << " ";
 	}
