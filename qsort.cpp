@@ -14,22 +14,41 @@ void swap(int arr[], int a, int b)
 }
 
 
-int quicksort(int arr[], int low, int high)
+int partition(int arr[], int low, int high)
 {
 	int pivot = low;
 
 	while (low < high)
 	{
 		while((arr[low] <= arr[pivot]) && (low < high)) low++;
-		while((arr[high] > arr[pivot]) && (high > low))high--;
+		while((arr[high] > arr[pivot]) && (high >= low)) high--;
+		swap(arr, low, high);
+
+		for (int i = 0; i < 9; ++i)
+		{
+			cout << arr[i] << " ";
+		}
+		cout << endl;
+
+		cout << low << " " << high << endl;
+
 	}
 
-
-	swap(arr, pivot, high);
+	swap(arr, pivot, low);
 
 	return high;
 }
 
+
+void quicksort(int arr[], int low, int hi)
+{
+
+	int mid = partition(arr, low, hi);
+
+	quicksort(arr, low, mid);
+	quicksort(arr, mid+1, hi);
+
+}
 
 int main(int argc, char* argv[])
 {
@@ -46,6 +65,6 @@ int main(int argc, char* argv[])
 	}
 
 	cout << endl;
-	
+
 	return 0;
 }
