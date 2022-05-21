@@ -32,7 +32,20 @@ int main(int argc, char* argv[])
 		temp = temp->next;
 	}
 
-	cout << head->data << endl;
+	node* prev = nullptr;
+	node* curr = head;
+	node* next = head->next;
+
+	while(curr)
+	{
+		curr->next = prev;
+
+		prev = curr;
+		curr = next;
+		next = curr->next;
+	}
+
+	head = prev;
 
 
 	return 0;
