@@ -2,35 +2,34 @@
 
 using namespace std;
 
-int merge(int xarr[], int yarr[], int lenx, int leny)
+int merge(int xarr[], int low, int mid, int high)
 {
 
-	int zarr[lenx + leny];
+	int zarr[high - low + 1];
 
-	int idx = 0, idy = 0, idz = 0;
+	int idx = low, idy = mid + 1, idz = low;
 
-	while ((idx < lenx) && (idy < leny))
+	while ((idx <= mid) && (idy <= high))
 	{
-		if (xarr[idx] <= yarr[idy])
+		if (xarr[idx] <= xarr[idy])
 		{
 			zarr[idz++] = xarr[idx++];
 		}
 		else
 		{
-			zarr[idz++] = yarr[idy++];
+			zarr[idz++] = xarr[idy++];
 		}
 	}
 
-		while (idx < lenx)
+	while (idx < lenx)
 	{
 		zarr[idz++] = xarr[idx++];
 	}
 
 	while (idy < leny)
 	{
-		zarr[idz++] = yarr[idy++];
+		zarr[idz++] = xarr[idy++];
 	}
-	
 
 	for (int i = 0; i < idz; ++i)
 	{
@@ -68,13 +67,10 @@ int main(int argc, char* argv[])
 
 	mergesort(arr, 0, len - 1);
 
-	int xarr[] = {3, 4, 8, 11};
+	int xarr[] = {3, 4, 8, 11, 1, 2, 5, 7};
 	int lenx = sizeof(xarr)/sizeof(xarr[0]);
 
-	int yarr[] = {1, 2, 5, 7};
-	int leny = sizeof(xarr)/sizeof(xarr[0]);
-
-	merge(xarr, yarr, lenx, leny);
+	merge(xarr, 0, 3, 7);
 
 
 	return 0;
