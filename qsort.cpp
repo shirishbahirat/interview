@@ -6,10 +6,10 @@ using namespace std;
 void swap(int arr[], int a, int b)
 {
 
-	if (a != b)
-	{
-		arr[a] ^= arr[b] ^= arr[a] ^=arr[b];
-	}
+	int temp = arr[a];
+
+	arr[a] = arr[b];
+	arr[b] = temp;
 
 }
 
@@ -17,24 +17,29 @@ void swap(int arr[], int a, int b)
 int partition(int arr[], int low, int high)
 {
 	
-	if (low >= high) return high;
-
 	int pivot = low;
 
 	while (low < high)
 	{
-		while((arr[low] <= arr[pivot]) && (low < high)) low++;
-		while((arr[high] > arr[pivot]) && (high >= low)) high--;
-		swap(arr, low, high);
+		while(arr[low] <= arr[pivot]) 
+		{
+			low++;
+		}
+		while(arr[high] > arr[pivot])
+		{
+			high--;
+		}
+	
+		if (low < high)
+		{
+			swap(arr, low, high);
+		}
 
 		for (int i = 0; i < 9; ++i)
 		{
 			cout << arr[i] << " ";
 		}
 		cout << endl;
-
-		cout << low << " " << high << endl;
-
 	}
 
 	swap(arr, pivot, high);
@@ -45,6 +50,8 @@ int partition(int arr[], int low, int high)
 
 void quicksort(int arr[], int low, int hi)
 {
+
+	if (low >= hi) return;
 
 	int mid = partition(arr, low, hi);
 
