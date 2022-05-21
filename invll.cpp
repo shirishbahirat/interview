@@ -43,6 +43,8 @@ int main(int argc, char* argv[])
 		prev = curr;
 		curr = next;
 		next = curr->next;
+
+		cout << curr->data << endl;
 	}
 
 	head = prev;
