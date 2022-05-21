@@ -47,6 +47,13 @@ int main(int argc, char* argv[])
 
 	head = prev;
 
+	temp = head;
+
+	while(temp)
+	{
+		cout << temp->data << endl;
+		temp = temp->next;
+	}
 
 	return 0;
 }
