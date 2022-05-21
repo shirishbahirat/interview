@@ -36,10 +36,6 @@ int main(int argc, char* argv[])
 	node* curr = head;
 	node* next = head->next;
 
-	prev = curr;
-	curr = next;
-	next = curr->next;
-
 	while(curr->next)
 	{
 		curr->next = prev;
@@ -49,7 +45,9 @@ int main(int argc, char* argv[])
 		next = curr->next;
 	}
 
-	head = prev;
+	curr->next = prev;
+
+	head = curr;
 
 	temp = head;
 
