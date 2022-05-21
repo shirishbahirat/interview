@@ -36,11 +36,8 @@ int main(int argc, char* argv[])
 	node* curr = head;
 	node* next = head->next;
 
-	while(curr)
+	while(curr->next)
 	{
-		if (prev)
-			cout << "inv "<< prev->data << endl;
-
 		curr->next = prev;
 
 		prev = curr;
