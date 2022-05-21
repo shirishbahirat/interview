@@ -5,6 +5,8 @@ using namespace std;
 int mergesort(int arr[], int low, int high)
 {
 
+	cout << low << " " << high << endl;
+
 	if (low < high)
 	{
 		int mid = low + (high - low)/2;
