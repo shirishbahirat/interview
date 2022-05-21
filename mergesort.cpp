@@ -31,6 +31,13 @@ int merge(int xarr[], int yarr[], int lenx, int leny)
 		zarr[idz++] = yarr[idy++];
 	}
 
+	for (int i = 0; i < (lenx+leny); ++i)
+	{
+		cout << zarr[i] << " ";
+	}
+
+	cout << endl;
+
 	return 0;
 
 }
