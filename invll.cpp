@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
 
 	while(temp)
 	{
-		cout << temp->data << endl;
+		cout << "inv "<< temp->data << endl;
 		temp = temp->next;
 	}
 
