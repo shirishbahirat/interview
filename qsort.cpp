@@ -17,7 +17,7 @@ void swap(int arr[], int a, int b)
 int partition(int arr[], int low, int high)
 {
 	
-	if (low <= high) return high;
+	if (low >= high) return high;
 
 	int pivot = low;
 
