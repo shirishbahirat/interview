@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 		temp = temp->next;
 	}
 
-
+	cout << head->data << endl;
 
 
 	return 0;
