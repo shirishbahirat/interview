@@ -20,15 +20,14 @@ int quicksort(int arr[], int low, int high)
 
 	while (low < high)
 	{
-		while(arr[low] <= arr[pivot]) low++;
-		while(arr[low] <= arr[pivot]) low++;
-
+		while((arr[low] <= arr[pivot]) && (low < high)) low++;
+		while((arr[high] > arr[pivot]) && (high > low))high--;
 	}
 
 
-	//swap high
+	swap(arr, pivot, high);
 
-	return 0;
+	return high;
 }
 
 
@@ -38,7 +37,15 @@ int main(int argc, char* argv[])
 	int arr[] = {6, 7, 5, 4, 2, 1, 8, 9, 3};
 	int len = sizeof(arr)/sizeof(arr[0]);
 
+	quicksort(arr, 0, len - 1);
 
 
+	for (int i = 0; i < len; ++i)
+	{
+		cout << arr[i] << " ";
+	}
+
+	cout << endl;
+	
 	return 0;
 }
