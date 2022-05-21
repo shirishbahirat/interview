@@ -7,7 +7,7 @@ int merge(int xarr[], int low, int mid, int high)
 
 	int zarr[high - low + 1];
 
-	int idx = low, idy = mid + 1, idz = low;
+	int idx = low, idy = mid + 1, idz = 0;
 
 	while ((idx <= mid) && (idy <= high))
 	{
@@ -21,12 +21,12 @@ int merge(int xarr[], int low, int mid, int high)
 		}
 	}
 
-	while (idx < lenx)
+	while (idx <= mid)
 	{
 		zarr[idz++] = xarr[idx++];
 	}
 
-	while (idy < leny)
+	while (idy <= high)
 	{
 		zarr[idz++] = xarr[idy++];
 	}
@@ -37,6 +37,11 @@ int merge(int xarr[], int low, int mid, int high)
 	}
 
 	cout << endl;
+
+	for (int i = low, j = 0; i <= high; ++i, ++j)
+	{
+		xarr[i] = zarr[j];
+	}
 
 	return 0;
 
@@ -53,6 +58,7 @@ int mergesort(int arr[], int low, int high)
 
 		mergesort(arr, low, mid);
 		mergesort(arr, mid + 1, high);
+		merge(arr, low, mid, high);
 
 	}
 
@@ -67,11 +73,11 @@ int main(int argc, char* argv[])
 
 	mergesort(arr, 0, len - 1);
 
-	int xarr[] = {3, 4, 8, 11, 1, 2, 5, 7};
-	int lenx = sizeof(xarr)/sizeof(xarr[0]);
-
-	merge(xarr, 0, 3, 7);
-
+	for (int i = 0; i < len; ++i)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
 
 	return 0;
 }
