@@ -38,16 +38,19 @@ int main(int argc, char* argv[])
 
 	while(curr)
 	{
+
+		cout << "inv "<< curr->data << endl;
+
 		curr->next = prev;
 
 		prev = curr;
 		curr = next;
 		next = curr->next;
-
-		cout << curr->data << endl;
 	}
 
 	head = prev;
+
+	cout << head->data << endl;
 
 	temp = head;
 
