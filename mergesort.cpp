@@ -2,6 +2,40 @@
 
 using namespace std;
 
+int merge(int xarr[], int yarr[], int lenx, int leny)
+{
+
+	int zarr[lenx + leny];
+
+	int idx = 0, idy = 0, idz = 0;
+
+	while ((idx < lenx) && (idy < leny))
+	{
+		if (xarr[idx] <= yarr[idx])
+		{
+			zarr[idz++] = xarr[idx++];
+		}
+		else
+		{
+			zarr[idz++] = yarr[idy++];
+		}
+	}
+
+	while (idx < lenx)
+	{
+		zarr[idz++] = xarr[idx++];
+	}
+
+	while (idy < leny)
+	{
+		zarr[idz++] = yarr[idy++];
+	}
+
+	return 0;
+
+}
+
+
 int mergesort(int arr[], int low, int high)
 {
 
@@ -28,6 +62,15 @@ int main(int argc, char* argv[])
 	int len = sizeof(arr)/sizeof(arr[0]);
 
 	mergesort(arr, 0, len - 1);
+
+	int xarr[] = {3, 4, 8, 11};
+	int lenx = sizeof(xarr)/sizeof(xarr[0]);
+
+	int yarr[] = {1, 2, 5, 7};
+	int leny = sizeof(xarr)/sizeof(xarr[0]);
+
+	merge(xarr, yarr, lenx, leny);
+
 
 	return 0;
 }
