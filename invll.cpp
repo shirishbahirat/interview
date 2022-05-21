@@ -38,8 +38,7 @@ int main(int argc, char* argv[])
 
 	while(curr)
 	{
-
-		cout << "inv "<< curr->data << endl;
+		cout << "inv "<< prev->data << endl;
 
 		curr->next = prev;
 
