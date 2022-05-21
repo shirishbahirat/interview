@@ -43,7 +43,6 @@ int merge(int xarr[], int yarr[], int lenx, int leny)
 
 }
 
-
 int mergesort(int arr[], int low, int high)
 {
 
@@ -58,10 +57,8 @@ int mergesort(int arr[], int low, int high)
 
 	}
 
-
 	return 0;
 }
-
 
 int main(int argc, char* argv[])
 {
