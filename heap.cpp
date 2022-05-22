@@ -63,6 +63,13 @@ void heap_sort(int arr[], int len)
 	}
 
 
+
+	for (auto i : arr1)
+	{
+		cout << i << " ";
+	}
+	cout << endl;
+
 }
 
 
