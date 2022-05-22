@@ -31,6 +31,26 @@ void trickle_up(int arr[], int idx)
 	return;
 }
 
+void trickle_down(int arr[], int idx, int len)
+{
+	int left = 2*idx + 1;
+	int right = 2*idx + 2;
+
+	int max = idx;
+
+	if (left < len) && (arr[left] > arr[max]) max = left;
+	if (right < len) && (arr[right] > arr[max]) max = right;
+
+	if (max != idx)
+	{
+		swap(arr, max, idx);
+		trickle_down(arr, max, len);
+	}
+
+
+	return;
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -43,6 +63,6 @@ int main(int argc, char* argv[])
 		cout << i << " ";
 	}
 	cout << endl;
-	
+
 	return 0;
 }
