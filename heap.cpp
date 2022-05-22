@@ -38,8 +38,8 @@ void trickle_down(int arr[], int idx, int len)
 
 	int max = idx;
 
-	if (left < len) && (arr[left] > arr[max]) max = left;
-	if (right < len) && (arr[right] > arr[max]) max = right;
+	if (left < len && arr[left] > arr[max]) max = left;
+	if (right < len && arr[right] > arr[max]) max = right;
 
 	if (max != idx)
 	{
@@ -50,6 +50,21 @@ void trickle_down(int arr[], int idx, int len)
 
 	return;
 }
+
+
+void heap_sort(int arr[], int len)
+{
+
+	int parent = (len - 1)/2;
+
+	for (int i = parent; i >= 0; --i)
+	{
+
+	}
+
+
+}
+
 
 int main(int argc, char* argv[])
 {
@@ -63,6 +78,18 @@ int main(int argc, char* argv[])
 		cout << i << " ";
 	}
 	cout << endl;
+
+	int arr1[] = {1, 8, 7, 4, 5, 3, 2 , 0};
+
+	trickle_down(arr1, 0, 7);
+
+	for (auto i : arr1)
+	{
+		cout << i << " ";
+	}
+	cout << endl;
+
+	heap_sort(arr, 7);
 
 	return 0;
 }
