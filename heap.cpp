@@ -64,9 +64,9 @@ void heap_sort(int arr[], int len)
 
 
 
-	for (auto i : arr1)
+	for (int i = 0; i < len; ++i)
 	{
-		cout << i << " ";
+		cout << arr[i] << " ";
 	}
 	cout << endl;
 
