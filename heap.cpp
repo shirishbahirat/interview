@@ -20,7 +20,7 @@ void swap(int arr[], int a, int b)
 void trickle_up(int arr[], int idx)
 {
 
-	if (parent <= 0) return;
+	if (idx <= 0) return;
 
 	int parent = (idx - 1)/2;
 
