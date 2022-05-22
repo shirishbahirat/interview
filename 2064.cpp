@@ -35,9 +35,9 @@ public:
 
 
     int minimizedMaximum(int n, vector<int>& quantities) {
-        
 
     int left = *max_element(quantities.begin(), quantities.end());
+
     int right = reduce(quantities.begin(), quantities.end());
 
     while (left < right)
