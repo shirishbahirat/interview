@@ -59,7 +59,7 @@ void heap_sort(int arr[], int len)
 
 	for (int i = parent; i >= 0; --i)
 	{
-
+		trickle_down(arr, i, len);
 	}
 
 
