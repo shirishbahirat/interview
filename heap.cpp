@@ -63,6 +63,12 @@ void heap_sort(int arr[], int len)
 	}
 
 
+	for (int i = len; i >= 0; --i)
+	{
+		swap(arr, i, 0);
+		trickle_down(arr, 0, i);
+	}
+
 
 	for (int i = 0; i < len; ++i)
 	{
