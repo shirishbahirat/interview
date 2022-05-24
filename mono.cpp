@@ -18,11 +18,11 @@ int main(int argc, const char* argv[])
 
 		while(!mono.empty() && (mono.top() <= arr[i] ))
 		{
+
 			int t = mono.top();
 
-			cout << t << endl;
-
 			mono.pop();
+
 		}
 
 		ans[i] = mono.size() ? -1 : mono.top();
