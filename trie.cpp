@@ -117,7 +117,6 @@ bool search(trie* head, char* str)
  
     return curr->is_leaf;
 }
- 
 
 int main(int argc, const char* argv[])
 {
