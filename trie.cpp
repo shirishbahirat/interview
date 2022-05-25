@@ -53,6 +53,48 @@ bool have_children(trie const* curr)
     return false;
 }
 
+bool deletion(trie*& curr, char* str)
+{
+
+    if (curr == nullptr) {
+        return false;
+    }
+ 
+    if (*str)
+    {
+
+        if (curr != nullptr && curr->nodes.find(*str) != curr->nodes.end() &&
+            deletion(curr->nodes[*str], str + 1) && curr->is_leaf == false)
+        {
+            if (!have_children(curr))
+            {
+                delete curr;
+                curr = nullptr;
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+ 
+    if (*str == '\0' && curr->is_leaf)
+    {
+        if (!have_children(curr))
+        {
+            delete curr;
+            curr = nullptr;
+            return true;
+        }
+        else {
+            curr->is_leaf = false;
+            return false;
+        }
+    }
+ 
+    return false;
+}
+
 int main(int argc, const char* argv[])
 {
 
