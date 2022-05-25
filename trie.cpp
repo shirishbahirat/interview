@@ -14,7 +14,14 @@ struct trie
 	~trie(){}
 };
 
+void insert(trie*& head, char* str)
+{
+	if (head == nullptr)
+	{
+		head = trie(false);
+	}
 
+}
 
 int main(int argc, const char* argv[])
 {
