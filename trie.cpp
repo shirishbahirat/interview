@@ -126,16 +126,16 @@ int main(int argc, const char* argv[])
 
 	trie* head = nullptr;
  
-   	insert(head, "hello");
-   	cout << search(head, "hello") << " "; 
+   	insert(head, (char*)"hello");
+   	cout << search(head, (char*)"hello") << " "; 
  
-   	insert(head, "helloworld");
-    cout << search(head, "helloworld") << " ";
+   	insert(head, (char*)"helloworld");
+    cout << search(head, (char*)"helloworld") << " ";
  
-    cout << search(head, "helll") << " "; 
+    cout << search(head, (char*)"helll") << " "; 
  
-    insert(head, "hell");
-    cout << search(head, "hell") << " "; 
+    insert(head, (char*)"hell");
+    cout << search(head, (char*)"hell") << " "; 
  
 	return 0;
 }
