@@ -25,11 +25,11 @@ void insert(trie*& head, char* str)
 
  	while (*str)
     {
-        if (curr->map.find(*str) == curr->map.end()) {
-            curr->map[*str] = new trie(false);
+        if (curr->nodes.find(*str) == curr->nodes.end()) {
+            curr->nodes[*str] = new trie(false);
         }
  
-        curr = curr->map[*str];
+        curr = curr->nodes[*str];
  
         str++;
     }
