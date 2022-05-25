@@ -30,7 +30,6 @@ int main(int argc, const char* argv[])
 		mono.push(arr[i]);
 
 	}
-
 	
 	for (int i = 0; i < size; ++i)
 	{
@@ -38,6 +37,6 @@ int main(int argc, const char* argv[])
 	}
 
 	cout <<endl;
-	
+
 	return 0;
 }
