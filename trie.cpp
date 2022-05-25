@@ -21,6 +21,22 @@ void insert(trie*& head, char* str)
 		head = new trie(false);
 	}
 
+	trie* curr = head;
+
+ 	while (*str)
+    {
+        if (curr->map.find(*str) == curr->map.end()) {
+            curr->map[*str] = new trie(false);
+        }
+ 
+        curr = curr->map[*str];
+ 
+        str++;
+    }
+ 
+    curr->isLeaf = true
+
+
 }
 
 int main(int argc, const char* argv[])
