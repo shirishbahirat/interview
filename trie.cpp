@@ -18,7 +18,7 @@ void insert(trie*& head, char* str)
 {
 	if (head == nullptr)
 	{
-		head = trie(false);
+		head = new trie(false);
 	}
 
 }
