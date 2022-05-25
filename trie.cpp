@@ -39,6 +39,20 @@ void insert(trie*& head, char* str)
 
 }
 
+
+bool have_children(trie const* curr)
+{
+ 
+    for (auto it: curr->nodes)
+    {
+        if (it.second != nullptr) {
+            return true;
+        }
+    }
+ 
+    return false;
+}
+
 int main(int argc, const char* argv[])
 {
 
