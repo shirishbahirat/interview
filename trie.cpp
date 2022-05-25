@@ -1,6 +1,8 @@
 #include <iostream>
 #include <map>
 
+using namespace std;
+
 struct trie
 {
 	bool is_leaf;
@@ -13,9 +15,6 @@ struct trie
 };
 
 
-
-
-using namespace std;
 
 int main(int argc, const char* argv[])
 {
