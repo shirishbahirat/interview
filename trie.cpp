@@ -95,6 +95,29 @@ bool deletion(trie*& curr, char* str)
     return false;
 }
 
+bool search(trie* head, char* str)
+{
+
+    if (head == nullptr) {
+        return false;
+    }
+ 
+    trie* curr = head;
+    while (*str)
+    {
+        curr = curr->nodes[*str];
+ 
+        if (curr == nullptr) {
+            return false;
+        }
+ 
+        str++;
+    }
+ 
+    return curr->is_leaf;
+}
+ 
+
 int main(int argc, const char* argv[])
 {
 
