@@ -25,18 +25,20 @@ int main(int argc, const char* argv[])
 
 		}
 
-		ans[i] = mono.size() ? -1 : mono.top();
+		ans[i] = mono.empty() ? -1 : mono.top();
 
 		mono.push(arr[i]);
 
 	}
 
+	
 	for (int i = 0; i < size; ++i)
 	{
 		cout << ans[i] << " ";
 	}
 
-	cout << endl;
+	cout <<endl;
+	
 
 	return 0;
 }
