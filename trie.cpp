@@ -103,6 +103,7 @@ bool search(trie* head, char* str)
     }
  
     trie* curr = head;
+
     while (*str)
     {
         curr = curr->nodes[*str];
@@ -123,5 +124,18 @@ int main(int argc, const char* argv[])
 
    // trie: Peter, piper, picked, peck, pickled, and peppers
 
+	trie* head = nullptr;
+ 
+   	insert(head, "hello");
+   	cout << search(head, "hello") << " "; 
+ 
+   	insert(head, "helloworld");
+    cout << search(head, "helloworld") << " ";
+ 
+    cout << search(head, "helll") << " "; 
+ 
+    insert(head, "hell");
+    cout << search(head, "hell") << " "; 
+ 
 	return 0;
 }
