@@ -34,7 +34,7 @@ void insert(trie*& head, char* str)
         str++;
     }
  
-    curr->isLeaf = true
+    curr->isLeaf = true;
 
 
 }
