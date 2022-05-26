@@ -5,13 +5,13 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
-	char* str = (char*)"dmzg";
+	char* str = (char*)"dmzg-1234";
 
 	while(*str)
 	{
 
 		cout << *str << endl;
-		
+
 		str++;
 	}
 
