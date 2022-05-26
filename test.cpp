@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
-	char* str = "dmzg";
+	char* str = (char*)"dmzg";
 
 
 	int arr[] = {2,5,7,9,11,14,17};
