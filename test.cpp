@@ -7,6 +7,14 @@ int main(int argc, char* argv[])
 
 	char* str = (char*)"dmzg";
 
+	while(*str)
+	{
+
+		cout << *str << endl;
+		
+		str++;
+	}
+
 
 	int arr[] = {2,5,7,9,11,14,17};
 
