@@ -5,6 +5,9 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
+	char* str = "dmzg";
+
+
 	int arr[] = {2,5,7,9,11,14,17};
 
 	int len = sizeof(arr)/sizeof(arr[0]);
