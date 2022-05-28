@@ -54,7 +54,6 @@ public:
                 return val;
         }
 
-
         return false;
     }
 };
