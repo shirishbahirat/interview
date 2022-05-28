@@ -35,6 +35,7 @@ int main(int argc, char* argv[])
 	node* prev = nullptr;
 
 	node* curr = head;
+
 	node* next = head->next;
 
 	while(curr->next)
