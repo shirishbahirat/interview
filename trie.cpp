@@ -27,7 +27,9 @@ void insert(trie*& head, char* str)
  	while (*str)
     {
         if (curr->nodes.find(*str) == curr->nodes.end()) {
+
             curr->nodes[*str] = new trie(false);
+
         }
  
         curr = curr->nodes[*str];
