@@ -44,6 +44,7 @@ int main(int argc, char* argv[])
 		curr->next = prev;
 
 		prev = curr;
+
 		curr = next;
 		next = curr->next;
 	}
