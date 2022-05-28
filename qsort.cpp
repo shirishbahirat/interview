@@ -56,6 +56,7 @@ void quicksort(int arr[], int low, int hi)
 	int mid = partition(arr, low, hi);
 
 	quicksort(arr, low, mid);
+
 	quicksort(arr, mid+1, hi);
 
 }
