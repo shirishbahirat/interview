@@ -11,7 +11,7 @@ public:
     priority_queue<int> data;
 
     int findKthLargest(vector<int>& nums, int k) {
-        
+
         for (int i = 0; i < nums.size(); ++i)
         {
             data.push(nums[i]);
