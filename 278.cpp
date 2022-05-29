@@ -20,7 +20,7 @@ public:
     }
 
     int firstBadVersion(int n) {
-        
+
         int left = 0, right = n;
 
         while (left < right)
