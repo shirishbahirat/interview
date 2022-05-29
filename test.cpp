@@ -1,9 +1,20 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
+
+	vector<int> vec = {6,3,2,1,9,5};
+
+	sort(vec.begin(), vec.end());
+
+	for (auto x: vec)
+	{
+		cout << x << " ";
+	}
+	endl;
 
 	char* str = (char*)"dmzg-1234";
 
