@@ -1,8 +1,7 @@
 #include <iostream>
 
 
-a->b->c
-a->b->d
+using namespace std;
 
 
 int main(int argc, const char* argv[])
