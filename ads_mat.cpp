@@ -17,6 +17,19 @@ int main(int argc, const char* argv[])
 	string nme[] = {"a","b","c","d","e","f"};
 
 
+	stack <string> sta;
+
+	sta.push("a");
+
+	while(!.sta.empty())
+	{
+
+		string c = sta.top();
+		cout << c << endl;
+		sta.pop();
+
+
+	}
 
 	return 0;
 }
