@@ -61,16 +61,13 @@ public:
 
                 return -1;
             }            
-
         }
 
         return -1;
-
     }
 
     int get_pivot(vector<int>& nums)
     {
-
 
         if (nums.empty())
         {
@@ -104,16 +101,12 @@ public:
         if (mid < 0)
             return false;
 
-
-
-
         int idm = mid;
 
         while ((idm > 0) && (nums[idm] == nums[mid]))
         {
             --idm;
         }
-
 
         int idx = bin_search(nums,0, idm, target);
 
@@ -123,7 +116,6 @@ public:
         }
 
         int idy = bin_search(nums, idm+1, nums.size() - 1, target);
-
 
         if (idy >= idm+1)
         {
