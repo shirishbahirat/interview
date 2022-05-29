@@ -47,7 +47,6 @@ public:
     int get_pivot(vector<int>& nums)
     {
 
-
         if (nums.empty())
         {
             return -1;
