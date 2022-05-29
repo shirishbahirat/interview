@@ -16,12 +16,16 @@ int main(int argc, const char* argv[])
 
 	string nme[] = {"a","b","c","d","e","f"};
 
+	int visited[] = {0,0,0,0,0,0};
+
 
 	queue <string> sta;
 
 	sta.push("a");
 
 	int idx = 0;
+
+	visited[0] = 1;
 
 	while(!sta.empty() && idx < 6)
 	{
@@ -32,7 +36,7 @@ int main(int argc, const char* argv[])
 
 		for (int i = 0; i < 6; ++i)
 		{
-			if (arr[idx][i] == 1)
+			if ((arr[idx][i] == 1) && visited[i] == 0)
 			{
 				sta.push(nme[i]);
 			}
