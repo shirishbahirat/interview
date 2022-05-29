@@ -41,7 +41,6 @@ public:
         return answer;
     }
 
-
 };
 
 int main(int argc, char const *argv[])
