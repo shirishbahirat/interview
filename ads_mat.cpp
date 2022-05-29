@@ -21,14 +21,23 @@ int main(int argc, const char* argv[])
 
 	sta.push("a");
 
-	while(!sta.empty())
+	int idx = 0;
+
+	while(!sta.empty() && idx < 6)
 	{
 
 		string c = sta.top();
 		cout << c << endl;
 		sta.pop();
 
-
+		for (int i = 0; i < 6; ++i)
+		{
+			if (arr[idx][i] == 1)
+			{
+				sta.push(nme[i]);
+			}
+		}
+		idx++;
 	}
 
 	return 0;
