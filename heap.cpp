@@ -47,7 +47,6 @@ void trickle_down(int arr[], int idx, int len)
 		trickle_down(arr, max, len);
 	}
 
-
 	return;
 }
 
