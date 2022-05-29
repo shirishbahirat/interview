@@ -21,7 +21,7 @@ int main(int argc, const char* argv[])
 
 	sta.push("a");
 
-	while(!.sta.empty())
+	while(!sta.empty())
 	{
 
 		string c = sta.top();
