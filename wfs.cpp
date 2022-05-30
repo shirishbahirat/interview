@@ -22,6 +22,8 @@ int main(int argc, char* argv[])
 
 	stack <string> dfs;
 
+	map <string, int> distance;
+
 	dfs.push("a");
 
 	while (!dfs.empty())
@@ -33,10 +35,16 @@ int main(int argc, char* argv[])
 		for (int i = 0; i < graph[c].size(); ++i)
 		{
 			dfs.push(graph[c][i]);
+			distance[graph[c][i]] = distance[c] + 1;
 		}
 	}
 
 	cout << endl;
+
+	for(auto const& [key, value]: distance)
+    {
+	    cout << key << " " << value << endl;
+    }
 
 	queue <string> bfs;
 
