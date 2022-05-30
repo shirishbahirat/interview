@@ -25,6 +25,8 @@ int main(int argc, char* argv[])
 
 	queue <string> que;
 
+	queue <string> topo_sort;
+
 	for (auto const& [key, value]: graph)
 	{
 		
@@ -54,7 +56,11 @@ int main(int argc, char* argv[])
 	while (!que.empty())
 	{
 		string ans = que.front();
+
 		cout << ans << ", ";
+
+		topo_sort.push_back(ans);
+
 		que.pop();
 
 		vector <string> eliminate = graph[ans];
