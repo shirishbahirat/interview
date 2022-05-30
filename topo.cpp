@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
 
 		cout << ans << ", ";
 
-		topo_sort.push_back(ans);
+		topo_sort.push(ans);
 
 		que.pop();
 
@@ -77,5 +77,9 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
+
+	cout << endl;
+
+	cout << "size " << topo_sort.size() << " " << degree.size() << endl;
 
 }
