@@ -19,5 +19,11 @@ int main(int argc, char* argv[])
 	};
 
 
+	for (int i = 0; i < 16; ++i)
+	{
+		cout << mat[i] << endl;
+	}
+
+
 
 }
