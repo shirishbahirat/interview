@@ -13,16 +13,17 @@ int main(int argc, char* argv[])
 
 	map<string, vector<string>> graph = {
 		{"a", {"c", "b"}},
-		{"b", {"d"}},
+		{"b", {"f", "c"}},
 		{"c", {"e"}},
-		{"d", {"f"}},
+		{"d", {"f","b"}},
 		{"e", {}},
-		{"f", {}},
+		{"f", {"g","e"}},
+		{"g", {}}
 	};
 
 	map<string, int> degree;
 
-	queue <string> qu;
+	queue <string> que;
 
 	for (auto const& [key, value]: graph)
 	{
@@ -44,17 +45,31 @@ int main(int argc, char* argv[])
 
 		if (value == 0)
 		{
-			qu.push(key);
+			que.push(key);
 		}
 	}
 
 	cout << endl;
 
-	while (!qu.empty())
+	while (!que.empty())
 	{
-		string ans = qu.front();
+		string ans = que.front();
 		cout << ans << ", ";
-		qu.pop();
+		que.pop();
+
+		vector <string> eliminate = graph[ans];
+
+		for (int i = 0; i < eliminate.size(); ++i)
+		{
+			string dec = eliminate[i];
+
+			degree[dec]--;
+
+			if (degree[dec] == 0)
+			{
+				que.push(dec);
+			}
+		}
 	}
 
 }
