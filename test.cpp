@@ -10,11 +10,23 @@ int main(int argc, char* argv[])
 
 	sort(vec.begin(), vec.end());
 
+	reverse(vec.begin(), vec.end());
+
 	for (auto x: vec)
 	{
 		cout << x << " ";
 	}
-	endl;
+	cout << endl;
+
+	int v[] = {6,3,2,1,9,5};
+
+	sort(v, v+6);
+
+	for (auto x: v)
+	{
+		cout << x << " ";
+	}
+	cout << endl;
 
 	char* str = (char*)"dmzg-1234";
 
