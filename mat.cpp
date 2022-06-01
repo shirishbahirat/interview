@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	{
 		for (int j = i+1; j <= 4; ++j)
 		{
-			int t = mat[j][i];
+			int t = mat[i][j];
 			mat[i][j] = mat[j][i];
 			mat[j][i] = t;
 		}
