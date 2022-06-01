@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 	{
 		for (int j = 0; j < 4; ++j)
 		{
-			cout << mat[j][i] << " ";
+			cout << mat[i][j] << " ";
 		}
 
 		cout << endl;
