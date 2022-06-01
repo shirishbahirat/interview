@@ -18,11 +18,11 @@ int main(int argc, char* argv[])
 		{5,3,4,7}
 	};
 
-	int idx = 0;
+	int size = sizeof(mat[0])/sizeof(mat[0][0]);
 
-	for (idx = 0; idx < 3; ++idx)
+	for (idx = 0; idx < size - 1; ++idx)
 	{
-		for (int i = idx; i < 4; ++i)
+		for (int i = idx; i < size; ++i)
 		{
 			int t = mat[idx][i];
 			mat[idx][i] = mat[i][idx];
