@@ -23,9 +23,9 @@ int main(int argc, char* argv[])
 	{
 		for (int j = i+1; j <= 3; ++j)
 		{
-			int t = a[i][j];
-			a[i][j] = a[j][i];
-			a[j][i] = t;
+			int t = mat[i][j];
+			mat[i][j] = mat[j][i];
+			mat[j][i] = t;
 		}
 	}
 
