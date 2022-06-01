@@ -21,9 +21,10 @@ int main(int argc, char* argv[])
 
 	for (int i = 0; i < 16; ++i)
 	{
-		cout << mat[i] << endl;
+		cout << mat[i] << " ";
+
+		if ((i%4) == 0)
+			cout << endl;
 	}
-
-
 
 }
