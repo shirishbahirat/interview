@@ -20,12 +20,16 @@ int main(int argc, char* argv[])
 
 	int idx = 0;
 
-	for (int i = idx; i < 4; ++i)
+	for (idx = 0; idx < 3; ++idx)
 	{
-		int t = mat[idx][i];
-		mat[idx][i] = mat[i][idx];
-		mat[i][idx] = t;
+		for (int i = idx; i < 4; ++i)
+		{
+			int t = mat[idx][i];
+			mat[idx][i] = mat[i][idx];
+			mat[i][idx] = t;
+		}
 	}
+
 
 	for (int i = 0; i < 4; ++i)
 	{
