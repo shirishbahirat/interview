@@ -18,8 +18,9 @@ int main(int argc, char* argv[])
 		{5,3,4,7}
 	};
 
+	int idx = 0;
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = idx; i < 4; ++i)
 	{
 		int t = mat[0][i];
 		mat[0][i] = mat[i][0];
