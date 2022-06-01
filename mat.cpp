@@ -19,9 +19,9 @@ int main(int argc, char* argv[])
 	};
 
 
-	for (int i = 0; i < 3; ++i)
+	for (int i = 0; i < 4; ++i)
 	{
-		for (int j = i+1; j <= 3; ++j)
+		for (int j = i+1; j <= 4; ++j)
 		{
 			int t = mat[i][j];
 			mat[i][j] = mat[j][i];
