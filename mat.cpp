@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	{
 		cout << mat[i] << " ";
 
-		if (i > 0 && ((i + 1)%4) == 0)
+		if (((i + 1)%4) == 0)
 			cout << endl;
 	}
 
