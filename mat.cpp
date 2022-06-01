@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
 	int size = sizeof(mat[0])/sizeof(mat[0][0]);
 
-	for (idx = 0; idx < size - 1; ++idx)
+	for (int idx = 0; idx < size - 1; ++idx)
 	{
 		for (int i = idx; i < size; ++i)
 		{
