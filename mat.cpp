@@ -4,8 +4,6 @@
 #include <stack>
 #include <queue>
 
-
-
 using namespace std;
 
 int main(int argc, char* argv[])
@@ -25,11 +23,12 @@ int main(int argc, char* argv[])
 		for (int i = idx; i < size; ++i)
 		{
 			int t = mat[idx][i];
+
 			mat[idx][i] = mat[i][idx];
+
 			mat[i][idx] = t;
 		}
 	}
-
 
 	for (int i = 0; i < 4; ++i)
 	{
@@ -40,6 +39,5 @@ int main(int argc, char* argv[])
 
 		cout << endl;
 	}
-
 
 }
