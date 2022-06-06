@@ -71,7 +71,6 @@ public:
 
     }
 
-
     vector<int> results = {-1, -1};
 
     vector<int> searchRange(vector<int>& nums, int target) {
@@ -112,7 +111,6 @@ public:
             results[1] = idy;
             ++idy;
         }
-
 
     }
 
