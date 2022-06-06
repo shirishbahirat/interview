@@ -23,7 +23,7 @@ int get_abs_root(int arr[], int base)
 int main(int argc, const char* argv[])
 {
 
-	get_abs_root(arr, 8);
+	cout << get_abs_root(arr, 8) << endl;
 
 	return 0;
 }
