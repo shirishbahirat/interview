@@ -4,7 +4,8 @@ using namespace std;
 
 int arr[] = {8,3,4,5,7,8,9,-1,3, -4, 5};
 
-const int size = 11;
+
+#define size 11
 
 int psum[size];
 
