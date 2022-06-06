@@ -6,7 +6,6 @@
 using namespace std;
 
 class Solution {
-
 public:
 
     int bin_search(vector<int>& nums, int left, int right, int target)
