@@ -21,7 +21,7 @@ void get_abs_root(int arr[], int base)
 int main(int argc, const char* argv[])
 {
 
-	get_abs_root(arr, 4);
+	get_abs_root(arr, 7);
 
 	return 0;
 }
