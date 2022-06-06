@@ -4,7 +4,7 @@ using namespace std;
 
 int arr[] = {8,3,4,5,7,8,9,-1,3, -4, 5};
 
-int size = sizeof(arr)/sizeof(arr[0]);
+int size = 11;
 
 int psum[size];
 
