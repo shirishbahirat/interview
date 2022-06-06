@@ -46,7 +46,6 @@ int partition(int arr[], int low, int high)
 	return high;
 }
 
-
 void quicksort(int arr[], int low, int hi)
 {
 
