@@ -24,6 +24,9 @@ void pre_sum(void)
 int sum(int l, int h)
 {
 
+	if (l < 0) return -1;
+	if (h >= size) return -1; 
+
 	if (!l)
 	{
 		return psum[h];
