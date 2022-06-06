@@ -16,7 +16,7 @@ void pre_sum(void)
 
 	for (int i = 1; i < size; ++i)
 	{
-		psum[i] = psum[i-1] + psum[i];
+		psum[i] = arr[i - 1] + arr[i];
 		cout << psum[i] << endl;
 	}
 
