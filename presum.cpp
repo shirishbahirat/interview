@@ -51,5 +51,7 @@ int main(int argc, const char* argv[])
 
 	cout << sum(0, 5) << endl;
 
+	cout << sum(1, 5) << endl;
+
 	return 0;
 }
