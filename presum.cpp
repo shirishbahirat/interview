@@ -22,6 +22,19 @@ void pre_sum(void)
 
 }
 
+void sum(int l, int h)
+{
+
+	if (!l)
+	{
+		return psum[h]
+	}
+	else
+	{
+		return psum[h] - psum [l - 1];
+	}
+
+}
 
 int main(int argc, const char* argv[])
 {
