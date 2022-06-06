@@ -22,17 +22,19 @@ void pre_sum(void)
 
 }
 
-void sum(int l, int h)
+int sum(int l, int h)
 {
 
 	if (!l)
 	{
-		return psum[h]
+		return psum[h];
 	}
 	else
 	{
 		return psum[h] - psum [l - 1];
 	}
+
+	return -1;
 
 }
 
