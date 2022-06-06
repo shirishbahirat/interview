@@ -66,7 +66,7 @@ public:
     }
 
     int search(vector<int>& nums, int target) {
-        
+
         int mid = get_pivot(nums);
 
         if (mid < 0)
