@@ -39,7 +39,6 @@ void insert(trie*& head, char* str)
  
     curr->is_leaf = true;
 
-
 }
 
 
