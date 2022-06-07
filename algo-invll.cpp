@@ -63,5 +63,6 @@ int main(int argc, const char* argv[])
 	head = inv_link_list(head);
 
 	print(head);
+
 	return 0;
 }
