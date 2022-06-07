@@ -36,5 +36,11 @@ int main(int argc, const char* argv[])
 	cout << (int)log2(data) << endl;
 
 
+	// signed shift
+
+	data = -8;
+
+	cout << (data >> 1) << endl;
+
 	return 0;
 }
