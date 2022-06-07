@@ -42,5 +42,7 @@ int main(int argc, const char* argv[])
 
 	cout << "index " << bin_search(arr, 0, arr.size() - 1, 12) << endl;
 
+	cout << "index " << bin_search(arr, 12) << endl;
+
 	return 0;
 }
