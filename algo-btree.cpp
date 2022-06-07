@@ -24,7 +24,7 @@ int main(int argc, const char* argv[])
 	int arr[] = {5,6,8,9,12,15};
 	int size = sizeof(arr)/sizeof(arr[0]) - 1;
 
-	cout << "index " << bin_search(arr, 0, size, 7) << endl;
+	cout << "index " << bin_search(arr, 0, size, 6) << endl;
 
 	return 0;
 }
