@@ -50,7 +50,6 @@ node* inv_link_list(node* head)
 
 }
 
-
 int main(int argc, const char* argv[])
 {
 
