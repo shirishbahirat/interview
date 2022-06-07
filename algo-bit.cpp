@@ -31,7 +31,7 @@ int main(int argc, const char* argv[])
 
 	// leftmost bit
 
-	data = 15;
+	data = 16;
 
 	cout << (int)log2(data) << endl;
 
