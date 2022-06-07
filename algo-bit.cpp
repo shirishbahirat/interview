@@ -40,7 +40,7 @@ int main(int argc, const char* argv[])
 
 	data = -8;
 
-	cout << (data >> 1) << endl;
+	cout << ((unsigned)data >> 1) << endl;
 
 	return 0;
 }
