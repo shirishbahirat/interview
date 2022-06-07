@@ -34,7 +34,7 @@ node* inv_link_list(node* head)
 	node* curr = head;
 	node* next = head->next;
 
-	while(curr)
+	while(curr->next)
 	{
 		curr->next = prev;
 		prev = curr;
