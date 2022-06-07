@@ -29,6 +29,12 @@ int main(int argc, const char* argv[])
 
 	cout << log2(data) << endl;
 
+	// leftmost bit
+
+	data = 8;
+
+	cout << log2(data) << endl;
+
 
 	return 0;
 }
