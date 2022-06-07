@@ -1,8 +1,9 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int bin_search(int arr[], int lo, int hi, int target)
+int bin_search(vector<int> arr, int lo, int hi, int target)
 {
 	if ((lo == hi) && arr[lo] == target) return lo;
 	if ((lo == hi) && arr[lo] != target) return -1;
@@ -21,10 +22,9 @@ int bin_search(int arr[], int lo, int hi, int target)
 int main(int argc, const char* argv[])
 {
 
-	int arr[] = {5,6,8,9,12,15};
-	int size = sizeof(arr)/sizeof(arr[0]) - 1;
+	vector<int> arr = {5,6,8,9,12,15};
 
-	cout << "index " << bin_search(arr, 0, size, 12) << endl;
+	cout << "index " << bin_search(arr, 0, arr.size() - 1, 12) << endl;
 
 	return 0;
 }
