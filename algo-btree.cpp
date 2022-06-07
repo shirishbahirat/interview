@@ -2,18 +2,18 @@
 
 using namespace std;
 
-int bin_search(int arr[], int lo, int hi, int number)
+int bin_search(int arr[], int lo, int hi, int target)
 {
-	//if ((lo == hi) && arr[lo] == number) return lo;
-	//if ((lo == hi) && arr[lo] != number) return -1;
+	//if ((lo == hi) && arr[lo] == target) return lo;
+	//if ((lo == hi) && arr[lo] != target) return -1;
 
-	if (lo < hi) return -1;
+	if (lo <= hi) return -1;
 
 	int mid = lo + (hi - lo) / 2;
 
-	if (number == arr[mid]) return mid;
-	else if (number > arr[mid]) bin_search(arr, mid + 1, hi, number);
-	else if (number < arr[mid]) bin_search(arr, lo, mid - 1, number);
+	if (target == arr[mid]) return mid;
+	else if (target > arr[mid]) bin_search(arr, mid + 1, hi, target);
+	else if (target < arr[mid]) bin_search(arr, lo, mid - 1, target);
 
 	return -1;
 }
