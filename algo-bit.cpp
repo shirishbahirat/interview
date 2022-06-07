@@ -40,7 +40,7 @@ int main(int argc, const char* argv[])
 
 	data = -8;
 
-	cout << ((unsigned)data >> 1) << endl;
+	cout << INT_MAX - ((unsigned)data >> 1) << endl;
 
 	return 0;
 }
