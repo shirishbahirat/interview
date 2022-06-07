@@ -7,7 +7,7 @@ int bin_search(int arr[], int lo, int hi, int number)
 	//if ((lo == hi) && arr[lo] == number) return lo;
 	//if ((lo == hi) && arr[lo] != number) return -1;
 
-	if (lo < high) return -1;
+	if (lo < hi) return -1;
 
 	int mid = lo + (hi - lo) / 2;
 
