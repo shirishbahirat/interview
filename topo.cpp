@@ -28,13 +28,16 @@ int main(int argc, char* argv[])
 	queue <string> topo_sort;
 
 	for (auto const& [key, value]: graph)
-	{
-		
+	{	
 		if (degree.find(key) == degree.end())
 		{
 			degree[key] = 0;
 		}
 
+	}
+
+	for (auto const& [key, value]: graph)
+	{
 		for (auto c: value)
 		{		
 			degree[c]++;
