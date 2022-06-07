@@ -25,6 +25,29 @@ void print(node* head)
 
 }
 
+node* inv_link_list(node* head)
+{
+
+	if (head == nullptr) return nullptr;
+
+	node* prev = nullptr;
+	node* curr = head;
+	node* next = head->next;
+
+	while(curr)
+	{
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+		next = curr->next;
+	}
+
+	head = prev;
+
+	return head;
+
+}
+
 
 int main(int argc, const char* argv[])
 {
