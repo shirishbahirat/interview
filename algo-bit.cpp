@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
 
-	int data = 16;
+	int data = 17;
 	int count = 0;
 
 	while(data)
