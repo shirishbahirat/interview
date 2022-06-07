@@ -40,9 +40,11 @@ int main(int argc, const char* argv[])
 
 	vector<int> arr = {5,6,8,9,12,15};
 
-	cout << "index " << bin_search(arr, 0, arr.size() - 1, 12) << endl;
+	int target = 15;
 
-	cout << "index " << bin_search(arr, 12) << endl;
+	cout << "index " << bin_search(arr, 0, arr.size() - 1, target) << endl;
+
+	cout << "index " << bin_search(arr, target) << endl;
 
 	return 0;
 }
