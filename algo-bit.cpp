@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -9,6 +10,7 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
 
+	// total bit set
 	int data = 17;
 	int count = 0;
 
@@ -19,6 +21,11 @@ int main(int argc, const char* argv[])
 	}
 
 	cout << count << endl;
+
+	// rightmost bit
+
+	data = 17;
+	data = data & (~data + 1);
 
 
 	return 0;
