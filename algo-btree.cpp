@@ -5,7 +5,7 @@ using namespace std;
 int bin_search(int arr[], int lo, int hi, int number)
 {
 	if ((lo == hi) && arr[lo] == number) return lo;
-	//if ((lo == hi) && arr[lo] != number) return -1;
+	if ((lo == hi) && arr[lo] != number) return -1;
 
 	int mid = lo + (hi - lo) / 2;
 
@@ -23,7 +23,7 @@ int main(int argc, const char* argv[])
 	int size = sizeof(arr)/sizeof(arr[0]);
 
 
-	cout << bin_search(arr, 0, size - 1, 12) << endl;
+	cout << bin_search(arr, 0, size - 1, 9) << endl;
 
 
 	return 0;
