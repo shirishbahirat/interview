@@ -24,7 +24,7 @@ int main(int argc, const char* argv[])
 	int size = sizeof(arr)/sizeof(arr[0]);
 
 
-	cout << bin_search(arr, 0, size, 12) << endl;
+	cout << bin_search(arr, 0, size - 1, 12) << endl;
 
 
 	return 0;
