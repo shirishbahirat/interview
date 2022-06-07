@@ -23,7 +23,7 @@ int bin_search(vector<int> arr, int target)
 {
 	int lo = 0, hi = arr.size() - 1;
 
-	while (lo < hi)
+	while (lo <= hi)
 	{
 		int mid = lo + (hi - lo) / 2;
 
