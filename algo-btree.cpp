@@ -13,7 +13,7 @@ int bin_search(int arr[], int lo, int hi, int target)
 
 	if (target == arr[mid]) return mid;
 	else if (target > arr[mid]) bin_search(arr, mid + 1, hi, target);
-	else if (target < arr[mid]) bin_search(arr, lo, mid - 1, target);
+	else if (target < arr[mid]) bin_search(arr, lo, mid, target);
 
 	return -1;
 }
