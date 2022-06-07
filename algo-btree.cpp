@@ -5,7 +5,7 @@ using namespace std;
 int bin_search(int arr[], int lo, int hi, int target)
 {
 	if ((lo == hi) && arr[lo] == target) return lo;
-	//if ((lo == hi) && arr[lo] != target) return -1;
+	if ((lo == hi) && arr[lo] != target) return -1;
 
 	//if (lo > hi) return -1;
 
