@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int bin_search(arr, int lo, int hi, int number)
+{
+	if ((lo == hi) && arr[lo] == number) return lo;
+	if ((lo == hi) && arr[lo] != number) return -1;
+
+
+	int mid = lo + (hi - lo) / 2;
+
+	if (number == arr[mid]) return mid;
+	else if (number > arr[mid]) bin_search(arr, mid + 1, h);
+	else if (number < arr[mid]) bin_search(arr, lo, mid - 1);
+
+	return -1;
+}
+
+int main(int argc, const char* argv[])
+{
+
+	int arr[] = {5,6,8,9,12,15};
+	int size = sizeof(arr)/sizeof(arr[0]);
+
+
+	cout << bin_search(arr, 0, size, 12) << endl;
+
+
+	return 0;
+}
