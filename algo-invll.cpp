@@ -42,7 +42,9 @@ node* inv_link_list(node* head)
 		next = curr->next;
 	}
 
-	head = prev;
+	curr->next = prev;
+
+	head = curr;
 
 	return head;
 
