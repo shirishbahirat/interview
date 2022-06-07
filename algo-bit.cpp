@@ -33,7 +33,7 @@ int main(int argc, const char* argv[])
 
 	data = 9;
 
-	cout << log2(data) << endl;
+	cout << (int)log2(data) << endl;
 
 
 	return 0;
