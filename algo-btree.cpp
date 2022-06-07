@@ -22,9 +22,9 @@ int main(int argc, const char* argv[])
 {
 
 	int arr[] = {5,6,8,9,12,15};
-	int size = sizeof(arr)/sizeof(arr[0]);
+	int size = sizeof(arr)/sizeof(arr[0]) - 1;
 
-	cout << bin_search(arr, 0, 5, 6) << endl;
+	cout << bin_search(arr, 0, size, 6) << endl;
 
 	return 0;
 }
