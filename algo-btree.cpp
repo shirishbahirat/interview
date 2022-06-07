@@ -11,7 +11,7 @@ int bin_search(int arr[], int lo, int hi, int number)
 	int mid = lo + (hi - lo) / 2;
 
 	if (number == arr[mid]) return mid;
-	else if (number > arr[mid]) bin_search(arr, mid + 1, h, number);
+	else if (number > arr[mid]) bin_search(arr, mid + 1, hi, number);
 	else if (number < arr[mid]) bin_search(arr, lo, mid - 1, number);
 
 	return -1;
