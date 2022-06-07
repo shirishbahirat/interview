@@ -24,7 +24,7 @@ int main(int argc, const char* argv[])
 
 	// rightmost bit
 
-	data = 12;
+	data = 16;
 	data = data & ~(data - 1);
 
 	cout << log2(data) << endl;
