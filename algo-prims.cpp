@@ -30,14 +30,19 @@ int main(int argc, const char* argv[])
 
     typedef pair <int, int> p;
 
+    int src = 0;
+
     priority_queue < p, vector <p>, greater <p> > pq;
 
-    vector <int> key (10, INT_MAX)
+    vector <int> key (10, INT_MAX);
 
     vector<int> parent(10, -1);
  
     vector<bool> in_mst(10, false);
  
+    pq.push(make_pair(0, src));
+    key[src] = 0;
+
 
 	return 0;
 }
