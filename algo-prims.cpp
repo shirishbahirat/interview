@@ -10,9 +10,11 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
 
-	vector < pair <int, pair <int, int>>> edge;
-	vector < pair <int, pair <int, int>>>::iterator it;
+	vector < pair <int, int> > edge;
 
+    edge.push_back(make_pair(0,4));
+
+    /*
 	edge.push_back({4, {0, 1}});
 	edge.push_back({8, {0, 7}});
     edge.push_back({8, {1, 2}});
@@ -27,6 +29,7 @@ int main(int argc, const char* argv[])
     edge.push_back({1, {6, 7}});
     edge.push_back({6, {6, 8}});
     edge.push_back({7, {7, 8}});
+    */
 
     typedef pair <int, int> p;
 
@@ -48,6 +51,10 @@ int main(int argc, const char* argv[])
     {
         int u = pq.top().second;
         pq.pop();
+
+        if(in_mst[u] == true) continue;
+
+        in_mst[u] = true;
 
     }
 
