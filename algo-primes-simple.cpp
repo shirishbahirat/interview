@@ -42,6 +42,9 @@ void get_mst(int graph[nodes][nodes])
     {
         //Select best nodesertex by applying greedy method
         int idx = select_min_vertex(value, set_mst);
+
+        cout << "min vertex " << idx << endl;
+    
         set_mst[idx] = true;   //Include new nodesertex in MST
 
         //Relax adjacent vertices (not yet included in MST)
@@ -61,10 +64,12 @@ void get_mst(int graph[nodes][nodes])
     }
 
     //Print MST
-    for(int i=1; i < nodes; ++i)
+    for(int i = 1; i < nodes; ++i)
     {
-        cout<< "U->V: " << parent[i] << "->" << i << "  wt = " <<graph[parent[i]][i] << endl;
+        cout<< "U->V: " << parent[i] << "->" << i << "  wt = " << graph[parent[i]][i] << endl;
     }
+
+    return;
 }
 
 
