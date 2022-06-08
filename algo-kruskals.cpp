@@ -4,8 +4,8 @@
 
 using namespace std;
 
-vector <int> rnk{9,0};
-vector <int> parent{9,0};
+vector <int> rnk{10,0};
+vector <int> parent{10,0};
 
 int find(int u)
 {
@@ -55,7 +55,7 @@ int main(int argc, const char* argv[])
 
     sort(edge.begin(), edge.end());
 
-    for (int i = 0; i < 9; ++i)
+    for (int i = 0; i < 10; ++i)
     {
     	rnk.push_back(0);
     	parent.push_back(i);
