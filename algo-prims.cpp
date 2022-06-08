@@ -13,23 +13,46 @@ int main(int argc, const char* argv[])
 	vector < pair <int, int> > edge;
 
     edge.push_back(make_pair(0,4));
+    edge.push_back(make_pair(1,4));
 
-    /*
-	edge.push_back({4, {0, 1}});
-	edge.push_back({8, {0, 7}});
-    edge.push_back({8, {1, 2}});
-    edge.push_back({11, {1, 7}});
-    edge.push_back({7, {2, 3}});
-    edge.push_back({2, {2, 8}});
-    edge.push_back({4, {2, 5}});
-    edge.push_back({9, {3, 4}});
-    edge.push_back({14, {3, 5}});
-    edge.push_back({10, {4, 5}});
-    edge.push_back({2, {5, 6}});
-    edge.push_back({1, {6, 7}});
-    edge.push_back({6, {6, 8}});
-    edge.push_back({7, {7, 8}});
-    */
+    edge.push_back(make_pair(0,8));
+    edge.push_back(make_pair(7,8));
+
+    edge.push_back(make_pair(1,8));
+    edge.push_back(make_pair(2,8));
+
+    edge.push_back(make_pair(1,11));
+    edge.push_back(make_pair(7,11));
+
+    edge.push_back(make_pair(2,7));
+    edge.push_back(make_pair(3,7));
+
+    edge.push_back(make_pair(2,2));
+    edge.push_back(make_pair(8,2));
+
+    edge.push_back(make_pair(2,4));
+    edge.push_back(make_pair(5,4));
+
+    edge.push_back(make_pair(3,9));
+    edge.push_back(make_pair(4,9));
+
+    edge.push_back(make_pair(3,14));
+    edge.push_back(make_pair(5,14));
+
+    edge.push_back(make_pair(4,10));
+    edge.push_back(make_pair(5,10));
+
+    edge.push_back(make_pair(5,2));
+    edge.push_back(make_pair(6,2));
+
+    edge.push_back(make_pair(6,1));
+    edge.push_back(make_pair(7,1));
+
+    edge.push_back(make_pair(6,6));
+    edge.push_back(make_pair(8,6));
+
+    edge.push_back(make_pair(7,7));
+    edge.push_back(make_pair(8,7));
 
     typedef pair <int, int> p;
 
