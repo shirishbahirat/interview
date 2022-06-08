@@ -69,10 +69,14 @@ int main(int argc, const char* argv[])
 
     int mst_weight = 0;
 
-    cout << "test" << endl;
+
 
     for (it = edge.begin(); it < edge.end(); ++it)
     {
+    	cout << "test" << endl;
+
+    	/*
+
     	int u = it->second.first;
     	int v = it->second.second;
 
@@ -90,6 +94,7 @@ int main(int argc, const char* argv[])
 
     		merge(parent_v, parent_u);
     	}
+    	*/
 
     }
 
