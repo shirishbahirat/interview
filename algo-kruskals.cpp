@@ -10,7 +10,7 @@ vector <int> parent;
 int find(int u)
 {
 	if (u != parent[u])
-		parent[u] = find(parent[u])
+		parent[u] = find(parent[u]);
 
 	return parent[u];
 }
@@ -22,9 +22,9 @@ void merge(int x, int y)
 	y = find(y);
 
 	if (rank[x] > rank[y])
-		parent[y] = x
+		parent[y] = x;
 	else
-		parent[x] = y
+		parent[x] = y;
 
 	if (rank[x] == rank[y])
 		rank[y]++;
