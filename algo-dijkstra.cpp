@@ -19,11 +19,13 @@ int min_distance(int dist[], bool spt_set[])
 	return min_index;
 }
 
-void printSolution(int dist[])
+void print_solution(int dist[])
 {
+
 	cout <<"Vertex \t Distance from Source" << endl;
+
 	for (int i = 0; i < V; i++)
-		cout << i << " \t\t"<<dist[i]<< endl;
+		cout << i << " \t\t"<< dist[i] << endl;
 }
 
 void dijkstra(int graph[V][V], int src)
@@ -49,24 +51,25 @@ void dijkstra(int graph[V][V], int src)
 				dist[v] = dist[u] + graph[u][v];
 	}
 
-	printSolution(dist);
+	print_solution(dist);
 }
 
-int main()
+int main(int argc, const char* argv[])
 {
 
-	int graph[V][V] = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
-						{ 4, 0, 8, 0, 0, 0, 0, 11, 0 },
-						{ 0, 8, 0, 7, 0, 4, 0, 0, 2 },
-						{ 0, 0, 7, 0, 9, 14, 0, 0, 0 },
-						{ 0, 0, 0, 9, 0, 10, 0, 0, 0 },
-						{ 0, 0, 4, 14, 10, 0, 2, 0, 0 },
-						{ 0, 0, 0, 0, 0, 2, 0, 1, 6 },
-						{ 8, 11, 0, 0, 0, 0, 1, 0, 7 },
-						{ 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
+	int graph[V][V] = { { 0,  4,  0,  0,  0,  0,  0,  8,  0 },
+						{ 4,  0,  8,  0,  0,  0,  0, 11,  0 },
+						{ 0,  8,  0,  7,  0,  4,  0,  0,  2 },
+						{ 0,  0,  7,  0,  9, 14,  0,  0,  0 },
+						{ 0,  0,  0,  9,  0, 10,  0,  0,  0 },
+						{ 0,  0,  4, 14, 10,  0,  2,  0,  0 },
+						{ 0,  0,  0,  0,  0,  2,  0,  1,  6 },
+						{ 8, 11,  0,  0,  0,  0,  1,  0,  7 },
+						{ 0,  0,  2,  0,  0,  0,  6,  7,  0 } };
 
 	dijkstra(graph, 0);
 
 	return 0;
+
 }
 
