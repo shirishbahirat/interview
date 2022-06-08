@@ -80,6 +80,9 @@ int main(int argc, const char* argv[])
 
     	if (parent_u != parent_v)
     	{
+    		
+    		cout << u << " - " << v << endl;
+ 
     		mst_weight = it->first;
 
     		merge(parent_v, parent_u);
