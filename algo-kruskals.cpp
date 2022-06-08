@@ -4,8 +4,8 @@
 
 using namespace std;
 
-vector <int> rank{9,9};
-vector <int> parent{9,9};
+vector <int> rnk{9,0};
+vector <int> parent{9,0};
 
 int find(int u)
 {
@@ -21,13 +21,13 @@ void merge(int x, int y)
 
 	y = find(y);
 
-	if (rank[x] > rank[y])
+	if (rnk[x] > rnk[y])
 		parent[y] = x;
 	else
 		parent[x] = y;
 
-	if (rank[x] == rank[y])
-		rank[y]++;
+	if (rnk[x] == rnk[y])
+		rnk[y]++;
 
 }
 
@@ -56,7 +56,7 @@ int main(int argc, const char* argv[])
 
     for (int i = 0; i < 9; ++i)
     {
-    	rank.push_back(0);
+    	rnk.push_back(0);
     	parent.push_back(i);
     }
 
