@@ -5,14 +5,16 @@ using namespace std;
 
 #define V 9
 
-int minDistance(int dist[], bool sptSet[])
+int min_distance(int dist[], bool sptSet[])
 {
 
 	int min = INT_MAX, min_index;
 
 	for (int v = 0; v < V; v++)
+	{
 		if (sptSet[v] == false && dist[v] <= min)
 			min = dist[v], min_index = v;
+	}
 
 	return min_index;
 }
@@ -36,7 +38,7 @@ void dijkstra(int graph[V][V], int src)
 	dist[src] = 0;
 
 	for (int count = 0; count < V - 1; count++) {
-		int u = minDistance(dist, sptSet);
+		int u = min_distance(dist, sptSet);
 
 		sptSet[u] = true;
 
