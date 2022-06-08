@@ -9,8 +9,6 @@ int parent[20];
 
 int find(int u)
 {
-	
-	cout << u << endl;
 
 	if (u != parent[u])
 		parent[u] = find(parent[u]);
