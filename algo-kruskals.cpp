@@ -78,6 +78,13 @@ int main(int argc, const char* argv[])
     	int parent_u = find(u);
     	int parent_v = find(v);
 
+    	if (parent_u != parent_v)
+    	{
+    		mst_weight = it->first;
+
+    		merge(parent_v, parent_u);
+    	}
+
     }
 
 	return 0;
