@@ -79,6 +79,23 @@ int main(int argc, const char* argv[])
 
         in_mst[u] = true;
 
+        for (auto x : edge[u])
+        {
+
+            int v = x.first;
+            int weight = x.second;
+ 
+            if (in_mst[v] == false && key[v] > weight)
+            {
+
+                key[v] = weight;
+
+                pq.push(make_pair(key[v], v));
+
+                parent[v] = u;
+            }
+        }
+
     }
 
 	return 0;
