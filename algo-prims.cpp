@@ -28,8 +28,9 @@ int main(int argc, const char* argv[])
     edge.push_back({6, {6, 8}});
     edge.push_back({7, {7, 8}});
 
+    typedef pair <int, int> p;
 
-    priority_queue < pair<int, int>, vector <pair <int, int>, greater <pair <int, int>> > > pq;
+    priority_queue < p, vector <p>, greater <p> > pq;
 
 	return 0;
 }
