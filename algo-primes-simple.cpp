@@ -38,18 +38,18 @@ void get_mst(int graph[nodes][nodes])
     value[0] = 0;   //start node has value=0 to get picked 1st
 
     //Form MST with (nodes-1) edges
-    for(int i=0; i < nodes - 1; ++i)
+    for(int i = 0; i < nodes - 1; ++i)
     {
         //Select best nodesertex by applying greedy method
         int idx = select_min_vertex(value, set_mst);
         set_mst[idx] = true;   //Include new nodesertex in MST
 
         //Relax adjacent vertices (not yet included in MST)
-        for(int j=0;j<nodes;++j)
+        for(int j = 0; j < nodes; ++j)
         {
             /* 3 constraints to relax:-
                   1.Edge is present from idx to j.
-                  2.nodesertex j is not included in MST
+                  2.Vertex j is not included in MST
                   3.Edge weight is smaller than current edge weight
             */
             if(graph[idx][j] != 0 && set_mst[j] == false && graph[idx][j] < value[j])
