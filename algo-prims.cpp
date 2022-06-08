@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
 
-	vector < pair <int, int> > edge(10,{});
+	vector < pair <int, int> > edge[10];
 
     edge[1].push_back(make_pair(0,4));
     edge[0].push_back(make_pair(1,4));
