@@ -29,7 +29,7 @@ int main(int argc, const char* argv[])
 
     for (int i = 0; i < edge.size(); ++i)
     {
-    	cout << edge[i].first << " " << edge[i].second.first << " " << edge[i].second.<< endl; 
+    	cout << edge[i].first << " " << edge[i].second.first << " " << edge[i].second.second << endl; 
     }
 
 	return 0;
