@@ -29,7 +29,7 @@ int main(int argc, const char* argv[])
     edge.push_back({7, {7, 8}});
 
 
-    priority_queue < pair<int, int>, vector <pair <int, int>, grater <pair <int, int>> > > pq;
+    priority_queue < pair<int, int>, vector <pair <int, int>, greater <pair <int, int>> > > pq;
 
 	return 0;
 }
