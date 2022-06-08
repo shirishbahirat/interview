@@ -59,9 +59,12 @@ void get_mst(int graph[nodes][nodes])
             }
         }
     }
+
     //Print MST
-    for(int i=1; i<nodes; ++i)
+    for(int i=1; i < nodes; ++i)
+    {
         cout<< "U->V: " << parent[i] << "->" << i << "  wt = " <<graph[parent[i]][i] << endl;
+    }
 }
 
 
