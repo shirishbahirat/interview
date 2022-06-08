@@ -9,6 +9,9 @@ vector <int> parent{10,0};
 
 int find(int u)
 {
+	
+	cout << u << endl;
+
 	if (u != parent[u])
 		parent[u] = find(parent[u]);
 
