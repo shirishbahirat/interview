@@ -61,7 +61,7 @@ int main(int argc, const char* argv[])
     	parent.push_back(i);
     }
 
-    for (int i = 0; i < edge.size(); ++it)
+    for (int i = 0; i < edge.size(); ++i)
     {
     	cout << edge[i].first << " " << edge[i].second.first << " " << edge[i].second.second << endl; 
     }
