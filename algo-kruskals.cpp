@@ -85,7 +85,7 @@ int main(int argc, const char* argv[])
     	int parent_u = find(u);
     	int parent_v = find(v);
 
-    	/*
+    	
 
 
     	cout << parent_v << " " << parent_u << endl;
@@ -99,7 +99,7 @@ int main(int argc, const char* argv[])
 
     		merge(parent_v, parent_u);
     	}
-    	*/
+    	
 
     }
 
