@@ -4,6 +4,33 @@
 
 using namespace std;
 
+vector <int> rank;
+vector <int> parent;
+
+int find(int u)
+{
+	if (u != parent[u])
+		parent[u] = find(parent[u])
+
+	return parent[u]
+}
+
+void merge(int x, int y)
+{
+	x = find(x);
+
+	y = find(y);
+
+	if (rank[x] > rank[y])
+		parent[y] = x
+	else
+		parent[x] = y
+
+	if (rank[x] == rank[y])
+		rank[y]++;
+
+}
+
 int main(int argc, const char* argv[])
 {
 
