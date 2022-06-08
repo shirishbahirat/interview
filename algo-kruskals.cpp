@@ -75,10 +75,12 @@ int main(int argc, const char* argv[])
     {
     	cout << "test" << endl;
 
-    	/*
+    	
 
     	int u = it->second.first;
     	int v = it->second.second;
+
+    	/*
 
     	int parent_u = find(u);
     	int parent_v = find(v);
