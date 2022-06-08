@@ -27,6 +27,7 @@ int main(int argc, const char* argv[])
     edge.push_back({7, {7, 8}});
 
 
+    priority_queue <int> pq;
 
 	return 0;
 }
