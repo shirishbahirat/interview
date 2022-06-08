@@ -34,7 +34,7 @@ void merge(int x, int y)
 int main(int argc, const char* argv[])
 {
 
-	vector < pair <int, pair <int, int>>> edge; 
+	vector < pair <int, pair <int, int>>> edge;
 
 	edge.push_back({4, {0, 1}});
 	edge.push_back({8, {0, 7}});
@@ -53,6 +53,12 @@ int main(int argc, const char* argv[])
 
 
     sort(edge.begin(), edge.end());
+
+    for (int i = 0; i < 9; ++i)
+    {
+    	rank.push_back(0);
+    	parent.push_back(i);
+    }
 
     for (int i = 0; i < edge.size(); ++i)
     {
