@@ -41,8 +41,15 @@ int main(int argc, const char* argv[])
     vector<bool> in_mst(10, false);
  
     pq.push(make_pair(0, src));
+
     key[src] = 0;
 
+    while (!pq.empty())
+    {
+        int u = pq.top().second;
+        pq.pop();
+
+    }
 
 	return 0;
 }
