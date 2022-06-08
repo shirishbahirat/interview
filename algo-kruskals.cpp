@@ -27,6 +27,11 @@ int main(int argc, const char* argv[])
 
     sort(edge.begin(), edge.end());
 
+    for (int i = 0; i < edge.size(); ++i)
+    {
+    	cout << edge[i][0] << endl; 
+    }
+
 	return 0;
 }
 
