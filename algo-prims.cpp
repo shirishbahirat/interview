@@ -32,6 +32,13 @@ int main(int argc, const char* argv[])
 
     priority_queue < p, vector <p>, greater <p> > pq;
 
+    vector <int> key (10, INT_MAX)
+
+    vector<int> parent(10, -1);
+ 
+    vector<bool> in_mst(10, false);
+ 
+
 	return 0;
 }
 
