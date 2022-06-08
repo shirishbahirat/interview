@@ -67,10 +67,7 @@ int main(int argc, const char* argv[])
     	cout << edge[i].first << " " << edge[i].second.first << " " << edge[i].second.second << endl; 
     }
 
-
     int mst_weight = 0;
-
-
 
     for (it = edge.begin(); it < edge.end(); ++it)
     {
@@ -86,12 +83,14 @@ int main(int argc, const char* argv[])
 
     		cout << u << " - " << v << endl;
 
-    		mst_weight = it->first;
+    		mst_weight += it->first;
 
     		merge(parent_v, parent_u);
     	}
 
     }
+
+    cout << "weight of mst " << mst_weight << endl;
 
 	return 0;
 }
