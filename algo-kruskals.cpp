@@ -70,7 +70,7 @@ int main(int argc, const char* argv[])
     int mst_weight = 0;
 
 
-    for (it = edge.begin(); it < edge.end(); ++i)
+    for (it = edge.begin(); it < edge.end(); ++it)
     {
     	int u = it->second.first;
     	int v = it->second.second;
