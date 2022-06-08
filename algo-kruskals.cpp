@@ -4,8 +4,8 @@
 
 using namespace std;
 
-vector <int> rank;
-vector <int> parent;
+vector <int> rank{9,0};
+vector <int> parent{9,0};
 
 int find(int u)
 {
