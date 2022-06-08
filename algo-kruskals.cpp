@@ -25,6 +25,8 @@ int main(int argc, const char* argv[])
     edge.push_back({7, {7, 8}});
 
 
+    sort(edge.begin(), edge.end());
+
 	return 0;
 }
 
