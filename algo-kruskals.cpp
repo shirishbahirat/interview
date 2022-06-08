@@ -72,8 +72,8 @@ int main(int argc, const char* argv[])
 
     for (it = edge.begin(); it < edge.end(); ++i)
     {
-    	int u = it.second.first;
-    	int v = it.second.second;
+    	int u = it->second.first;
+    	int v = it->second.second;
 
     	int parent_u = find(u);
     	int parent_v = find(v);
