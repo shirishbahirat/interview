@@ -69,6 +69,7 @@ int main(int argc, const char* argv[])
 
     int mst_weight = 0;
 
+    cout << "test" << endl;
 
     for (it = edge.begin(); it < edge.end(); ++it)
     {
