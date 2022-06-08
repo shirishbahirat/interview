@@ -35,6 +35,7 @@ int main(int argc, const char* argv[])
 {
 
 	vector < pair <int, pair <int, int>>> edge;
+	vector < pair <int, pair <int, int>>>::iterator it;
 
 	edge.push_back({4, {0, 1}});
 	edge.push_back({8, {0, 7}});
@@ -63,6 +64,15 @@ int main(int argc, const char* argv[])
     for (int i = 0; i < edge.size(); ++i)
     {
     	cout << edge[i].first << " " << edge[i].second.first << " " << edge[i].second.second << endl; 
+    }
+
+
+    int mst_weight = 0;
+
+
+    for (it = edge.begin(); it < edge.end(); ++i)
+    {
+    	
     }
 
 	return 0;
