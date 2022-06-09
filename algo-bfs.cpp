@@ -18,23 +18,23 @@ int main(int argc, char* argv[])
 
     bool visited[nodes] =  {false, false, false, false, false, false};
 
-    queue <int> dfs;
+    queue <int> bfs;
 
-    dfs.push(0);
+    bfs.push(0);
     visited[0] = true;
 
-    while(!dfs.empty())
+    while(!bfs.empty())
     {
 
-        int n = dfs.front();
+        int n = bfs.front();
         cout << n << endl;
-        dfs.pop();
+        bfs.pop();
 
         for (int i = 0; i < nodes; ++i)
         {
             if (graph[n][i] > 0 && visited[i] == false)
             {
-                dfs.push(i);
+                bfs.push(i);
                 visited[i] = true;
             }
         }
