@@ -17,10 +17,30 @@ int main(int argc, char* argv[])
                                 {0, 7, 5, 4, 0, 7},
                                 {0, 0, 0, 6, 7, 0} };
 
+    bool visited[nodes] =  {false, false, false, false, false, false};
+
     stack <int> dfs;
 
-    dfs.push(graph[0][1]);
+    dfs.push(0);
+    visited[0] = true;
 
+    while(!dfs.empty())
+    {
+        
+        int n = dfs.top();
+        cout << n << endl;
+        dfs.pop();
+
+        for (int i = 0; i < nodes; ++i)
+        {
+            if (graph[n][i] > 0 && visited[i] == false)
+            {
+                dfs.push(i);
+                visited[i] = true;
+            }
+        }
+
+    }
 
     return 0;
 }
