@@ -2,6 +2,13 @@
 
 using namespace std;
 
+void merge(int arr[], int lo, int mid, int hi)
+{
+
+	
+}
+
+
 void mergesort(int arr[], int lo, int hi)
 {
 	if (hi <= lo) return;
@@ -10,7 +17,7 @@ void mergesort(int arr[], int lo, int hi)
 
 	mergesort(arr, lo, mid);
 	mergesort(arr, mid+1, hi);
-
+	merge(arr, lo, mid, hi);
 
 }
 
