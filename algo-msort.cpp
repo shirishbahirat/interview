@@ -28,7 +28,6 @@ void merge(int arr[], int lo, int mid, int hi)
 
 }
 
-
 void mergesort(int arr[], int lo, int hi)
 {
 	if (hi <= lo) return;
