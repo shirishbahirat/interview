@@ -7,7 +7,7 @@ void merge(int arr[], int lo, int mid, int hi)
 
 	int idx = lo;
 	int idy = mid + 1;
-	int len = hi - lo + 1
+	int len = hi - lo + ;
 	int zrr[len];
 	int idz = 0;
 
