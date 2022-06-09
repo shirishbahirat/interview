@@ -24,7 +24,7 @@ int main(int argc, const char* argv[])
 
 		ans[i] = mono.empty() ? -1 : mono.top();
 
-		push.mono(arr[i]);
+		mono.push(arr[i]);
 
 	}
 
