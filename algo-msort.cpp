@@ -19,7 +19,7 @@ void merge(int arr[], int lo, int mid, int hi)
 
 	while(idx <= mid) zrr[idz++] = arr[idx++];
 
-	while(idy <=high) zrr[idz++] = arr[idy++];
+	while(idy <=hi) zrr[idz++] = arr[idy++];
 
 	for (int i = lo, j = 0; i <= hi; ++i, ++j)
 	{
