@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
     while(!dfs.empty())
     {
 
-        int n = dfs.top();
+        int n = dfs.front();
         cout << n << endl;
         dfs.pop();
 
