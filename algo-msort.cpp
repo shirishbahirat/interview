@@ -5,7 +5,27 @@ using namespace std;
 void merge(int arr[], int lo, int mid, int hi)
 {
 
-	
+	int idx = lo;
+	int idy = mid + 1;
+	int len = hi - lo + 1
+	int zrr[len];
+	int idz = 0;
+
+	while(idx <= mid && idy <=high)
+	{
+		if (arr[idx] < arr[idy]) zrr[idz++] = arr[idx++];
+		else zrr[idz++] = arr[idy++];
+	}
+
+	while(idx <= mid) zrr[idz++] = arr[idx++];
+
+	while(idy <=high) zrr[idz++] = arr[idy++];
+
+	for (int i = low, j = 0; i <= high; ++i, ++j)
+	{
+		arr[i] = zrr[j];
+	}
+
 }
 
 
@@ -16,7 +36,9 @@ void mergesort(int arr[], int lo, int hi)
 	int mid = lo + (hi - lo) / 2;
 
 	mergesort(arr, lo, mid);
+
 	mergesort(arr, mid+1, hi);
+
 	merge(arr, lo, mid, hi);
 
 }
