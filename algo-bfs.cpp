@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
     bool visited[nodes] =  {false, false, false, false, false, false};
 
-    stack <int> dfs;
+    queue <int> dfs;
 
     dfs.push(0);
     visited[0] = true;
