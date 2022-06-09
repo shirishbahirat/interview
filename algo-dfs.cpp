@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
 
 
-    int nodes = 5;
+    const int nodes = 5;
 
     int graph[nodes][nodes] = { {0, 1, 4, 0, 0, 0},
                                 {1, 0, 4, 2, 7, 0},
