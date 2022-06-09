@@ -24,7 +24,7 @@ int partition(int arr[], int lo, int hi)
 
 		while (arr[lo] <= arr[pivot]) lo++;
 
-		while (arr[high] > arr[pivot]) --hi;
+		while (arr[hi] > arr[pivot]) --hi;
 
 		if (lo < hi) swap(arr,lo, hi);
 
