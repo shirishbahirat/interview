@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#define nodes 5
+#define nodes 6
 
 int main(int argc, char* argv[])
 {
