@@ -22,7 +22,7 @@ void links2graph(void)
 
     for (int i = 0; i < links.size(); ++i)
     {
-        
+
         if ( auto it{ graph.find(links[i][0])}; it == end( graph ) ) 
         {
             graph[links[i][0]] = {};
@@ -37,7 +37,7 @@ void links2graph(void)
 
         graph[links[i][0]].push_back(links[i][1]);
         graph[links[i][1]].push_back(links[i][0]);
-        
+    
     }
 
 }
