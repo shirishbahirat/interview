@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
     queue <int> bfs;
 
     bfs.push(0);
+
     visited[0] = true;
 
     while(!bfs.empty())
