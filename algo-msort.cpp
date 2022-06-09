@@ -11,7 +11,7 @@ void merge(int arr[], int lo, int mid, int hi)
 	int zrr[len];
 	int idz = 0;
 
-	while(idx <= mid && idy <=high)
+	while(idx <= mid && idy <=hi)
 	{
 		if (arr[idx] < arr[idy]) zrr[idz++] = arr[idx++];
 		else zrr[idz++] = arr[idy++];
