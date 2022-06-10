@@ -75,7 +75,5 @@ int main(int argc, const char* argv[])
 	cout << search(head, (char*)"helloworld") << endl; 
 
 
-
-
 	return 0;
 }
