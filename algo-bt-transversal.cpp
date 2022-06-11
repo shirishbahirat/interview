@@ -56,8 +56,8 @@ int main(int argc, const char* argv[])
 		cout << "bfs " << node->data;
 		bfs.pop();
 
-		if (bfs->left) bfs.push(node->left);
-		if (bfs->right) bfs.push(node->right);
+		if (node->left) node.push(node->left);
+		if (node->right) node.push(node->right);
 
 	}
 
