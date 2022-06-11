@@ -18,9 +18,9 @@ void transverse(tree* head)
 
 	transverse(head->left);
 
-	cout << head->data << endl;
-
 	transverse(head->right);
+
+	cout << head->data << endl;
 
 }
 
