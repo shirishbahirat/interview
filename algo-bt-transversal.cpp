@@ -65,5 +65,28 @@ int main(int argc, const char* argv[])
 
 	cout << endl;
 
+
+	node = head;
+
+	stack <tree*> dfs;
+
+	dfs.push(node);
+
+	cout << "dfs ";
+
+	while (!dfs.empty())
+	{
+		node = dfs.top();
+		cout << node->data << " ";
+		dfs.pop();
+
+		if (node->left) dfs.push(node->left);
+		if (node->right) dfs.push(node->right);
+
+	}
+
+	cout << endl;
+
+
 	return 0;
 }
