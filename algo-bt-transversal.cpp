@@ -50,10 +50,12 @@ int main(int argc, const char* argv[])
 
 	bfs.push(node);
 
+	cout << "bfs ";
+
 	while (!bfs.empty())
 	{
 		node = bfs.front();
-		cout << " bfs " << node->data;
+		cout << node->data << " ";
 		bfs.pop();
 
 		if (node->left) bfs.push(node->left);
