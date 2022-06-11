@@ -16,6 +16,7 @@ struct flit {
     uint32_t time;
 };
 
+
 struct control_interface
 {
     virtual void connect_n(control_interface* nc) = 0;
