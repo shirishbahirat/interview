@@ -1,4 +1,6 @@
 #include <iostream>
+#include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -11,7 +13,6 @@ struct tree {
 	~tree() {}
 };
 
-
 void transverse(tree* head)
 {
 	if (head == nullptr) return;
@@ -23,7 +24,6 @@ void transverse(tree* head)
 	cout << head->data << endl;
 
 }
-
 
 int main(int argc, const char* argv[])
 {
@@ -40,9 +40,26 @@ int main(int argc, const char* argv[])
 	head->right->left = new tree(11);
 	head->right->right = new tree(12);
 
+	tree* node = head;
 
-	transverse(head);
+	transverse(node);
 
+	node = head;
+
+	queue <tree*> bfs;
+
+	bfs.push(node);
+
+	while (!bfs.empty())
+	{
+		node = bfs.front();
+		cout << "bfs " << node->data;
+		bfs.pop();
+
+		if (bfs->left) bfs.push(node->left);
+		if (bfs->right) bfs.push(node->right);
+
+	}
 
 	return 0;
 }

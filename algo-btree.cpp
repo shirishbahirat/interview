@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
 
 int bin_search(vector<int> arr, int lo, int hi, int target)
