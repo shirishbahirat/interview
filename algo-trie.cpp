@@ -12,6 +12,19 @@ struct trie{
 	~trie() {}
 };
 
+bool have_children(trie const* curr)
+{
+ 
+    for (auto it: curr->nodes)
+    {
+        if (it.second != nullptr) {
+            return true;
+        }
+    }
+ 
+    return false;
+}
+
 bool deletion(trie*& curr, char* str)
 {
 
