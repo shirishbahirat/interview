@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 struct trie{
 	bool is_leaf;
 
