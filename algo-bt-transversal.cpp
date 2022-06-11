@@ -40,9 +40,7 @@ int main(int argc, const char* argv[])
 	head->right->right = new tree(12);
 
 
-
-
-
+	transverse(head);
 
 
 	return 0;
