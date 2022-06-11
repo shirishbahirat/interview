@@ -30,7 +30,7 @@ int main(int argc, const char* argv[])
 	tree* head = new tree(10);
 
 	head->left = new tree(9);
-	head->right = new tree(9);
+	head->right = new tree(14);
 
 
 	head->left->left = new tree(7);
