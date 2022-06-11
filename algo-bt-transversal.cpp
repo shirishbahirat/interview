@@ -80,8 +80,8 @@ int main(int argc, const char* argv[])
 		cout << node->data << " ";
 		dfs.pop();
 
-		if (node->left) dfs.push(node->left);
 		if (node->right) dfs.push(node->right);
+		if (node->left) dfs.push(node->left);
 
 	}
 
