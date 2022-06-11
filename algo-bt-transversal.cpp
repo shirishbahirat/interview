@@ -53,13 +53,15 @@ int main(int argc, const char* argv[])
 	while (!bfs.empty())
 	{
 		node = bfs.front();
-		cout << "bfs " << node->data;
+		cout << " bfs " << node->data;
 		bfs.pop();
 
 		if (node->left) bfs.push(node->left);
 		if (node->right) bfs.push(node->right);
 
 	}
+
+	cout << endl;
 
 	return 0;
 }
