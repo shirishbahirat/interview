@@ -12,7 +12,6 @@ struct trie{
 	~trie() {}
 };
 
-
 void insert(trie*& head, char* name)
 {
 
