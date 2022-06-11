@@ -12,6 +12,18 @@ struct tree {
 };
 
 
+void transverse(tree* head)
+{
+	if (head == nullptr) return;
+
+	cout << head->data << endl;
+
+	transverse(head->left);
+	transverse(head->right);
+
+}
+
+
 int main(int argc, const char* argv[])
 {
 
