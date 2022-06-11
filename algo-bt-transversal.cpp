@@ -16,9 +16,10 @@ void transverse(tree* head)
 {
 	if (head == nullptr) return;
 
+	transverse(head->left);
+
 	cout << head->data << endl;
 
-	transverse(head->left);
 	transverse(head->right);
 
 }
