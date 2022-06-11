@@ -44,7 +44,6 @@ struct gateway_interface
     virtual void is_busy(void) = 0;
 };
 
-
 class cpu
 {
 public:
