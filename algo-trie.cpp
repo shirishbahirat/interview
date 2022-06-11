@@ -44,7 +44,6 @@ void insert(trie*& head, char* name)
 }
 
 
-
 bool search(trie* head, char* str)
 {
 	if (head == nullptr) return false;
