@@ -34,6 +34,7 @@ int bin_search(vector<int> arr, int target)
 	return - 1;
 }
 
+
 int main(int argc, const char* argv[])
 {
 
