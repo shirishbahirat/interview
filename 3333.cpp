@@ -52,4 +52,6 @@ int main(int argc, char const *argv[])
     cout << obj->ExactOrMin(nums, 9) << endl;
 
     return 0;
+
+    
 }
