@@ -14,7 +14,7 @@ int main(int argc, const char* argv[])
 	queue <int> topo;
 
 	map <int, vector<int>> graph = {
-		0, {2, 3}
+		{0, {2, 3}}
 	};
 
 
