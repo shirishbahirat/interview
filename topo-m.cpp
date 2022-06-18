@@ -30,6 +30,7 @@ int main(int argc, const char* argv[])
 	while (!topo.empty())
 	{
 		int a = topo.front();
+	
 		topo.pop();
 
 		cout << a << endl;
