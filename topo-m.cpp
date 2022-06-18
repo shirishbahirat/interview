@@ -22,6 +22,27 @@ int main(int argc, const char* argv[])
 		{5, {}}
 	};
 
+	topo.push(0);
+
+	while (!topo.empty())
+	{
+		int a = topo.front();
+		topo.pop();
+
+		cout << a << endl;
+
+		vector <int> temp = graph[a];
+
+		for (int i = 0; i < temp.size(); ++i)
+		{
+			int x = temp[i];
+
+			degree[x]--;
+
+			if (degree[x] == 0) topo.push[x];
+		}
+
+	}
 
 	return 0;
 }
