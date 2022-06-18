@@ -39,7 +39,7 @@ int main(int argc, const char* argv[])
 
 			degree[x]--;
 
-			if (degree[x] == 0) topo.push[x];
+			if (degree[x] == 0) topo.push(x);
 		}
 
 	}
