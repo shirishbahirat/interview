@@ -14,7 +14,7 @@ int fib(int n)
 
 	if (fib_sequence[n]) return fib_sequence[n];
 
-	fib_sequence[n] = fib(n - 1) + fib(n-2);
+	fib_sequence[n] = fib(n - 1) + fib(n - 2);
 
 	return fib_sequence[n];
 }
@@ -31,8 +31,6 @@ int main(int argc, const char* argv[])
 	cout << fib(8) << endl;
 	cout << fib(9) << endl;
 	cout << fib(10) << endl;
-
-
 
 	return 0;
 }
