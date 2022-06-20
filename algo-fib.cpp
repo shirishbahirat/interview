@@ -22,7 +22,7 @@ int fib(int n)
 int main(int argc, const char* argv[])
 {
 
-	cout << fib(5) << endl;
+	cout << fib(6) << endl;
 
 
 
