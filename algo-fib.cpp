@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector <int> fib_sequence(10, 0);
+vector <int> fib_sequence(20, 0);
 
 int fib(int n)
 {
@@ -23,6 +23,10 @@ int main(int argc, const char* argv[])
 {
 
 	cout << fib(6) << endl;
+	cout << fib(7) << endl;
+	cout << fib(8) << endl;
+	cout << fib(9) << endl;
+	cout << fib(10) << endl;
 
 
 
