@@ -24,6 +24,7 @@ int main(int argc, const char* argv[])
 
 	cout << fib(2) << endl;
 	cout << fib(3) << endl;
+	cout << fib(5) << endl;
 
 	cout << fib(6) << endl;
 	cout << fib(7) << endl;
