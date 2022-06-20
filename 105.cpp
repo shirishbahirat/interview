@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-
 //Title: Construct Binary Tree from Preorder and Inorder Traversal
 
 using namespace std;
