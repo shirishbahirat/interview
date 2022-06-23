@@ -26,7 +26,7 @@ void prnt(int** arr, int size)
 int main(int argc, const char* argv[])
 {
 
-	int** parr = new int(*)[5]; 
+	int** parr = new int*()[5]; 
 
 	int arr[] = {2,3,4,5,6};
 	int *p = arr;
