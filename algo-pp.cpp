@@ -6,6 +6,8 @@ using namespace std;
 void prnt(int** arr, int size)
 {
 
+	int** temp = arr;
+
 	for (int i = 0; i < size; ++i)
 	{
 		*arr = new int();
@@ -13,6 +15,8 @@ void prnt(int** arr, int size)
 
 		cout << **arr << endl;
 	}
+
+	arr =  temp;
 
 	return;
 }
