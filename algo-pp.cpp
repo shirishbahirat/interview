@@ -28,7 +28,7 @@ int main(int argc, const char* argv[])
 
 	int** parr = new int*; 
 
-	int arr[] = {2,3,4,5,6};
+	int arr[] = {2,7,4,5,6};
 
 	int *p = arr;
 
