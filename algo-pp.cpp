@@ -21,7 +21,7 @@ int main(int argc, const char* argv[])
 
 	int** parr = new int*[5]; 
 
-	prnt(&parr, 5);
+	prnt(parr, 5);
 
 
 
