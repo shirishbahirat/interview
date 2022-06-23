@@ -26,7 +26,10 @@ int main(int argc, const char* argv[])
 
 	prnt(parr, 5);
 
-
+	for (int i = 0; i < size; ++i)
+	{
+		cout << *parr[i] << endl;
+	}
 
 
 
