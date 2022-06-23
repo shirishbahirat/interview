@@ -10,6 +10,8 @@ void prnt(int** arr, int size)
 	{
 		*arr = new int();
 		**arr = 10+1;
+
+		cout << **arr << endl;
 	}
 
 	return;
