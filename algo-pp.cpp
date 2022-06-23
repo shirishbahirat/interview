@@ -28,6 +28,9 @@ int main(int argc, const char* argv[])
 
 	int** parr = new int*[5]; 
 
+	int arr[] = {2,3,4,5,6};
+	int *p = arr;
+
 	prnt(parr, 5);
 
 	for (int i = 0; i < 5; ++i)
