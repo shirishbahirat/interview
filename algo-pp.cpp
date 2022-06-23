@@ -32,7 +32,7 @@ int main(int argc, const char* argv[])
 
 	int *p = arr;
 
-	int *x = arr;
+	int **x = &p;
 
 	prnt(parr, 5);
 
