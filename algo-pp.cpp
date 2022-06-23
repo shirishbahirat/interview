@@ -8,7 +8,7 @@ void prnt(int** arr, int size)
 
 	for (int i = 0; i < size; ++i)
 	{
-		*parr = new int*;
+		*arr = new int*;
 	}
 
 	return;
