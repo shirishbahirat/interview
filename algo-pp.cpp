@@ -6,7 +6,7 @@ using namespace std;
 void prnt(int** arr, int size)
 {
 
-	int* temp = &arr;
+	int* temp = *arr;
 
 	for (int i = 0; i < size; ++i)
 	{
