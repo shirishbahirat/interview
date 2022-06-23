@@ -38,7 +38,7 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < 5; ++i)
 	{
-		cout << *parr[i] << endl;
+		cout << *x[i] << endl;
 	}
 
 
