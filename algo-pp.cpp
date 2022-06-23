@@ -6,7 +6,10 @@ using namespace std;
 void prnt(int** arr, int size)
 {
 
-	cout << **arr << endl;
+	for (int i = 0; i < size; ++i)
+	{
+		cout << **arr++ << endl;
+	}
 
 	return;
 }
