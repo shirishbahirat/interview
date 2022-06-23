@@ -3,12 +3,12 @@
 using namespace std;
 
 
-void prnt(int arr**, int size)
+void prnt(int** arr, int size)
 {
 
 
 
-	
+	return;
 }
 
 
