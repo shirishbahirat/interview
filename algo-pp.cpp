@@ -35,6 +35,12 @@ int main(int argc, const char* argv[])
 	cout << m[0] << " " << m[1];
 	cout << " " << m[2] << endl;
 
+	for (int i = 0; i < 6; ++i)
+	{
+		cout << *(m + i) << " " << endl;
+	}
+	cout << endl;
+
 	int *p = arr;
 
 	int **x = &p;
