@@ -41,6 +41,7 @@ int main(int argc, const char* argv[])
 			cout << max[j][i] << " " << *(*(max + j) + i) << " ";
 		}
 	}
+
 	cout << endl;
 
 	int *m = mat[1];
