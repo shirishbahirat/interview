@@ -11,6 +11,7 @@ void prnt(int** arr, int size)
 	for (int i = 0; i < size; ++i)
 	{
 		*arr = new int();
+
 		**arr = 10+i;
 
 		cout << **arr << endl;
