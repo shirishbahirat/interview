@@ -25,6 +25,8 @@ void prnt(int** arr, int size)
 int main(int argc, const char* argv[])
 {
 
+	cout << sizeof(int) << endl;
+
 	cout << argc << " " << argv[0] << endl;
 
 	int** parr = new int*; 
