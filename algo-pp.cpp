@@ -25,7 +25,7 @@ void prnt(int** arr, int size)
 int main(int argc, const char* argv[])
 {
 
-	cout << sizeof(long int) << endl;
+	cout << sizeof(float) << endl;
 
 	cout << argc << " " << argv[0] << endl;
 
