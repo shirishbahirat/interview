@@ -35,9 +35,9 @@ int main(int argc, const char* argv[])
 	cout << m[0] << " " << m[1];
 	cout << " " << m[2] << endl;
 
-	for (int i = 0; i < 3; ++i)
+	for (int j = 0; j < 2; ++j)
 	{
-		for (int j = 0; j < 2; ++j)
+		for (int i = 0; i < 3; ++i)
 		{
 			cout << *(*(mat + j) + i) << " ";
 		}
