@@ -37,7 +37,7 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < 6; ++i)
 	{
-		cout << *(m + i) << " " << endl;
+		cout << *(m + i) << " ";
 	}
 	cout << endl;
 
