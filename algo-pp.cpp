@@ -37,7 +37,10 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << *(*(mat) + i) << " ";
+		for (int j = 0; j < 2; ++j)
+		{
+			cout << *(*(mat + j) + i) << " ";
+		}
 	}
 	cout << endl;
 
