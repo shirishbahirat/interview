@@ -43,7 +43,6 @@ int main(int argc, const char* argv[])
 	}
 	cout << endl;
 
-
 	int *m = mat[1];
 
 	cout << m[0] << " " << m[1];
