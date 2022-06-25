@@ -46,6 +46,7 @@ int main(int argc, const char* argv[])
 	int *m = mat[1];
 
 	cout << m[0] << " " << m[1];
+
 	cout << " " << m[2] << endl;
 
 	for (int j = 0; j < 2; ++j)
