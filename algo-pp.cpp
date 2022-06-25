@@ -30,6 +30,9 @@ int main(int argc, const char* argv[])
 
 	int mat[2][3] = {{1,2,3},{4,5,6}};
 
+	int max[2][3] = {1,2,3,4,5,6};
+
+
 	int *m = mat[1];
 
 	cout << m[0] << " " << m[1];
@@ -42,6 +45,7 @@ int main(int argc, const char* argv[])
 			cout << *(*(mat + j) + i) << " ";
 		}
 	}
+
 	cout << endl;
 
 	int *p = arr;
