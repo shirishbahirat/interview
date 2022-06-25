@@ -39,7 +39,5 @@ int main(int argc, const char* argv[])
 		cout << (*(*x + i)) << endl;
 	}
 
-
-
 	return 0;
 }
