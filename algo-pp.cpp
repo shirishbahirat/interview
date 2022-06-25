@@ -37,7 +37,7 @@ int main(int argc, const char* argv[])
 
 	for (int i = 0; i < 6; ++i)
 	{
-		cout << **(mat)[1] << " ";
+		cout << **(mat) << " ";
 	}
 	cout << endl;
 
