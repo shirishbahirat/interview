@@ -30,7 +30,7 @@ int main(int argc, const char* argv[])
 
 	int mat[2][3] = {{1,2,3},{4,5,6}};
 
-	int **m = &mat;
+	int **m = mat;
 
 	int *p = arr;
 
