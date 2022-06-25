@@ -32,6 +32,8 @@ int main(int argc, const char* argv[])
 
 	int *m = mat[0];
 
+	cout << m[0] << " " << m[1] << endl;
+	
 	int *p = arr;
 
 	int **x = &p;
