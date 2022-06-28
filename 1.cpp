@@ -30,7 +30,7 @@ int main(int argc, const char* argv[])
 
 		if (it != distance.end())
 		{
-			cout << temp << " " << *it << endl;
+			cout << temp << " " << arr[i] << endl;
 		}
 
 	}
