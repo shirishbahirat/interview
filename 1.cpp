@@ -23,7 +23,7 @@ int main(int argc, const char* argv[])
 	{
 		int temp = 17 - arr[i];
 
-		map <int, int>::it = distance.find(temp);  
+		map <int, int>::iterator it = distance.find(temp);  
 
 		if (it != distance.end())
 		{
