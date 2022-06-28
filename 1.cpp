@@ -21,11 +21,17 @@ int main(int argc, const char* argv[])
 		distance[temp] = i;
 	}
 
+
 	for (int i = 0; i < size; ++i)
 	{
 		int temp = 17 - arr[i];
 
 		auto it = distance.find(temp);  
+
+		if it != distance.end()
+		{
+			cout << temp << " " << *it << endl;
+		}
 
 	}
 
