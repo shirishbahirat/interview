@@ -17,9 +17,16 @@ int main(int argc, const char* argv[])
 	for (int i = 0; i < size; ++i)
 	{
 		int temp = 17 - arr[i];
-		map[temp] = 
+		map[temp] = i;
 	}
 
+	for (int i = 0; i < size; ++i)
+	{
+		int temp = 17 - arr[i];
+
+		auto it = distance.find(temp);  
+
+	}
 
 	return 0;
 
