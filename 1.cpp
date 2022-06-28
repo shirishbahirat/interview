@@ -18,7 +18,7 @@ int main(int argc, const char* argv[])
 	{
 		int temp = 17 - arr[i];
 
-		map[temp] = i;
+		distance[temp] = i;
 	}
 
 	for (int i = 0; i < size; ++i)
