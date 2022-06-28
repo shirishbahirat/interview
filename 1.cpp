@@ -28,7 +28,7 @@ int main(int argc, const char* argv[])
 
 		auto it = distance.find(temp);  
 
-		if it != distance.end()
+		if (it != distance.end())
 		{
 			cout << temp << " " << *it << endl;
 		}
