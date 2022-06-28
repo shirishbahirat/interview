@@ -19,12 +19,11 @@ int main(int argc, const char* argv[])
 		distance[arr[i]] = i;
 	}
 
-
 	for (int i = 0; i < size; ++i)
 	{
 		int temp = 17 - arr[i];
 
-		auto it = distance.find(temp);  
+		map <int, int>::it = distance.find(temp);  
 
 		if (it != distance.end())
 		{
