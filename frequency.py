@@ -44,7 +44,7 @@ print(ddr6_per_pin_bw_GBps * 384 * number_of_dimm)
 
 print("nvlink BW GB/s", 900)
 
-print (cuda_core_count, "cuda core memory BW GB/s", per_cuda_core_memory_processing * cuda_core_count)
+print (cuda_core_count, "cuda core memory BW GB/s", int(per_cuda_core_memory_processing * cuda_core_count))
 
 
 '''
