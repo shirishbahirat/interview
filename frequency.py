@@ -8,7 +8,7 @@ bits = 64
 
 ddr_pins = 1
 
-ddr6_per_pin_bw_GBps = 18/8
+ddr6_per_pin_bw_GBps = 12/8/32
 
 gen6_x16_BW_GBps_duplex = 256
 
@@ -32,4 +32,4 @@ print("network BW total GB/w", network_bw_800GBps)
 
 print("per core network BW GB/w", network_bw_800GBps/core_count)
 
-print(bw_gbpes_per_dimmm * number_of_dimm)
+print(ddr6_per_pin_bw_GBps * 280 * number_of_dimm)
