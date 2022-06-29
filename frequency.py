@@ -23,6 +23,9 @@ bw_gbpes_per_dimmm = 12.8
 
 per_core_memory_processing = clock_speed * bits/8 * 2
 
+per_cuda_core_memory_processing = gpu_clock_speed * bits/8 * 2
+
+
 print ("per core memory BW GB/s", per_core_memory_processing)
 
 print (core_count, "core memory BW GB/s", per_core_memory_processing * core_count)
@@ -41,7 +44,7 @@ print(ddr6_per_pin_bw_GBps * 384 * number_of_dimm)
 
 print("nvlink BW GB/s", 900)
 
-print (cuda_core_count, "cuda core memory BW GB/s", per_core_memory_processing * gpu_clock_speed)
+print (cuda_core_count, "cuda core memory BW GB/s", per_cuda_core_memory_processing * cuda_core_count)
 
 
 '''
