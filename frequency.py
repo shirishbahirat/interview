@@ -1,8 +1,11 @@
 
+cuda_core_count = 10496
 
 core_count = 64
 
 clock_speed = 4
+
+gpu_clock_speed = 1.6
 
 bits = 64
 
@@ -38,5 +41,11 @@ print(ddr6_per_pin_bw_GBps * 384 * number_of_dimm)
 
 print("nvlink BW GB/s", 900)
 
+print (cuda_core_count, "cuda core memory BW GB/s", per_core_memory_processing * gpu_clock_speed)
+
+
+'''
 nv link 6.25 GB/s 
 pcie 4.0 2.0 GB/s 
+nvnet 
+'''
