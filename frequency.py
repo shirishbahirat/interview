@@ -2,17 +2,19 @@
 
 core_count = 64
 
-clock_speed = 3.2
+clock_speed = 4
 
 bits = 64
 
 ddr_pins = 1
 
-ddr6_per_pin_bw_GBps = 12/8/32
+ddr6_per_pin_bw_GBps = 24/8
 
 gen6_x16_BW_GBps_duplex = 256
 
-number_of_dimm = 8
+number_of_dimm = 1
+
+capacity_per_dimm_gb = 24
 
 bw_gbpes_per_dimmm = 12.8
 
@@ -32,4 +34,9 @@ print("network BW total GB/w", network_bw_800GBps)
 
 print("per core network BW GB/w", network_bw_800GBps/core_count)
 
-print(ddr6_per_pin_bw_GBps * 280 * number_of_dimm)
+print(ddr6_per_pin_bw_GBps * 384 * number_of_dimm)
+
+print("nvlink BW GB/s", 900)
+
+nv link 6.25 GB/s 
+pcie 4.0 2.0 GB/s 
