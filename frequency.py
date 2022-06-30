@@ -25,6 +25,9 @@ per_core_memory_processing = clock_speed * bits/8 * 2
 
 per_cuda_core_memory_processing = gpu_clock_speed * bits/8 * 2
 
+hbm_die_bw_GBps = 256
+
+number_of_hbm_dies = 8
 
 print ("per core memory BW GB/s", per_core_memory_processing)
 
@@ -46,6 +49,7 @@ print("nvlink BW GB/s", 900)
 
 print (cuda_core_count, "cuda core memory BW GB/s", int(per_cuda_core_memory_processing * cuda_core_count))
 
+print ("hbm bandwidth GB/s", hbm_die_bw_GBps*number_of_hbm_dies)
 
 '''
 nv link 6.25 GB/s 
