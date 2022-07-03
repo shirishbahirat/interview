@@ -10,7 +10,7 @@ struct node {
 	int index;
 };
 
-both = prev ^ next
+//both = prev ^ next
 
 
 int main(int argc, char* argv[])
