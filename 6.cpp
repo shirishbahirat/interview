@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 
 	head = insert(head, 10, prev, next);
 
-	cout << head->index << endl;
+	cout << head->index << prev << endl;
 
 
 
