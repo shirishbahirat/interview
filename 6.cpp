@@ -18,9 +18,10 @@ node* insert(node* head, int index, node* &prev, node* &next)
 	if (head == nullptr)
 	{
 		node* temp = new node(index);
+		head = temp;
 	}
 
-	head = temp;
+	
 
 	return head;
 }
