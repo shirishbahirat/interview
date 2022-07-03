@@ -22,6 +22,8 @@ node* insert(node* head, int index)
 	{
 		node* temp = new node(index);
 		head = temp;
+		prev = (*node) 0x0;
+		next = (*node) 0x0;
 	}
 
 	return head;
