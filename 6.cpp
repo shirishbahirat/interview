@@ -24,8 +24,6 @@ node* insert(node* head, int index)
 		head = temp;
 	}
 
-	prev = (node*)0x10;
-
 	return head;
 }
 
