@@ -13,7 +13,10 @@ struct node {
 	~node(){}
 };
 
-node* insert(node* head, int index, node* prev, node* next)
+node* prev;
+node* next;
+
+node* insert(node* head, int index)
 {
 	if (head == nullptr)
 	{
@@ -34,9 +37,9 @@ int main(int argc, char* argv[])
 	node* next = 0x0;
 
 
-	head = insert(head, 10, prev, next);
+	head = insert(head, 10);
 
-	cout << head->index << " " << prev << endl;
+	cout << head->index << endl;
 
 
 
