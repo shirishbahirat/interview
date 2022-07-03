@@ -24,6 +24,13 @@ node* insert(node* head, int index)
 		head = temp;
 	}
 
+	node* curr = head;
+
+	while(curr->next)
+	{
+		curr = curr->next;
+	}
+
 	return head;
 }
 
@@ -36,6 +43,8 @@ int main(int argc, char* argv[])
 
 
 	head = insert(head, 10);
+
+	head = insert(head, 20);
 
 	cout << head->index << endl;
 
