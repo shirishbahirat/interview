@@ -8,10 +8,17 @@ using namespace std;
 struct node {
 	node* both;
 	int index;
+
+	node(int d):index(d){}
+	~node(){}
 };
 
 node* insert(node* head, int index)
 {
+	if (head == nullptr)
+	{
+		node* temp = new node(index);
+	}
 
 
 	return head;
