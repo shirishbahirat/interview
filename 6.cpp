@@ -26,9 +26,9 @@ node* insert(node* head, int index)
 
 	node* curr = head;
 
-	while(curr->next)
+	while(curr->both)
 	{
-		curr = curr->next;
+		curr = curr->both;
 	}
 
 	return head;
