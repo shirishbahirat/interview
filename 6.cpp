@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 {
 
 	cout << (1 ^ 3) << endl;
-	cout << (2 ^ 1) << endl;
+	cout << (2 ^ 3) << endl;
 
     return 0;
 }
