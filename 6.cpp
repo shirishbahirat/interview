@@ -13,7 +13,7 @@ struct node {
 int main(int argc, char* argv[])
 {
 
-	cout << (3 ^ 3) << endl;
+	cout << (1 ^ 3) << endl;
 
     return 0;
 }
