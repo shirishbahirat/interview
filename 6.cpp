@@ -21,7 +21,7 @@ node* insert(node* head, int index, node* prev, node* next)
 		head = temp;
 	}
 
-	
+	prev = 0x10;
 
 	return head;
 }
@@ -36,8 +36,9 @@ int main(int argc, char* argv[])
 
 	head = insert(head, 10, prev, next);
 
-	cout << (0x1 ^ 0x3) << endl;
-	cout << (0x0 ^ 0x3) << endl;
+	cout << head->index << endl;
+
+
 
     return 0;
 }
