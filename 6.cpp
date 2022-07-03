@@ -13,7 +13,7 @@ struct node {
 	~node(){}
 };
 
-node* insert(node* head, int index, node* &prev, node* &next)
+node* insert(node* head, int index, node* prev, node* next)
 {
 	if (head == nullptr)
 	{
