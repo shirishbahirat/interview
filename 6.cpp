@@ -10,14 +10,13 @@ struct node {
 	int index;
 };
 
-//both = prev ^ next
 
 
 int main(int argc, char* argv[])
 {
 
-	cout << (1 ^ 3) << endl;
-	cout << (nullptr ^ 3) << endl;
+	cout << (0x1 ^ 0x3) << endl;
+	cout << (0x0 ^ 0x3) << endl;
 
     return 0;
 }
