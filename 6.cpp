@@ -24,13 +24,6 @@ node* insert(node* head, int index, node* prev)
 		head = prev;
 	}
 
-	while(curr->both)
-	{
-		prev = curr;
-		curr = curr->both;
-	}
-
-	curr = new node(index);
 
 	return head;
 }
