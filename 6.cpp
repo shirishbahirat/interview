@@ -16,7 +16,7 @@ struct node {
 node* prev = nullptr;
 node* next = nullptr;
 
-node* insert(node* head, int index, node* prev)
+node* insert(node* head, int index)
 {
 	if (head == nullptr)
 	{
@@ -32,12 +32,10 @@ int main(int argc, char* argv[])
 {
 
 	node* head = nullptr;
-	node* prev = 0x0;
-	node* next = 0x0;
 
-	head = insert(head, 10, prev);
+	head = insert(head, 10);
 
-	head = insert(head, 20, prev);
+	head = insert(head, 20);
 
 	cout << head->index << endl;
 
