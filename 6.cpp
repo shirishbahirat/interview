@@ -31,7 +31,7 @@ node* insert(node* head, int index)
 
 	while(curr->both)
 	{
-		node* next = (((void*)pre) ^ (void*)(curr->both));
+		node* next =(void*)pre ^ (void*)(curr->both);
 
 		curr = next;
 	}
