@@ -21,7 +21,19 @@ node* insert(node* head, int index)
 	if (head == nullptr)
 	{
 		pre = new node(index);
+
 		head = pre;
+
+		return head;
+	}
+
+	node* curr = head;
+
+	while(curr->both)
+	{
+		node* next = pre ^ curr->both;
+
+		curr = next;
 	}
 
 
