@@ -31,11 +31,25 @@ node* insert(node* head, int index)
 
 	while(curr->both)
 	{
-		node* next =(void*)pre ^ (void*)(curr->both);
+		uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre);
+		uint64_t add_curr =  reinterpret_cast<uint64_t>(curr->both);
+		uint64_t addr_next = (addr_prev ^ add_curr);
+
+		node* next =  reinterpret_cast<node*>(addr_next);
 
 		curr = next;
 	}
 
+	node* next = new node(index);
+
+	next->both = pre;
+
+	uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
+	uint64_t add_next =  reinterpret_cast<uint64_t>(curr);
+
+	uint64_t addr_both = (addr_prev ^ add_next);
+
+	pre->both = reinterpret_cast<node*>(addr_both);
 
 	return head;
 }
