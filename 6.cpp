@@ -42,6 +42,9 @@ void insert(int index)
 
 	pre->both = reinterpret_cast<node*>(addr_both);
 
+	pre->next = both;
+	next->prev = pre;
+
 	next->both = pre;
 
 	pre = next;
