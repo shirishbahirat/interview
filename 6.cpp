@@ -13,8 +13,8 @@ struct node {
 	~node(){}
 };
 
-node* prev = nullptr;
-node* next = nullptr;
+node* prev;
+node* next;
 
 node* insert(node* head, int index)
 {
