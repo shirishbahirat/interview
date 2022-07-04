@@ -13,15 +13,15 @@ struct node {
 	~node(){}
 };
 
-node* prev;
-node* next;
+node* pre;
+node* nxt;
 
 node* insert(node* head, int index)
 {
 	if (head == nullptr)
 	{
-		prev = new node(index);
-		head = prev;
+		pre = new node(index);
+		head = pre;
 	}
 
 
