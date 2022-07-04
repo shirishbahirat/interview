@@ -38,7 +38,11 @@ node* insert(node* head, int index)
 		node* next =  reinterpret_cast<node*>(addr_next);
 
 		curr = next;
+
+		cout << curr->index << " ";
 	}
+
+	cout << endl;
 
 	node* next = new node(index);
 
@@ -62,6 +66,8 @@ int main(int argc, char* argv[])
 	head = insert(head, 10);
 
 	head = insert(head, 20);
+
+	head = insert(head, 30);
 
 	cout << head->index << endl;
 
