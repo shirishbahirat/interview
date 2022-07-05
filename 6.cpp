@@ -19,8 +19,19 @@ struct node {
 };
 
 node* pre = nullptr;
-node* nxt = nullptr;
 node* head = nullptr;
+
+node* xor_both(node* pre, node* next)
+{
+
+	uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
+	uint64_t add_next =  reinterpret_cast<uint64_t>(next);
+
+	uint64_t addr_both = (addr_prev ^ add_next);
+
+	return reinterpret_cast<node*>(addr_both);
+
+}
 
 void insert(int index)
 {
@@ -35,14 +46,10 @@ void insert(int index)
 
 	node* next = new node(index);
 
-	uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
-	uint64_t add_next =  reinterpret_cast<uint64_t>(next);
 
-	uint64_t addr_both = (addr_prev ^ add_next);
+	pre->both = xor_both(pre, next);
 
-	pre->both = reinterpret_cast<node*>(addr_both);
-
-	pre->next = both;
+	pre->next = next;
 	next->prev = pre;
 
 	next->both = pre;
@@ -61,7 +68,18 @@ int main(int argc, char* argv[])
 
 	insert(20);
 
-	cout << head->index << endl;
+	cout << head->next->index << endl;
+	cout << "rev " << head->next->prev->index << endl;
+
+	insert(30);
+
+	cout << head->next->next->index << endl;
+	cout << "rev " << head->next->next->prev->index << endl;
+
+	insert(40);
+
+	cout << head->next->next->next->index << endl;
+	cout << "rev " << head->next->next->next->prev->index << endl;
 
     return 0;
 }
