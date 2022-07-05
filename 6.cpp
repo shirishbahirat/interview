@@ -6,16 +6,16 @@
 using namespace std;
 
 struct node {
-	node* both;
-	node* next;
-	node* prev;
-	int index;
+    node* both;
+    node* next;
+    node* prev;
+    int index;
 
-	node(int d):index(d), 
-				both(nullptr),
-				next(nullptr),
-				prev(nullptr){}
-	~node(){}
+    node(int d):index(d), 
+                both(nullptr),
+                next(nullptr),
+                prev(nullptr){}
+    ~node(){}
 };
 
 node* pre = nullptr;
@@ -24,62 +24,62 @@ node* head = nullptr;
 node* xor_both(node* pre, node* next)
 {
 
-	uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
+    uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
 
-	uint64_t add_next =  reinterpret_cast<uint64_t>(next);
+    uint64_t add_next =  reinterpret_cast<uint64_t>(next);
 
-	uint64_t addr_both = (addr_prev ^ add_next);
+    uint64_t addr_both = (addr_prev ^ add_next);
 
-	return reinterpret_cast<node*>(addr_both);
+    return reinterpret_cast<node*>(addr_both);
 
 }
 
 void insert(int index)
 {
-	if (head == nullptr)
-	{
-		pre = new node(index);
+    if (head == nullptr)
+    {
+        pre = new node(index);
 
-		head = pre;
+        head = pre;
 
-		return;
-	}
+        return;
+    }
 
-	node* next = new node(index);
+    node* next = new node(index);
 
-	pre->both = xor_both(pre, next);
+    pre->both = xor_both(pre, next);
 
-	pre->next = next;
-	next->prev = pre;
+    pre->next = next;
+    next->prev = pre;
 
-	next->both = pre;
+    next->both = pre;
 
-	pre = next;
+    pre = next;
 
-	return;
+    return;
 }
 
 int main(int argc, char* argv[])
 {
 
-	insert(10);
+    insert(10);
 
-	cout << head->index << endl;
+    cout << head->index << endl;
 
-	insert(20);
+    insert(20);
 
-	cout << head->next->index << endl;
-	cout << "rev " << head->next->prev->index << endl;
+    cout << head->next->index << endl;
+    cout << "rev " << head->next->prev->index << endl;
 
-	insert(30);
+    insert(30);
 
-	cout << head->next->next->index << endl;
-	cout << "rev " << head->next->next->prev->index << endl;
+    cout << head->next->next->index << endl;
+    cout << "rev " << head->next->next->prev->index << endl;
 
-	insert(40);
+    insert(40);
 
-	cout << head->next->next->next->index << endl;
-	cout << "rev " << head->next->next->next->prev->index << endl;
+    cout << head->next->next->next->index << endl;
+    cout << "rev " << head->next->next->next->prev->index << endl;
 
     return 0;
 }
