@@ -19,6 +19,7 @@ struct node {
                 both(nullptr),
                 next(nullptr),
                 prev(nullptr){}
+                
     ~node(){}
 };
 
