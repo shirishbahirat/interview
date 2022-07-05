@@ -19,7 +19,10 @@ struct node {
 };
 
 node* pre = nullptr;
+
 node* head = nullptr;
+
+node* next = nullptr;
 
 node* xor_both(node* pre, node* next)
 {
