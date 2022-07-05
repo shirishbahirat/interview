@@ -85,6 +85,7 @@ int main(int argc, char* argv[])
     insert(40);
 
     cout << head->next->next->next->index << endl;
+
     cout << "rev " << head->next->next->next->prev->index << endl;
 
     return 0;
