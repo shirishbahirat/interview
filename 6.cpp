@@ -73,6 +73,7 @@ int main(int argc, char* argv[])
     insert(20);
 
     cout << head->next->index << endl;
+
     cout << "rev " << head->next->prev->index << endl;
 
     insert(30);
