@@ -46,7 +46,6 @@ void insert(int index)
 
 	node* next = new node(index);
 
-
 	pre->both = xor_both(pre, next);
 
 	pre->next = next;
