@@ -6,9 +6,13 @@
 using namespace std;
 
 struct node {
+
     node* both;
+
     node* next;
+
     node* prev;
+
     int index;
 
     node(int d):index(d), 
