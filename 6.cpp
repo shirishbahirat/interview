@@ -17,7 +17,6 @@ struct node {
 
     node(int d):index(d), 
                 both(nullptr),
-                
                 next(nullptr),
                 prev(nullptr){}
     ~node(){}
