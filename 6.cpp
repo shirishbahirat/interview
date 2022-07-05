@@ -25,6 +25,7 @@ node* xor_both(node* pre, node* next)
 {
 
 	uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
+
 	uint64_t add_next =  reinterpret_cast<uint64_t>(next);
 
 	uint64_t addr_both = (addr_prev ^ add_next);
