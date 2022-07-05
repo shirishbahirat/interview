@@ -53,6 +53,7 @@ void insert(int index)
     pre->both = xor_both(pre, next);
 
     pre->next = next;
+
     next->prev = pre;
 
     next->both = pre;
