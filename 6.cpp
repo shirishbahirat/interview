@@ -19,7 +19,7 @@ struct node {
                 both(nullptr),
                 next(nullptr),
                 prev(nullptr){}
-                
+
     ~node(){}
 };
 
@@ -84,6 +84,7 @@ int main(int argc, char* argv[])
     insert(30);
 
     cout << head->next->next->index << endl;
+
 
     cout << "rev " << head->next->next->prev->index << endl;
 
