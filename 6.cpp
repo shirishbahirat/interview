@@ -105,5 +105,7 @@ int main(int argc, char* argv[])
 
     insert(40);
 
+    print(head);
+
     return 0;
 }
