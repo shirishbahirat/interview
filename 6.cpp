@@ -32,7 +32,7 @@ node* next = nullptr;
 node* xor_both(node* pre, node* next)
 {
 
-    if (pre == nullptr) return next;
+    //if (pre == nullptr) return next;
 
     uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
 
