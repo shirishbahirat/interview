@@ -56,15 +56,20 @@ void insert(int index)
     if (head == nullptr)
     {
         head = curr;
-        
-        pre = nullptr;
 
         return;
     }
 
     cout << "insert " << pre->index << " " << curr->index << endl;
 
-    pre->both = xor_both(pre->both, curr);
+    if (pre)
+    {
+        pre->both = xor_both(pre->both, curr);
+    }
+    else
+    {
+        pre->both = curr;
+    }
 
     pre = curr;
 
