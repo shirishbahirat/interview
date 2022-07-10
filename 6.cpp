@@ -32,6 +32,8 @@ node* next = nullptr;
 node* xor_both(node* pre, node* next)
 {
 
+    if (pre == nullptr) return next;
+
     uint64_t addr_prev =  reinterpret_cast<uint64_t>(pre->both);
 
     uint64_t add_next =  reinterpret_cast<uint64_t>(next);
@@ -96,6 +98,12 @@ int main(int argc, char* argv[])
 {
 
     insert(10);
+
+    insert(20);
+
+    insert(30);
+
+    insert(40);
 
     return 0;
 }
