@@ -80,8 +80,6 @@ void print(node* head)
 
     node* curr = head;
 
-    cout << "print " << head->index << endl;
-
     node* next = curr->both;
 
     while(curr != nullptr)
