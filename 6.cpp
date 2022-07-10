@@ -51,6 +51,8 @@ void insert(int index)
 
     curr->both = pre;
 
+    cout << "insert " << pre->index << endl;
+
     if (head == nullptr)
     {
         head = curr;
