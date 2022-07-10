@@ -82,7 +82,7 @@ void print(node* head)
 
     node* next = curr->both;
 
-    while(next != pre)
+    while(next->both != pre)
     {
 
         next = xor_both(curr->both, prev);
