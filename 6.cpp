@@ -76,6 +76,7 @@ void print(node* head)
 
     node* next = curr->both;
 
+    /*
     while(next != pre)
     {
 
@@ -86,6 +87,7 @@ void print(node* head)
         prev = curr;
 
     }
+    */
 
     return;
 }
