@@ -62,7 +62,6 @@ void insert(int index)
 
     cout << "insert " << pre->index << " " << curr->index << endl;
 
-
     pre->both = xor_both(pre->both, curr);
 
     pre = curr;
