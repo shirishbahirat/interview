@@ -15,20 +15,20 @@ node* xor_both(node* x, node* y)
 		^ reinterpret_cast<uintptr_t>(y));
 }
 
-void insert(node** head_ref, int data)
+void insert(node** head, int data)
 {
 
 	node* new_node = new node();
 	new_node -> data = data;
 
-	new_node -> both = *head_ref;
+	new_node -> both = *head;
 
-	if (*head_ref != NULL) {
-		(*head_ref)
-			-> both = xor_both(new_node, (*head_ref) -> both);
+	if (*head != NULL) {
+		(*head)
+			-> both = xor_both(new_node, (*head) -> both);
 	}
 
-	*head_ref = new_node;
+	*head = new_node;
 }
 
 void print_list(node* head)
