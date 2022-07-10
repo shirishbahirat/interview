@@ -3,8 +3,8 @@
 
 using namespace std;
 
-class node {
-	public : int data;
+struct node {
+	int data;
 	node* both;
 };
 
