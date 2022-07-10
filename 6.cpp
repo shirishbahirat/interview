@@ -87,7 +87,7 @@ void print(node* head)
     while((next != pre) || (next != nullptr))
     {
 
-        cout << "xor start " << prev << endl;
+        cout << "xor start " << prev << " " << curr->both << endl;
 
         next = xor_both(curr->both, prev);
 
