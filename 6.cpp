@@ -72,7 +72,7 @@ void print(node* head)
 
     node* curr = head;
 
-    cout << head->data << endl;
+    cout << head->index << endl;
 
     node* next = curr->both;
 
