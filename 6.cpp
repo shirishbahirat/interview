@@ -74,6 +74,8 @@ void insert(int index)
 void print(node* head)
 {
 
+    if (head == nullptr) return;
+
     node* prev = nullptr;
 
     node* curr = head;
