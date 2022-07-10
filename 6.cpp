@@ -92,6 +92,8 @@ void print(node* head)
 
         prev = curr;
 
+        curr = next;
+
     }
 
     return;
