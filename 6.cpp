@@ -97,11 +97,5 @@ int main(int argc, char* argv[])
 
     insert(10);
 
-    insert(20);
-
-    insert(30);
-
-    insert(40);
-
     return 0;
 }
