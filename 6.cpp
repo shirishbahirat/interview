@@ -87,11 +87,12 @@ void print(node* head)
     while(curr != nullptr)
     {
 
+        cout << "print " << curr->index << endl;
+
         cout << "xor start " << prev << " " << curr->both << endl;
 
         next = xor_both(curr->both, prev);
 
-        cout << "print " << next->index << endl;
  
         cout << "xor done" << endl;
 
