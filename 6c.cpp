@@ -1,25 +1,18 @@
-// C++ Implementation of Memory
-// efficient Doubly Linked List
-
-// Importing libraries
 #include <iostream>
 #include <cinttypes>
 
 using namespace std;
 
-// Class 1
-// Helper class(Node structure)
-class Node {
+class node {
 	public : int data;
-	// Xor of next node and previous node
-	Node* xnode;
+	node* xnode;
 };
 
 // Method 1
 // It returns Xored value of the node addresses
-Node* Xor(Node* x, Node* y)
+node* Xor(node* x, node* y)
 {
-	return reinterpret_cast<Node*>(
+	return reinterpret_cast<node*>(
 		reinterpret_cast<uintptr_t>(x)
 		^ reinterpret_cast<uintptr_t>(y));
 }
@@ -27,10 +20,10 @@ Node* Xor(Node* x, Node* y)
 // Method 2
 // Insert a node at the start of the Xored LinkedList and
 // mark the newly inserted node as head
-void insert(Node** head_ref, int data)
+void insert(node** head_ref, int data)
 {
 	// Allocate memory for new node
-	Node* new_node = new Node();
+	node* new_node = new node();
 	new_node -> data = data;
 
 	// Since new node is inserted at the
@@ -55,11 +48,11 @@ void insert(Node** head_ref, int data)
 // Method 3
 // It simply prints contents of doubly linked
 // list in forward direction
-void printList(Node* head)
+void printList(node* head)
 {
-	Node* curr = head;
-	Node* prev = NULL;
-	Node* next;
+	node* curr = head;
+	node* prev = NULL;
+	node* next;
 
 	cout << "The nodes of Linked List are: \n";
 
@@ -83,7 +76,7 @@ void printList(Node* head)
 // main driver method
 int main()
 {
-	Node* head = NULL;
+	node* head = NULL;
 	insert(&head, 10);
 	insert(&head, 100);
 	insert(&head, 1000);
