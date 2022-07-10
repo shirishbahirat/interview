@@ -66,7 +66,7 @@ void printList(Node* head)
 	// Till condition holds true
 	while (curr != NULL) {
 		// print current node
-		cout << curr -> data << " ";
+		cout << curr -> data << " " << endl;
 
 		// get address of next node: curr->xnode is
 		// next^prev, so curr->xnode^prev will be
