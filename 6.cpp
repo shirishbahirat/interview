@@ -60,8 +60,6 @@ void insert(int index)
         return;
     }
 
-    cout << "insert " << pre->index << " " << curr->index << endl;
-
     if (pre)
     {
         pre->both = xor_both(pre->both, curr);
@@ -72,6 +70,8 @@ void insert(int index)
     }
 
     pre = curr;
+
+    cout << "insert " << pre->index << " " << curr->index << endl;
 
     return;
 }
