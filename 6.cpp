@@ -95,6 +95,8 @@ void print(node* head)
 
     }
 
+    cout << "done" << endl;
+
     return;
 }
 
