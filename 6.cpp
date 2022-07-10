@@ -89,11 +89,14 @@ void print(node* head)
 
         next = xor_both(curr->both, prev);
 
-        cout << "print " << next->index << endl;
+        if (next)
+        {
+            cout << "print " << next->index << endl;
 
-        prev = curr;
+            prev = curr;
 
-        curr = next;
+            curr = next;
+        }
 
     }
 
