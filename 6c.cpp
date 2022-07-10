@@ -5,11 +5,9 @@ using namespace std;
 
 class node {
 	public : int data;
-	node* xnode;
+	node* both;
 };
 
-// Method 1
-// It returns Xored value of the node addresses
 node* Xor(node* x, node* y)
 {
 	return reinterpret_cast<node*>(
@@ -27,18 +25,18 @@ void insert(node** head_ref, int data)
 	new_node -> data = data;
 
 	// Since new node is inserted at the
-	// start , xnode of new node will always be
+	// start , both of new node will always be
 	// Xor of current head and NULL
-	new_node -> xnode = *head_ref;
+	new_node -> both = *head_ref;
 
-	// If linkedlist is not empty, then xnode of
+	// If linkedlist is not empty, then both of
 	// present head node will be Xor of new node
 	// and node next to current head */
 	if (*head_ref != NULL) {
-		// *(head_ref)->xnode is Xor of (NULL and next).
+		// *(head_ref)->both is Xor of (NULL and next).
 		// If we Xor Null with next we get next
 		(*head_ref)
-			-> xnode = Xor(new_node, (*head_ref) -> xnode);
+			-> both = Xor(new_node, (*head_ref) -> both);
 	}
 
 	// Change head
@@ -61,10 +59,10 @@ void printList(node* head)
 		// print current node
 		cout << curr -> data << " " << endl;
 
-		// get address of next node: curr->xnode is
-		// next^prev, so curr->xnode^prev will be
+		// get address of next node: curr->both is
+		// next^prev, so curr->both^prev will be
 		// next^prev^prev which is next
-		next = Xor(prev, curr -> xnode);
+		next = Xor(prev, curr -> both);
 
 		// update prev and curr for next iteration
 		prev = curr;
