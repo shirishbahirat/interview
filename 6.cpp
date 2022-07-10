@@ -65,6 +65,28 @@ void insert(int index)
     return;
 }
 
+void print(node* head)
+{
+
+    node* prev = head;
+
+    node* curr = head;
+
+    cout << head->data << endl;
+
+    node* next = curr->both;
+
+    while(next != pre)
+    {
+
+        next = xor_both(curr->both, prev);
+
+        
+    }
+
+    return;
+}
+
 int main(int argc, char* argv[])
 {
 
