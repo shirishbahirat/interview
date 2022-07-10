@@ -60,9 +60,11 @@ void insert(int index)
         return;
     }
 
-    cout << "insert " << pre->index << " " << curr->index << endl;
+    cout << "insert " << pre->index << " " << curr->index << " ";
 
     pre->both = xor_both(pre->both, curr);
+
+    node* temp = xor_both(curr->both, pre);
 
     pre = curr;
 
