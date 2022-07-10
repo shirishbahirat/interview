@@ -68,7 +68,7 @@ void insert(int index)
 void print(node* head)
 {
 
-    node* prev = head;
+    node* prev = nullptr;
 
     node* curr = head;
 
@@ -81,7 +81,10 @@ void print(node* head)
 
         next = xor_both(curr->both, prev);
 
-        
+        cout << next->index << endl;
+
+        prev = curr;
+
     }
 
     return;
