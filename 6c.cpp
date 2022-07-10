@@ -37,7 +37,7 @@ void print_list(node* head)
 	node* prev = NULL;
 	node* next;
 
-	cout << "The nodes of Linked List are: \n";
+	cout << "The nodes in the linked list are: \n";
 
 	while (curr != NULL) {
 		cout << curr -> data << " " << endl;
