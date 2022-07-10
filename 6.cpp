@@ -91,11 +91,12 @@ void print(node* head)
 
         if (next)
         {
-            cout << "print " << next->index << endl;
-
             prev = curr;
 
             curr = next;
+
+            cout << "print " << next->index << endl;
+
         }
 
     }
