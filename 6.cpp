@@ -66,6 +66,8 @@ void insert(int index)
 
     node* temp = xor_both(curr->both, pre);
 
+    cout << temp->index << endl;
+
     pre = curr;
 
     return;
