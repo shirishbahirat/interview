@@ -78,17 +78,16 @@ void print(node* head)
 
     node* curr = head;
 
-    cout << head->index << endl;
+    cout << "print " << head->index << endl;
 
     node* next = curr->both;
 
-    
     while(next != pre)
     {
 
         next = xor_both(curr->both, prev);
 
-        cout << next->index << endl;
+        cout << "print " << next->index << endl;
 
         prev = curr;
 
