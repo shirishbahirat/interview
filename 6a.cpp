@@ -9,16 +9,10 @@ struct node {
 
     node* both;
 
-    node* next;
-
-    node* prev;
-
     int index;
 
     node(int d):index(d), 
-                both(nullptr),
-                next(nullptr),
-                prev(nullptr){}
+                both(nullptr) {}
 
     ~node(){}
 };
@@ -52,10 +46,6 @@ void insert(int index)
     node* curr = new node(index);
 
     curr->both = pre;
-    curr->prev = pre;
-
-    if (pre)
-        pre->next = curr;
 
     if (head == nullptr)
     {
@@ -86,7 +76,9 @@ void print(node* head)
     {
         cout << "print " <<temp->index << " ";
 
-        cout << temp << " " << temp->next << " ";
+        if (temp->both == prev) break;
+ 
+        cout << temp << " ";
 
         cout << xor_both(prev, temp->both) << endl;
 
@@ -95,7 +87,7 @@ void print(node* head)
         temp = xor_both(prev, temp->both);
 
         prev = ptemp;
- 
+
     }
 
     cout << "done" << endl;
