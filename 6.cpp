@@ -57,7 +57,7 @@ void insert(int index)
     {
         head = curr;
         
-        pre = curr;
+        pre = nullptr;
 
         return;
     }
@@ -91,7 +91,6 @@ void print(node* head)
 
         next = xor_both(curr->both, prev);
 
- 
         cout << "xor done" << endl;
 
         if (next)
