@@ -57,7 +57,7 @@ void insert(int index)
     {
         head = curr;
 
-        pre = curr;
+        pre = head;
 
         return;
     }
