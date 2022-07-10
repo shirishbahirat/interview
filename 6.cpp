@@ -57,17 +57,12 @@ void insert(int index)
     {
         head = curr;
 
+        pre = curr;
+
         return;
     }
 
-    if (pre)
-    {
-        pre->both = xor_both(pre->both, curr);
-    }
-    else
-    {
-        pre->both = curr;
-    }
+    pre->both = xor_both(pre->both, curr);
 
     pre = curr;
 
