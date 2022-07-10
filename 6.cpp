@@ -44,26 +44,23 @@ node* xor_both(node* pre, node* next)
 
 void insert(int index)
 {
+    
+    node* curr = new node(index);
+
+    curr->both = pre;
+
     if (head == nullptr)
     {
-        pre = new node(index);
-
-        head = pre;
+        head = curr;
+        
+        pre = curr;
 
         return;
     }
 
-    node* next = new node(index);
+    pre->both = xor_both(pre->both, curr);
 
-    pre->both = xor_both(pre, next);
-
-    pre->next = next;
-
-    next->prev = pre;
-
-    next->both = pre;
-
-    pre = next;
+    pre = curr;
 
     return;
 }
@@ -73,25 +70,11 @@ int main(int argc, char* argv[])
 
     insert(10);
 
-    cout << head->index << endl;
-
     insert(20);
-
-    cout << head->next->index << endl;
-
-    cout << "rev " << head->next->prev->index << endl;
 
     insert(30);
 
-    cout << head->next->next->index << endl;
-
-    cout << "rev " << head->next->next->prev->index << endl;
-
     insert(40);
-
-    cout << head->next->next->next->index << endl;
-
-    cout << "rev " << head->next->next->next->prev->index << endl;
 
     return 0;
 }
