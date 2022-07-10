@@ -2,7 +2,7 @@
 // efficient Doubly Linked List
 
 // Importing libraries
-#include <bits/stdc++.h>
+#include <iostream>
 #include <cinttypes>
 
 using namespace std;
