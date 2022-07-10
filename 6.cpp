@@ -91,6 +91,8 @@ void print(node* head)
 
         next = xor_both(curr->both, prev);
 
+        cout << "print " << next->index << endl;
+ 
         cout << "xor done" << endl;
 
         if (next)
@@ -99,7 +101,6 @@ void print(node* head)
 
             curr = next;
 
-            cout << "print " << next->index << endl;
         }
 
     }
