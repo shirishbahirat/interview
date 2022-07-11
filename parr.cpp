@@ -9,7 +9,7 @@ void xloop(int **arr, int len)
 
 	for (int i = 0; i < len; ++i)
 	{
-		cout << *pa[i] << endl;
+		cout << pa[i] << endl;
 	}
 
 }
