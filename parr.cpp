@@ -12,6 +12,16 @@ void loop(int *arr, int len)
 
 }
 
+void loop(int arr[], int len)
+{
+
+	for (int i = 0; i < len; ++i)
+	{
+		cout << arr[i] << endl;
+	}
+
+}
+
 
 int main(int argc, const char* argv[])
 {
