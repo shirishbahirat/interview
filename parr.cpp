@@ -32,5 +32,7 @@ int main(int argc, const char* argv[])
 
 	loop(arr, len);
 
+	aloop(arr, len);
+
 	return 0;
 }
