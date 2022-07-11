@@ -8,6 +8,7 @@ int main(int argc, const char* argv[])
 
 	int arr[] = {10, 15, 3, 7};
 
+
 	int size = sizeof(arr)/sizeof(arr[0]);
 
 	int k = 17;
