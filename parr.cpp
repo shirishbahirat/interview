@@ -5,9 +5,11 @@ using namespace std;
 void xloop(int **arr, int len)
 {
 
+	int *pa = *arr;
+
 	for (int i = 0; i < len; ++i)
 	{
-		cout << *arr[i] << endl;
+		cout << *pa[i] << endl;
 	}
 
 }
