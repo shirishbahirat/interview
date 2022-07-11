@@ -49,5 +49,7 @@ int main(int argc, const char* argv[])
 
 	aloop(arr, len);
 
+	xloop(pparr, len);
+
 	return 0;
 }
