@@ -13,7 +13,6 @@ int main(int argc, const char* argv[])
 
 
 
-
 	int k = 17;
 
 	map <int, int> distance;
