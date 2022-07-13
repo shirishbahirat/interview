@@ -10,7 +10,6 @@ int main(int argc, const char* argv[])
 
 	int size = sizeof(arr)/sizeof(arr[0]);
 
-
 	int k = 17;
 
 	map <int, int> distance;
