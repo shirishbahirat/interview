@@ -6,7 +6,7 @@ class model(object):
 	def __init__(self, env, res, cmds):
 		self.env = env
 		self.proc = [env.process(self.process(id)) for id in range(res)]
-
+		self.queu = [q() for _ in range(res)]
 
 	def process(self, id):
 		
