@@ -14,7 +14,7 @@ class model(object):
 
     def __init__(self, env, res, dmns, rate):
 
-        self.mu = 0.005
+        self.mu = 0.05
 
         self.env = env
 
@@ -44,13 +44,13 @@ class model(object):
 
         self.qd_per_domain = [4 for _ in range(self.domains)]
 
-        self.n1_target = [4*3*10*(i+1) for i in range(self.domains)]
+        self.n1_target = [3*10*(i+1) for i in range(self.domains)]
 
-        self.n2_target = [4*4*10*(i+1) for i in range(self.domains)]
+        self.n2_target = [4*10*(i+1) for i in range(self.domains)]
 
-        self.n3_target = [4*5*10*(i+1) for i in range(self.domains)]
+        self.n3_target = [5*10*(i+1) for i in range(self.domains)]
 
-        self.n4_target = [4*6*10*(i+1) for i in range(self.domains)]
+        self.n4_target = [6*10*(i+1) for i in range(self.domains)]
 
         self.n1 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
@@ -200,7 +200,7 @@ class model(object):
                 else:
                     err4 = 0
 
-                err = err1 + err2*0.02 + err3*0.02 + err4*0.02
+                err = err1 + err2*0.25 + err3*0.25 + err4*0.25
 
                 self.err_trace[idx].append(err)
 
@@ -222,7 +222,7 @@ class model(object):
     def plot_data(self):
 
         plt.figure()
-        plt.title('Error')
+        plt.title('Combined Error')
 
         for i in range(self.domains):
             plt.plot(self.err_trace[i])
@@ -259,9 +259,9 @@ def main():
 
     env = simpy.Environment()
 
-    rate = [5, 3, 4, 2, 7, 8, 9, 19, 20, 30]
+    rate = [3, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
-    md = model(env, 256, 4, rate)
+    md = model(env, 128, 6, rate)
 
     env.run(1e5)
 
