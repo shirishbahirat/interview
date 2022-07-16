@@ -12,9 +12,9 @@ class cmd(object):
 
 class model(object):
 
-    def __init__(self, env, res, cmds, dmns, rate):
+    def __init__(self, env, res, dmns, rate):
 
-        self.mu = 0.05
+        self.mu = 0.005
 
         self.env = env
 
@@ -42,15 +42,15 @@ class model(object):
 
         self.per_dmn_cmd_cnt = [0 for _ in range(dmns)]
 
-        self.qd_per_domain = [32, 16, 8, 4]
+        self.qd_per_domain = [4 for _ in range(self.domains)]
 
-        self.n1_target = [559, 601, 215, 514]
+        self.n1_target = [4*3*10*(i+1) for i in range(self.domains)]
 
-        self.n2_target = [770, 697, 663, 586]
+        self.n2_target = [4*4*10*(i+1) for i in range(self.domains)]
 
-        self.n3_target = [817, 791, 776, 742]
+        self.n3_target = [4*5*10*(i+1) for i in range(self.domains)]
 
-        self.n4_target = [1042, 890, 865, 836]
+        self.n4_target = [4*6*10*(i+1) for i in range(self.domains)]
 
         self.n1 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
@@ -83,6 +83,15 @@ class model(object):
                   'meas': [0 for _ in range(dmns)]}
 
         self.err_trace = [[] for _ in range(self.domains)]
+
+        self.res_trace = [[] for _ in range(self.domains)]
+
+        self.qos_trace = [[] for _ in range(self.domains)]
+
+        self.qos_error = [[] for _ in range(self.domains)]
+
+        self.bw_error = [[] for _ in range(self.domains)]
+
 
     def qos(self, n, dmn, time):
 
@@ -169,9 +178,13 @@ class model(object):
 
             for idx in range(self.domains):
 
+                err1 = self.per_dmn_cmd_cnt[idx] - self.qd_per_domain[idx]
+
                 if self.n1['meas'][idx] > n1[idx]:
                     err2 = self.n1['data'][idx] - self.n1_target[idx]
                     n1[idx] = self.n1['meas'][idx]
+
+                    self.qos_trace[idx].append(self.n1['data'][idx])
                 else:
                     err2 = 0
 
@@ -187,9 +200,7 @@ class model(object):
                 else:
                     err4 = 0
 
-                err1 = self.per_dmn_cmd_cnt[idx] - self.qd_per_domain[idx]
-      
-                err = err1 + err2*0.1 + err3*0.1 + err4*0.1
+                err = err1 + err2*0.02 + err3*0.02 + err4*0.02
 
                 self.err_trace[idx].append(err)
 
@@ -201,10 +212,44 @@ class model(object):
 
                 self.res_per_dmn[idx] = int(dmns)
 
+                self.res_trace[idx].append(int(dmns))
+
+                self.qos_error[idx].append(int(err1))
+
+                self.bw_error[idx].append(int(err - err1))
+
+
     def plot_data(self):
+
+        plt.figure()
+        plt.title('Error')
 
         for i in range(self.domains):
             plt.plot(self.err_trace[i])
+
+        plt.figure()
+        plt.title('Resources')
+
+        for i in range(self.domains):
+            plt.plot(self.res_trace[i])
+
+        plt.figure()
+        plt.title('QoS')
+
+        for i in range(self.domains):
+            plt.plot(self.qos_trace[i])
+
+        plt.figure()
+        plt.title('QoS Error')
+
+        for i in range(self.domains):
+            plt.plot(self.qos_error[i])
+
+        plt.figure()
+        plt.title('BW Error')
+
+        for i in range(self.domains):
+            plt.plot(self.bw_error[i])
 
         plt.show()
    
@@ -214,9 +259,9 @@ def main():
 
     env = simpy.Environment()
 
-    rate = [5, 3, 2, 1]
+    rate = [5, 3, 4, 2, 7, 8, 9, 19, 20, 30]
 
-    md = model(env, 256, 1024, 4, rate)
+    md = model(env, 256, 4, rate)
 
     env.run(1e5)
 
