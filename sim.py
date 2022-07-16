@@ -38,6 +38,8 @@ class model(object):
 
         self.per_dmn_cmd_cnt = [0 for _ in range(dmns)]
 
+        self.qd_per_domain = [32, 16, 8, 4]
+
     def dispatcher(self, id):
 
         while True:
@@ -69,7 +71,6 @@ class model(object):
                 self.per_dmn_cmd_cnt[cm.dmn] -= 1
 
 
-
     def optimizer(self):
 
         while True:
@@ -80,7 +81,7 @@ class model(object):
 
             for idx in range(self.domains):
 
-                err = self.per_dmn_cmd_cnt[idx] - 4
+                err = self.per_dmn_cmd_cnt[idx] - self.qd_per_domain[idx]
 
                 dmns = max(1, self.res_per_dmn[idx] + 0.05*err*self.rate[idx])
 
@@ -89,8 +90,6 @@ class model(object):
                     dmns = self.res - 1
 
                 self.res_per_dmn[idx] = int(dmns)
-
-
 
 def main():
 
