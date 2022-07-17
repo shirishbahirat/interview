@@ -116,9 +116,13 @@ class model(object):
     def print_qos(self):
 
         print('.99', self.n1['data'], self.n1['meas'])
+
         print('.999', self.n2['data'], self.n2['meas'])
+
         print('.9999', self.n3['data'], self.n3['meas'])
+
         print('.99999', self.n4['data'], self.n4['meas'])
+
         print('.999999', self.n5['data'], self.n5['meas'])
 
     def print_per_dmn_res(self):
