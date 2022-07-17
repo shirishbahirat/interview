@@ -55,31 +55,31 @@ class model(object):
         self.n1 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
                   'data': [0 for _ in range(dmns)],
-                  'thresh': 100, 
+                  'thresh': 100 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
         self.n2 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
                   'data': [0 for _ in range(dmns)],
-                  'thresh': 1000, 
+                  'thresh': 1000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
         self.n3 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
                   'data': [0 for _ in range(dmns)],
-                  'thresh': 10000, 
+                  'thresh': 10000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
         self.n4 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
                   'data': [0 for _ in range(dmns)],
-                  'thresh': 100000, 
+                  'thresh': 100000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
         self.n5 = {'time':[0 for _ in range(dmns)],
                   'cnt':[0 for _ in range(dmns)],
                   'data': [0 for _ in range(dmns)],
-                  'thresh': 1000000, 
+                  'thresh': 1000000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
         self.err_trace = [[] for _ in range(self.domains)]
@@ -115,11 +115,11 @@ class model(object):
 
     def print_qos(self):
 
-        print('.9', self.n1['data'], self.n1['meas'])
-        print('.99', self.n2['data'], self.n2['meas'])
-        print('.999', self.n3['data'], self.n3['meas'])
-        print('.9999', self.n4['data'], self.n4['meas'])
-        print('.99999', self.n5['data'], self.n5['meas'])
+        print('.99', self.n1['data'], self.n1['meas'])
+        print('.999', self.n2['data'], self.n2['meas'])
+        print('.9999', self.n3['data'], self.n3['meas'])
+        print('.99999', self.n4['data'], self.n4['meas'])
+        print('.999999', self.n5['data'], self.n5['meas'])
 
     def print_per_dmn_res(self):
 
@@ -226,30 +226,35 @@ class model(object):
 
         for i in range(self.domains):
             plt.plot(self.err_trace[i])
+        plt.xlabel('time')
 
         plt.figure()
         plt.title('Resources')
 
         for i in range(self.domains):
             plt.plot(self.res_trace[i])
+        plt.xlabel('time')
 
         plt.figure()
         plt.title('QoS')
 
         for i in range(self.domains):
             plt.plot(self.qos_trace[i])
+        plt.xlabel('time')
 
         plt.figure()
         plt.title('QoS Error')
 
         for i in range(self.domains):
             plt.plot(self.qos_error[i])
+        plt.xlabel('time')
 
         plt.figure()
         plt.title('BW Error')
 
         for i in range(self.domains):
             plt.plot(self.bw_error[i])
+        plt.xlabel('time')
 
         plt.show()
    
@@ -263,7 +268,7 @@ def main():
 
     md = model(env, 128, 6, rate)
 
-    env.run(1e5)
+    env.run(5e5)
 
     md.print_qos()
 
