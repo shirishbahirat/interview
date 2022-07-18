@@ -24,6 +24,9 @@ for p in range(4, 256, 8):
 plt.show()
 
 plt.plot(lim)
+
 plt.ylabel('QoS .999')
+
 plt.xlabel('resources')
+
 plt.show()
