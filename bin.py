@@ -28,5 +28,4 @@ plt.plot(lim)
 plt.ylabel('QoS .999')
 
 plt.xlabel('resources')
-
 plt.show()
