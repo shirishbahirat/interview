@@ -118,7 +118,7 @@ class model(object):
 
             self.per_dmn_cmd_cnt[id] += 1
 
-            err = self.per_dmn_cmd_cnt[id] - self.qd[id]
+            err = self.qd[id] - self.per_dmn_cmd_cnt[id]
 
             self.rate[id] = self.rate[id] + 0.05*err
 
