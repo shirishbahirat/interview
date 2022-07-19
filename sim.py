@@ -147,6 +147,8 @@ class model(object):
 
             self.per_dmn_cmd_cnt[id] += 1
 
+            print(self.per_dmn_cmd_cnt[id])
+
 
     def process(self, id):
         
@@ -272,7 +274,7 @@ def main():
 
     env = simpy.Environment()
 
-    rate = [3, 4, 5, 6, 7, 8, 9, 19, 20, 30]
+    rate = [14, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
     md = model(env, 128, 1, rate)
 
