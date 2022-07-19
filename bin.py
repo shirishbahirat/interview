@@ -33,4 +33,3 @@ p4 = -1 /(0.85**(1/n4) - 1)
 
 print(p1, p2, p3, p4, p1+p2+p3+p4)
 
-for i in range(1000):
