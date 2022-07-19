@@ -69,6 +69,8 @@ class model(object):
 
         self.exec = 10
 
+        self.per_dmn_cmd_cnt = [0 for _ in range(dmns)]
+
     def qos(self, n, dmn, time):
 
         n['cnt'][dmn] += 1
