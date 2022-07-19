@@ -40,3 +40,8 @@ p3 = 32 #qd
 n3 = 1/(log(1 - (1/p3), 0.95)) # die
 
 get_qos(p3, n3)
+
+p4 = 256 #qd
+n4 = 1/(log(1 - (1/p4), 0.95)) # die
+
+get_qos(p4, n4)
