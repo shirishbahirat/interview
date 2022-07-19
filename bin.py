@@ -36,22 +36,24 @@ log base 0.95 (1-1/p) = 1/n
 p1 = 128
 n1 = 1/(log(1 - (1/p1), 0.9))
 
+qos = [0 0 0 0]
+
 sum = 0
 for i in range(64):
     sum += binom.pmf(i, n1, 1/p1)
-    if sum >= .9:
-        print(i)
+    if sum >= .9 and qos[0] == 0:
+        qos[0] = i
 
-    if sum >= .99:
-        print(i)
+    if sum >= .99 and qos[0] == 0:
+        qos[1] = i
 
-    if sum >= .999:
-        print(i)
+    if sum >= .999 and qos[0] == 0:
+        qos[2] = i
 
-    if sum >= .9999:
-        print(i)
-        sum = -20000
+    if sum >= .9999 and qos[0] == 0:
+        qos[3] = i
 
+print(qos)
 
 
 '''
