@@ -156,7 +156,7 @@ def main():
 
     md = model(env, 128, 1, [28])
 
-    env.run(1e4)
+    env.run(1e5)
 
     md.print_qos()
 
