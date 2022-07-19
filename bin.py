@@ -29,6 +29,6 @@ plt.ylabel('QoS .999')
 plt.xlabel('resources')
 
 plt.figure()
-plt.paral()
+plt.plot(paral)
 
 plt.show()
