@@ -122,8 +122,8 @@ class model(object):
 
             self.rate[id] = int(max(self.rate[id] - 0.05*err, 2))
 
-            if self.env.now % 1000 == 0:
-            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id], self.env.now/10e6)
+            if self.env.now % 10000 == 0:
+            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id], 100*self.env.now/10e6)
 
 
     def process(self, id):
@@ -136,6 +136,8 @@ class model(object):
 
                 cm = self.queu_res[id].get()
 
+                print(self.queu_res[id].qsize())
+
                 self.per_dmn_cmd_cnt[cm.dmn] -= 1
 
                 self.qos(self.n1, cm.dmn, cm.time)
@@ -147,7 +149,6 @@ class model(object):
                 self.qos(self.n4, cm.dmn, cm.time)
 
                 self.qos(self.n5, cm.dmn, cm.time)
-
 
 def main():
 
