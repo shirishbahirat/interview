@@ -4,6 +4,12 @@ import attr
 from random import random, randrange
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from scipy.stats import binom
+
+
+
+>>> for i in range(20):
+...   binom.pmf(i, n, p)
 
 @attr.s
 class cmd(object):
