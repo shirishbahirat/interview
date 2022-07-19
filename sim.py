@@ -7,10 +7,6 @@ import matplotlib.pyplot as plt
 from scipy.stats import binom
 
 
-
->>> for i in range(20):
-...   binom.pmf(i, n, p)
-
 @attr.s
 class cmd(object):
 
@@ -278,7 +274,7 @@ def main():
 
     rate = [3, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
-    md = model(env, 128, 6, rate)
+    md = model(env, 128, 1, rate)
 
     env.run(5e5)
 
