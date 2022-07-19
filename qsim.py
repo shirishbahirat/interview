@@ -15,7 +15,7 @@ class cmd(object):
     time = attr.ib(0)
 
 
- class model(object):
+class model(object):
 
     def __init__(self, env, res, dmns, qd):
 
