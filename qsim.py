@@ -120,7 +120,7 @@ class model(object):
 
             err = self.qd[id] - self.per_dmn_cmd_cnt[id]
 
-            self.rate[id] = max(self.rate[id] - 0.05*err, 2)
+            self.rate[id] = int(max(self.rate[id] - 0.05*err, 2))
 
             if self.env.now % 1000 == 0:
             	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id])
