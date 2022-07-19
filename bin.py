@@ -22,13 +22,15 @@ for p in range(8, 256, 8):
     paral.append((1 - 1/p)**n)
 
 
+t1 = 16
+t2 = 64
+t3 = 128
+t4 = 48
 
-plt.figure()
-plt.plot(lim)
-plt.ylabel('QoS .999')
-plt.xlabel('resources')
+p1 = -1 /(0.85**(1/t1) - 1)
+p2 = -1 /(0.85**(1/t2) - 1)
+p3 = -1 /(0.85**(1/t3) - 1)
+p4 = -1 /(0.85**(1/t4) - 1)
 
-plt.figure()
-plt.plot(paral)
+print(p1, p2, p3, p4)
 
-plt.show()
