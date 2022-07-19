@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 @attr.s
 class cmd(object):
+
     dmn = attr.ib(0)
     time = attr.ib(0)
 
