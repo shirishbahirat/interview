@@ -153,7 +153,7 @@ def main():
 
     env = simpy.Environment()
 
-    rate = [2, 4, 5, 6, 7, 8, 9, 19, 20, 30]
+    rate = [15, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
     md = model(env, 128, 1, [28])
 
