@@ -36,7 +36,7 @@ log base 0.95 (1-1/p) = 1/n
 p1 = 128
 n1 = 1/(log(1 - (1/p1), 0.9))
 
-qos = [0 0 0 0]
+qos = [0, 0, 0, 0]
 
 sum = 0
 for i in range(64):
