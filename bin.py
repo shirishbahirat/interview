@@ -42,7 +42,7 @@ qos = [0, 0, 0, 0]
 
 sum = 0
 for i in range(64):
-    sum += binom.pmf(i, p1, 1/n1)
+    sum += binom.pmf(i, p1*2, 1/n1)
     if sum >= .9 and qos[0] == 0:
         qos[0] = i
 
