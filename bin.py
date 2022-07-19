@@ -9,7 +9,7 @@ prob = []
 paral = []
 
 
-for p in range(32, 256, 8):
+for p in range(8, 256, 8):
     sum = 0
     prob = []
     for i in range(32):
