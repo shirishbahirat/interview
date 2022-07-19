@@ -33,11 +33,16 @@ n4 = 16*.3
 log base 0.95 (1-1/p) = 1/n
 '''
 
-n = 1/(log(1 - (1/128), 0.95))
+p1 = 128
+n1 = 1/(log(1 - (1/p1), 0.95))
 
-p1 = 1 /(1 - 0.95**(1/n))
+sum = 0
+for i in range(32):
+    sum += binom.pmf(i, n1, 1/p1)
+    if sum >= .999:
+        print(i)
+        sum = -20000
 
-print(n, p1)
 
 
 '''
