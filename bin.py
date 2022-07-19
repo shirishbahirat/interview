@@ -1,14 +1,14 @@
 from scipy.stats import binom
 import matplotlib.pyplot as plt
 
-qd = n = 64
-p = die = 1/16
+qd = n = 32
+p = die = 1/128
 
 lim = []
 prob = []
 
 
-for p in range(10, 256):
+for p in range(4, 256, 8):
     sum = 0
     prob = []
     for i in range(32):
@@ -19,7 +19,9 @@ for p in range(10, 256):
             lim.append(i)
             sum = -20000
 
+
     plt.plot(prob)
+plt.show()
 
 
 plt.plot(lim)
