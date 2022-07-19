@@ -139,15 +139,15 @@ class model(object):
 
             yield self.env.timeout(self.rate[id])
 
-            cm = cmd(id, self.env.now)
+            if self.per_dmn_cmd_cnt[id] < 32:
 
-            res_queue = randrange(0, self.res_per_dmn[id])
+                cm = cmd(id, self.env.now)
 
-            self.queu_res[self.pick[res_queue]].put(cm)
+                res_queue = randrange(0, self.res_per_dmn[id])
 
-            self.per_dmn_cmd_cnt[id] += 1
+                self.queu_res[self.pick[res_queue]].put(cm)
 
-            print(self.per_dmn_cmd_cnt[id])
+                self.per_dmn_cmd_cnt[id] += 1
 
 
     def process(self, id):
@@ -274,7 +274,7 @@ def main():
 
     env = simpy.Environment()
 
-    rate = [14, 4, 5, 6, 7, 8, 9, 19, 20, 30]
+    rate = [2, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
     md = model(env, 128, 1, rate)
 
