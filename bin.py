@@ -53,7 +53,7 @@ for i in range(64):
     if sum >= .9999 and qos[3] == 0:
         qos[3] = i
 
-print(qos)
+print(qos, n1)
 
 
 '''
