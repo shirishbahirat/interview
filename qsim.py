@@ -134,7 +134,7 @@ class model(object):
 
             if self.queu_res[id].qsize():
 
-                cm = self.queu_res[id].get()
+                cm = self.queu_res[id].get_nowait()
 
                 print(self.queu_res[id].qsize())
 
