@@ -10,6 +10,7 @@ prob = []
 
 for p in range(10, 256):
     sum = 0
+    prob = []
     for i in range(32):
         sum += binom.pmf(i, n, 1/p)
         prob.append(binom.pmf(i, n, 1/p))
@@ -17,6 +18,8 @@ for p in range(10, 256):
             print (i)
             lim.append(i)
             sum = -20000
+
+    plt.plot(prob)
 
 
 plt.plot(lim)
