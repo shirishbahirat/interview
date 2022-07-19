@@ -67,7 +67,7 @@ class model(object):
                   'thresh': 1000000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
-        self.exec = 10
+        self.exec = 1
 
         self.per_dmn_cmd_cnt = [0 for _ in range(dmns)]
 
@@ -156,7 +156,7 @@ def main():
 
     md = model(env, 128, 1, [28])
 
-    env.run(5e5)
+    env.run(1e3)
 
     md.print_qos()
 
