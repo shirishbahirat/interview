@@ -1,5 +1,6 @@
 from scipy.stats import binom
 import matplotlib.pyplot as plt
+from math import log
 
 qd = n = 32
 p = die = 1/128
@@ -26,10 +27,23 @@ n2 = 16*.4
 n3 = 16*.1
 n4 = 16*.3
 
+
+0.95**(1/n) = (1 - 1/p)
+
+log base 0.95 (1-1/p) = 1/n
+
+n = 1/(log(1 - (1/128), 0.95))
+
+print(n)
+
+
+'''
 p1 = 1 /(1 - 0.95**(1/n1))
 p2 = 1 /(1 - 0.95**(1/n2))
 p3 = 1 /(1 - 0.95**(1/n3))
 p4 = 1 /(1 - 0.95**(1/n4))
+
+
 
 sum = 0
 for i in range(32):
@@ -64,4 +78,4 @@ for i in range(32):
 
 
 print(p1, p2, p3, p4, p1+p2+p3+p4)
-
+'''
