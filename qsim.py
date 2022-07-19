@@ -67,7 +67,7 @@ class model(object):
                   'thresh': 1000000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
-        self.exec = 1
+        self.exec = 2
 
         self.per_dmn_cmd_cnt = [0 for _ in range(dmns)]
 
