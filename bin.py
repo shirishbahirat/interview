@@ -39,6 +39,15 @@ n1 = 1/(log(1 - (1/p1), 0.9))
 sum = 0
 for i in range(64):
     sum += binom.pmf(i, n1, 1/p1)
+    if sum >= .9:
+        print(i)
+
+    if sum >= .99:
+        print(i)
+
+    if sum >= .999:
+        print(i)
+
     if sum >= .9999:
         print(i)
         sum = -20000
