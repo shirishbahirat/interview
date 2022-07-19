@@ -32,6 +32,6 @@ n1 = 1/(log(1 - (1/p1), 0.8)) # die
 get_qos(p1, n1)
 
 p2 = 64 #qd
-n2 = 1/(log(1 - (1/p2), 0.8)) # die
+n2 = 1/(log(1 - (1/p2), 0.9)) # die
 
 get_qos(p2, n2)
