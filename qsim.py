@@ -122,7 +122,7 @@ class model(object):
 
             self.rate[id] = self.rate[id] + 0.05*err
 
-            print(self.rate[id], err)
+            print(self.rate[id], err, self.per_dmn_cmd_cnt[id])
 
 
     def process(self, id):
