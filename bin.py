@@ -37,7 +37,7 @@ p1 = 128
 n1 = 1/(log(1 - (1/p1), 0.9))
 
 sum = 0
-for i in range(32):
+for i in range(64):
     sum += binom.pmf(i, n1, 1/p1)
     if sum >= .9999:
         print(i)
