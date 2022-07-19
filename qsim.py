@@ -123,7 +123,7 @@ class model(object):
             self.rate[id] = int(max(self.rate[id] - 0.05*err, 2))
 
             if self.env.now % 1000 == 0:
-            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id])
+            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id], self.env.now/10e6)
 
 
     def process(self, id):
