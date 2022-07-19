@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 class cmd(object):
 
     dmn = attr.ib(0)
+
     time = attr.ib(0)
 
 class model(object):
