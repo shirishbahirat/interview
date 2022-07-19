@@ -15,11 +15,11 @@ for p in range(4, 256, 8):
     for i in range(32):
         sum += binom.pmf(i, n, 1/p)
         prob.append(binom.pmf(i, n, 1/p))
-        paral.append((1 - 1/p)**n)
         if sum >= .999:
             print (i)
             lim.append(i)
             sum = -20000
+    paral.append((1 - 1/p)**n)
 
 
 
