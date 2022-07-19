@@ -112,7 +112,7 @@ class model(object):
 
             cm = cmd(id, self.env.now)
 
-            res_queue = randrange(0, self.dmns)
+            res_queue = randrange(0, self.res)
 
             self.queu_res[res_queue].put(cm)
 
