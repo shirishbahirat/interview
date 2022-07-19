@@ -67,6 +67,8 @@ class model(object):
                   'thresh': 1000000 - 1, 
                   'meas': [0 for _ in range(dmns)]}
 
+        self.exec = 10
+
     def qos(self, n, dmn, time):
 
         n['cnt'][dmn] += 1
