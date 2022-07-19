@@ -136,8 +136,6 @@ class model(object):
 
                 cm = self.queu_res[id].get_nowait()
 
-                print(self.queu_res[id].qsize())
-
                 self.per_dmn_cmd_cnt[cm.dmn] -= 1
 
                 self.qos(self.n1, cm.dmn, cm.time)
