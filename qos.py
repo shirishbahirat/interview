@@ -4,7 +4,7 @@ from math import log
 
 
 p1 = 32 #qd
-n1 = 1/(log(1 - (1/p1), 0.9)) # die
+n1 = 1/(log(1 - (1/p1), 0.8)) # die
 
 print((1 - 1/p1)**n1, n1)
 
