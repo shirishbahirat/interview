@@ -34,7 +34,7 @@ log base 0.95 (1-1/p) = 1/n
 '''
 
 p1 = 32 #qd
-n1 = 1/(log(1 - (1/p1), 0.7)) # die
+n1 = 1/(log(1 - (1/p1), 0.9)) # die
 
 print((1 - 1/p1)**n1, n1)
 
@@ -42,7 +42,7 @@ qos = [0, 0, 0, 0]
 
 sum = 0
 for i in range(64):
-    sum += binom.pmf(i, p1*.2, 1/n1)
+    sum += binom.pmf(i, p1, 1/n1)
     if sum >= .9 and qos[0] == 0:
         qos[0] = i
 
