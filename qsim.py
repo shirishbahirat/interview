@@ -29,7 +29,7 @@ class model(object):
 
         self.rate = [4 for _ in range(dmns)]
 
-        self.domains = sorted([i for in range (dmns)], key = lambda x: random())
+        self.domains = sorted([i for i in range (dmns)], key = lambda x: random())
 
         self.proc = [env.process(self.process(id)) for id in range(res)]
 
