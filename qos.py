@@ -56,9 +56,9 @@ for j in range(4,512,32):
 		idx = get_qos(j, n1)
 		qo.append(idx)
 		res.append(int(n1))
-		plt.plot(res, qo)
+		#plt.plot(res, qo)
 
-plt.show()
+#plt.show()
 
 
 dmsn = 5
@@ -77,8 +77,17 @@ nwt = [weight[i]/s for i in range(dmsn)]
 
 run = True
 
+import time
+
+cnt = 0
+
 while run:
-	run = False
+	time.sleep(.5)
+
+	if cnt > 1000:
+		run = False
+		cnt += 1
+
 
 
 
