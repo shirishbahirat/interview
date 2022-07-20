@@ -8,7 +8,7 @@ def get_qos(p1, n1):
 
 	sum = 0
 	for i in range(64):
-	    sum += binom.pmf(i, n1, 1/p1)
+	    sum += binom.pmf(i, p1, 1/n1)
 	    if sum >= .99 and qos[0] == 0:
 	        qos[0] = i
 
