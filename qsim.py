@@ -29,7 +29,7 @@ class model(object):
 
         self.qd = qd
 
-        self.rate = [4 for _ in range(dmns)]
+        self.rate = [15 for _ in range(dmns)]
 
         self.domains = sorted([i for i in range (dmns)], key = lambda x: random())
 
