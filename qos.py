@@ -2,8 +2,6 @@ from scipy.stats import binom
 import matplotlib.pyplot as plt
 from math import log
 
-
-
 def get_qos(p1, n1):
 
 	qos = [0, 0, 0, 0]
@@ -41,7 +39,7 @@ n3 = 1/(log(1 - (1/p3), 0.95)) # die
 
 get_qos(p3, n3)
 
-p4 = 256 #qd
+p4 = 32 #qd
 n4 = 1/(log(1 - (1/p4), 0.95)) # die
 
 get_qos(p4, n4)
