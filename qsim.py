@@ -17,13 +17,15 @@ class cmd(object):
 
 class model(object):
 
-    def __init__(self, env, res, dmns, qd):
+    def __init__(self, env, res, dmns, qd, sim_time):
 
         self.env = env
 
         self.res = res
 
         self.dmns = dmns
+
+        self.sim_time = sim_time
 
         self.qd = qd
 
@@ -123,7 +125,7 @@ class model(object):
             self.rate[id] = int(max(self.rate[id] - 0.05*err, 2))
 
             if self.env.now % 10000 == 0:
-            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id], 100*self.env.now/10e6)
+            	print(int(self.rate[id]), err, self.per_dmn_cmd_cnt[id], 100*self.env.now/self.sim_time)
 
 
     def process(self, id):
@@ -152,11 +154,13 @@ def main():
 
     env = simpy.Environment()
 
+    sim_time = 10e6
+
     rate = [15, 4, 5, 6, 7, 8, 9, 19, 20, 30]
 
-    md = model(env, 128, 1, [28])
+    md = model(env, 128, 1, [28], sim_time)
 
-    env.run(10e6)
+    env.run(sim_time)
 
     md.print_qos()
 
