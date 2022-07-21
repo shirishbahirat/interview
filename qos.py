@@ -46,7 +46,7 @@ n4 = 1/(log(1 - (1/p4), 0.95)) # die
 
 get_qos(p4, n4)
 
-plt.figure()
+#plt.figure()
 
 for j in range(4,512,32):
 	qo = []
@@ -82,11 +82,15 @@ import time
 cnt = 0
 
 while run:
-	time.sleep(.5)
+
+	time.sleep(.01)
 
 	if cnt > 1000:
 		run = False
-		cnt += 1
+	
+	cnt += 1
+
+	print(cnt)
 
 
 
