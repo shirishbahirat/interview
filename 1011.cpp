@@ -12,6 +12,7 @@ public:
     bool feasible(int capacity,  vector<int>& weights, int days)
     {
         int day = 1;
+
         int total = 0;
 
         for (int i = 0; i < weights.size(); ++i)
