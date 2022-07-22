@@ -63,7 +63,6 @@ for j in range(4,512,32):
 
 
 
-
 dmsn = 5
 
 res_cnt = [2 for _ in range(dmsn)]
