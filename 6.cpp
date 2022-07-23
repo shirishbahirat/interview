@@ -52,6 +52,7 @@ void insert(int index)
     node* curr = new node(index);
 
     curr->both = pre;
+
     curr->prev = pre;
 
     if (pre)
