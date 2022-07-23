@@ -25,7 +25,9 @@ public:
         while (!data.empty() && (i < k))
         {
             ++i;
+
             results = data.top();
+
             data.pop();
         }
 
