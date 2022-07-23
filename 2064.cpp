@@ -12,6 +12,7 @@ public:
     bool feasible(int n,  vector<int>& quantities, int products)
     {
         int product = 1;
+
         int total = 0;
 
         for (int i = 0; i < quantities.size(); ++i)
