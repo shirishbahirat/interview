@@ -8,6 +8,7 @@ using namespace std;
 
 class Solution {
 public:
+
     priority_queue<int> data;
 
     int findKthLargest(vector<int>& nums, int k) {
