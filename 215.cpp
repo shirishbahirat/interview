@@ -19,6 +19,7 @@ public:
         }
 
         int i = 0;
+
         int results = -1;
 
         while (!data.empty() && (i < k))
