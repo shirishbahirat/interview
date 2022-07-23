@@ -18,7 +18,6 @@ int partition(int arr[], int lo, int hi)
 
 	int pivot = lo;
 
-
 	while(lo < hi)
 	{
 
