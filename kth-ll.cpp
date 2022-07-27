@@ -4,46 +4,52 @@
 using namespace std;
 
 struct node {
-	int data;
-	node* next;
+    int data;
+    node* next;
 };
 
 
 void insert(node** head, int data)
 {
 
-	if (*head == nullptr)
-	{
-		node* n = new node();
+    if (*head == nullptr)
+    {
+        node* n = new node();
 
-		n->data = data;
+        n->data = data;
 
-		n->next = nullptr;
+        n->next = nullptr;
 
-		*head = n;
+        *head = n;
 
-		return;
-	}
+        return;
+    }
 
-	node** temp = head;
+    node** temp = head;
 
-	while((*temp)->next)
-	{
-		*temp = (*temp)->next;
-	}
+    while((*temp)->next)
+    {
+        *temp = (*temp)->next;
+    }
 
-	return;
+    *temp->next = new node();
+
+    (*temp)->next->data = data;
+
+    (*temp)->next->next = nullptr;
+
+    return;
 }
 
 
 int main(int argc, const char* argv[])
 {
 
-	node* head = nullptr;
+    node* head = nullptr;
 
-	insert(&head, 10);
+    insert(&head, 10);
 
-	cout << head->data << endl;
+    cout << head->data << endl;
 
-	return 0;
+    return 0;
 }
