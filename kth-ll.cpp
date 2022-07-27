@@ -59,20 +59,14 @@ void print_last(node** head, int index)
 
         count++;
 
-        cout << count << endl;
-
         if (count > index)
         {
             kth = kth->next;
-
-            cout << kth->data << endl;
         }
 
         if (count == index)
         {
             kth = *head;
-
-            cout << " " << kth->data << endl;
         }
 
     }
