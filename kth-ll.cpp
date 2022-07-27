@@ -72,7 +72,7 @@ void print_last(node** head, int index)
         {
             kth = head;
 
-            cout << (*kth)->data << endl;
+            cout << " " << (*kth)->data << endl;
         }
 
     }
