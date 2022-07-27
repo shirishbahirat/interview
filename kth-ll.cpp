@@ -21,7 +21,11 @@ void insert(node** head, int data)
 		n->next = nullptr;
 
 		*head = n;
+
+		return;
 	}
+
+	node** temp = head;
 
 	return;
 }
