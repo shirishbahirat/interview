@@ -62,7 +62,7 @@ void print_last(node** head, int index)
         *temp = (*temp)->next;
         count++;
 
-        if (kth)
+        if (*kth)
         {
             *kth = (*kth)->next;
         }
