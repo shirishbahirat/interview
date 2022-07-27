@@ -22,7 +22,7 @@ void insert(node** head, int data)
 
 		n->next = nullptr;
 
-		temp = n;
+		*head = n;
 	}
 
 	return;
