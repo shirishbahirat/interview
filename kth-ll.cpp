@@ -71,7 +71,7 @@ void print_last(node** head, int index)
 
     }
 
-    cout << kth->data << endl;
+    cout << kth->next->data << endl;
 }
 
 
