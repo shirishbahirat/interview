@@ -46,7 +46,7 @@ void insert(node** head, int data)
 }
 
 
-void print_last(int index)
+void print_last(node** head, int index)
 {
 
     node** temp = head;
