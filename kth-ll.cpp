@@ -96,7 +96,7 @@ int main(int argc, const char* argv[])
     insert(&head, 40);
     insert(&head, 50);
 
-    print_last(&head, 3);
+    print_last(&head, 2);
 
    return 0;
 }
