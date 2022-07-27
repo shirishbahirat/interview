@@ -47,15 +47,15 @@ void insert(node** head, int data)
 void print_last(node** head, int index)
 {
 
-    node** temp = head;
+    node* temp = *head;
 
     int count = 0;
 
-    node** kth;
+    node* kth;
 
-    while((*temp)->next)
+    while(temp->next)
     {
-        *temp = (*temp)->next;
+        *temp = temp->next;
 
         count++;
 
@@ -63,16 +63,16 @@ void print_last(node** head, int index)
 
         if (count > index)
         {
-            *kth = (*kth)->next;
+            kth = kth->next;
 
-            cout << (*kth)->data << endl;
+            cout << kth->data << endl;
         }
 
         if (count == index)
         {
-            kth = head;
+            kth = *head;
 
-            cout << " " << (*kth)->data << endl;
+            cout << " " << kth->data << endl;
         }
 
     }
