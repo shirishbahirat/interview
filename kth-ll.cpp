@@ -46,6 +46,40 @@ void insert(node** head, int data)
 }
 
 
+a  a  a  a  a  a
+
+
+void print_last(int index)
+{
+
+    node** temp = head;
+
+    node* h = *head;
+
+    int count = 0;
+
+    node** kth = nullptr;
+
+    while((*temp)->next)
+    {
+        *temp = (*temp)->next;
+        count++;
+
+        if (kth)
+        {
+            *kth = (*kth)->next;
+        }
+
+        if (count == index)
+        {
+            *kth = *head;
+        }
+    }
+
+    *head = h;
+}
+
+
 int main(int argc, const char* argv[])
 {
 
