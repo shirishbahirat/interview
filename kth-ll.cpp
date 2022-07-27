@@ -5,6 +5,9 @@ using namespace std;
 struct node {
     int data;
     node* next;
+
+    node(int d): data(d), next(nullptr){}
+    ~node(){}
 };
 
 void insert(node** head, int data)
@@ -12,11 +15,11 @@ void insert(node** head, int data)
 
     if (*head == nullptr)
     {
-        node* n = new node();
+        node* n = new node(data);
 
-        n->data = data;
+        //n->data = data;
 
-        n->next = nullptr;
+        //n->next = nullptr;
 
         *head = n;
 
@@ -32,11 +35,11 @@ void insert(node** head, int data)
         *temp = (*temp)->next;
     }
 
-    (*temp)->next = new node();
+    (*temp)->next = new node(data);
 
-    (*temp)->next->data = data;
+    //(*temp)->next->data = data;
 
-    (*temp)->next->next = nullptr;
+    //(*temp)->next->next = nullptr;
 
     *head = h;
 
