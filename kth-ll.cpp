@@ -55,7 +55,9 @@ void print_last(node** head, int index)
 
     int count = 0;
 
-    node** kth = nullptr;
+    node** kth;
+
+    *kth = nullptr;
 
     while((*temp)->next)
     {
