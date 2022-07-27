@@ -17,10 +17,6 @@ void insert(node** head, int data)
     {
         node* n = new node(data);
 
-        //n->data = data;
-
-        //n->next = nullptr;
-
         *head = n;
 
         return;
@@ -36,10 +32,6 @@ void insert(node** head, int data)
     }
 
     (*temp)->next = new node(data);
-
-    //(*temp)->next->data = data;
-
-    //(*temp)->next->next = nullptr;
 
     *head = h;
 
