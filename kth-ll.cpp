@@ -55,7 +55,7 @@ void print_last(node** head, int index)
 
     while(temp->next)
     {
-        *temp = temp->next;
+        temp = temp->next;
 
         count++;
 
