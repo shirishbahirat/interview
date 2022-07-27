@@ -67,6 +67,8 @@ void print_last(node** head, int index)
         if (*kth)
         {
             *kth = (*kth)->next;
+
+            cout << (*kth)->data << endl;
         }
 
         if (count == index)
