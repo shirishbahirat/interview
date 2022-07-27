@@ -61,7 +61,7 @@ int main(int argc, const char* argv[])
 
     insert(&head, 30);
 
-    cout << head->data << endl;
+    cout << head->next->next->data  << endl;
 
     return 0;
 }
