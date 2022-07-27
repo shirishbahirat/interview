@@ -27,6 +27,11 @@ void insert(node** head, int data)
 
 	node** temp = head;
 
+	while((*temp)->next)
+	{
+		*temp = (*temp)->next;
+	}
+
 	return;
 }
 
