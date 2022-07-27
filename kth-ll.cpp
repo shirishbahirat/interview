@@ -1,13 +1,11 @@
 #include <iostream>
 
-
 using namespace std;
 
 struct node {
     int data;
     node* next;
 };
-
 
 void insert(node** head, int data)
 {
@@ -55,9 +53,9 @@ void print_last(node** head, int index)
 
     int count = 0;
 
-    node** kth;
+    //node** kth;
 
-    *kth = nullptr;
+    //*kth = nullptr;
 
     while((*temp)->next)
     {
