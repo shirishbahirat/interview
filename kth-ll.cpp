@@ -51,5 +51,9 @@ int main(int argc, const char* argv[])
 
     cout << head->data << endl;
 
+    insert(&head, 20);
+
+    cout << head->next->data << endl;
+
     return 0;
 }
