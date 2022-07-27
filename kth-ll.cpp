@@ -27,6 +27,8 @@ void insert(node** head, int data)
 
     node** temp = head;
 
+    node* h = *head;
+
     while((*temp)->next)
     {
         *temp = (*temp)->next;
@@ -37,6 +39,8 @@ void insert(node** head, int data)
     (*temp)->next->data = data;
 
     (*temp)->next->next = nullptr;
+
+    *head = h;
 
     return;
 }
