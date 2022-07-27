@@ -56,6 +56,7 @@ void print_last(node** head, int index)
     while((*temp)->next)
     {
         *temp = (*temp)->next;
+
         count++;
 
         cout << count << endl;
@@ -70,6 +71,8 @@ void print_last(node** head, int index)
         if (count == index)
         {
             kth = head;
+
+            cout << (*kth)->data << endl;
         }
 
     }
