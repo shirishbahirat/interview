@@ -46,9 +46,6 @@ void insert(node** head, int data)
 }
 
 
-a  a  a  a  a  a
-
-
 void print_last(int index)
 {
 
