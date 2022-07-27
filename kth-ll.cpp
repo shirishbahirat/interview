@@ -32,7 +32,7 @@ void insert(node** head, int data)
         *temp = (*temp)->next;
     }
 
-    *temp->next = new node();
+    (*temp)->next = new node();
 
     (*temp)->next->data = data;
 
