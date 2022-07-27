@@ -12,9 +12,7 @@ struct node {
 void insert(node** head, int data)
 {
 
-	node* temp = *head;
-
-	if (temp == nullptr)
+	if (*head == nullptr)
 	{
 		node* n = new node();
 
