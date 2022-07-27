@@ -49,8 +49,6 @@ void print_last(node** head, int index)
 
     node** temp = head;
 
-    node* h = *head;
-
     int count = 0;
 
     node** kth;
