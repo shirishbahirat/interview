@@ -71,7 +71,7 @@ void print_last(node** head, int index)
 
         if (count == index)
         {
-            *kth = h;
+            kth = head;
         }
 
     }
