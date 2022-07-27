@@ -64,6 +64,10 @@ void print_last(node** head, int index)
         *temp = (*temp)->next;
         count++;
 
+        cout << count << endl;
+
+        /*
+
         if (*kth)
         {
             *kth = (*kth)->next;
@@ -75,9 +79,10 @@ void print_last(node** head, int index)
         {
             *kth = *head;
         }
+        */
     }
 
-    cout << (*kth)->data << endl;
+    //cout << (*kth)->data << endl;
 
     *head = h;
 }
