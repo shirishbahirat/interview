@@ -52,16 +52,11 @@ int main(int argc, const char* argv[])
     node* head = nullptr;
 
     insert(&head, 10);
-
-    cout << head->data << endl;
-
     insert(&head, 20);
-
-    cout << head->next->data << endl;
-
     insert(&head, 30);
+    insert(&head, 40);
+    insert(&head, 50);
 
-    cout << head->next->next->data  << endl;
 
-    return 0;
+   return 0;
 }
