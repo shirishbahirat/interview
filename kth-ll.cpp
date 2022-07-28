@@ -80,6 +80,7 @@ int main(int argc, const char* argv[])
     insert(&head, 10);
 
     insert(&head, 20);
+
     insert(&head, 30);
     insert(&head, 40);
     insert(&head, 50);
