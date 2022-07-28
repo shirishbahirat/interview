@@ -78,6 +78,7 @@ int main(int argc, const char* argv[])
     node* head = nullptr;
 
     insert(&head, 10);
+
     insert(&head, 20);
     insert(&head, 30);
     insert(&head, 40);
