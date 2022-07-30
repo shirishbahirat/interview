@@ -15,7 +15,7 @@ int main(int argc, const char* argv[])
 	for (int i = 0; i < size; ++i)
 	{
 		sum += arr[i];
-		cout << sum/(i+1) << endl;
+		cout << (double)sum/(i+1) << endl;
 	}
 
 
