@@ -15,6 +15,7 @@ void call(int idx)
 int main(int argc, const char* argv[])
 {
 
+	fcall c;
 
 	return 0;
 }
