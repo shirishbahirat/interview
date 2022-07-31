@@ -17,5 +17,9 @@ int main(int argc, const char* argv[])
 
 	fcall c;
 
+	c = call;
+
+	c(10);
+
 	return 0;
 }
