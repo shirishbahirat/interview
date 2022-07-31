@@ -7,9 +7,7 @@ typedef void (*fcall)(int);
 
 void call(int idx)
 {
-
 	cout << idx << endl;
-
 }
 
 int main(int argc, const char* argv[])
