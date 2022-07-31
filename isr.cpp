@@ -21,7 +21,12 @@ int main(int argc, const char* argv[])
 
 	c(10);
 
-	fcall arr[] = {call, call, call}; 
+	fcall arr[] = {call, call, call};
+
+	for (int i = 0; i < 3; ++i)
+	{
+		arr[i](i);
+	} 
 
 	return 0;
 }
