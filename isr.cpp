@@ -21,5 +21,7 @@ int main(int argc, const char* argv[])
 
 	c(10);
 
+	fcall arr[] = {call, call, call}; 
+
 	return 0;
 }
