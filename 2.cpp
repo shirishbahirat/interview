@@ -15,6 +15,11 @@ int main(int argc, const char* argv[])
 		mult *= arr[i];
 	}
 
+
+
+
+
+
 	for (int i = 0; i < size; ++i)
 	{
 		arr[i] = mult/arr[i];
