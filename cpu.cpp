@@ -2,7 +2,7 @@
 #include <thread>
 
 using namespace std;
-using namespace std::thread;
+using namespace thread;
 
 int main(int argc, const char* argv[])
 {
