@@ -8,7 +8,7 @@ int main(int argc, const char* argv[])
 
  	unsigned num_cpus = thread::hardware_concurrency();
 
- 	int arr[0] = {111};
+ 	int arr[1] = {111};
 
  	cout << "Launching " << num_cpus << " threads" << endl;
 
