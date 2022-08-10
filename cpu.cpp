@@ -3,6 +3,11 @@
 
 using namespace std;
 
+void data(int m)
+{
+	cout << "function pointer " << m << endl;
+}
+
 int main(int argc, const char* argv[])
 {
 
@@ -11,6 +16,10 @@ int main(int argc, const char* argv[])
  	int arr[1] = {111};
 
  	typedef void (*results)(int);
+
+ 	results = data;
+
+ 	results(1234);
 
  	cout << arr[0] << endl;
 
