@@ -17,7 +17,7 @@ int main(int argc, const char* argv[])
 
  	typedef void (*results)(int);
 
- 	results = &data;
+ 	results data;
 
  	results(1234);
 
