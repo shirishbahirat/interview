@@ -15,9 +15,9 @@ int main(int argc, const char* argv[])
 
  	int arr[1] = {111};
 
- 	typedef void (*results)(int);
+ 	void (*results)(int);
 
- 	results data;
+ 	results = data;
 
  	results(1234);
 
