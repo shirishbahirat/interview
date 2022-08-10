@@ -10,6 +10,8 @@ int main(int argc, const char* argv[])
 
  	int arr[1] = {111};
 
+ 	typedef void (*results)(int);
+
  	cout << arr[0] << endl;
 
  	cout << "Launching " << num_cpus << " threads" << endl;
