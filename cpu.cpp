@@ -8,6 +8,7 @@ void data(int m)
 	cout << "function pointer " << m << endl;
 }
 
+
 int main(int argc, const char* argv[])
 {
 
