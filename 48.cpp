@@ -20,6 +20,8 @@ void transverse(tree* head)
 
 	if (node == nullptr) return;
 
+	cout << node->name << endl;
+
 	transverse(node->left);
 	transverse(node->right);
 
@@ -41,6 +43,8 @@ int main(int argc, char const* argv[])
 
 	head->right->left = new tree('f');
 	head->right->right = new tree('g');
+
+	transverse(head);
 
 	return 0;
 }
