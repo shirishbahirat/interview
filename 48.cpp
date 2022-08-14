@@ -20,9 +20,10 @@ void transverse(tree* head)
 
 	if (node == nullptr) return;
 
+	transverse(node->left);
+	
 	cout << node->name << " ";
 
-	transverse(node->left);
 	transverse(node->right);
 
 }
