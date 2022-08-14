@@ -14,6 +14,17 @@ struct tree {
 	~tree(){}
 };
 
+void transverse(tree* head)
+{
+	tree* node = head;
+
+	if (node == nullptr) return;
+
+	transverse(node->left);
+	transverse(node->right);
+
+}
+
 
 int main(int argc, char const* argv[])
 {
