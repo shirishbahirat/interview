@@ -4,6 +4,8 @@ using namespace std;
 
 struct api {
     void (*dispatch) (int);
+    api(dispatch* d):dispatch(d){}
+    api(){}
 };
 
 
@@ -27,7 +29,6 @@ int main(int argc, const char* argv[])
     {
         arr[i]->dispatch(i);
     }
-
 
     return 0;
 }
