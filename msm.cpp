@@ -7,7 +7,7 @@ typedef void (*_dispatch) (int);
 
 struct api {
     _dispatch dispatch;
-    api(_dispatch* d):dispatch(d){}
+    api(_dispatch d):dispatch(d){}
     api(){}
 };
 
