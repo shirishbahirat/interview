@@ -31,9 +31,24 @@ int main(int argc, const char* argv[])
     }
 
 
-    int msc[] = {14,1,11};
+    int msc[] = {14,6,11,2,3,1,7};
     int msa[] = {4,3,1};
 
+
+    int inversions = 0;
+
+    for (int i = 0; i < 6; ++i)
+    {
+        for (int j = i; j < 6; ++j)
+        {
+            if (msc[i] < msc[j])
+            {
+                inversions++;
+            }
+        }
+    }
+
+    cout << inversions << endl;
 
     return 0;
 }
