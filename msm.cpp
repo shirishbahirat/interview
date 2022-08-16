@@ -9,6 +9,8 @@ struct api {
     api(_dispatch d):dispatch(d){}
 };
 
+int indxc = 0;
+
 void merge(int arr[], int lo, int mid, int hi)
 {
 
@@ -20,8 +22,15 @@ void merge(int arr[], int lo, int mid, int hi)
 
     while(idx <= mid && idy <=hi)
     {
-        if (arr[idx] < arr[idy]) zrr[idz++] = arr[idx++];
-        else zrr[idz++] = arr[idy++];
+        if (arr[idx] < arr[idy]) 
+        {
+            zrr[idz++] = arr[idx++];
+        }
+        else 
+        {
+            zrr[idz++] = arr[idy++];
+            indxc++;
+        }
     }
 
     while(idx <= mid) zrr[idz++] = arr[idx++];
@@ -95,6 +104,7 @@ int main(int argc, const char* argv[])
     }
 
     cout << endl;
+    cout << indxc << endl;
 
     return 0;
 }
