@@ -2,8 +2,11 @@
 
 using namespace std;
 
+typedef void (*_dispatch) (int);
+
+
 struct api {
-    void (*dispatch) (int);
+    _dispatch dispatch;
     api(dispatch* d):dispatch(d){}
     api(){}
 };
