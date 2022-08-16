@@ -46,12 +46,14 @@ void merge(int arr[], int lo, int mid, int hi)
 
 void mergesort(int arr[], int lo, int hi)
 {
-    if (lo >= hi) return;
+    if (hi <= lo) return;
 
-    int mid = lo + (hi - lo)/2;
+    int mid = lo + (hi - lo) / 2;
 
     mergesort(arr, lo, mid);
+
     mergesort(arr, mid+1, hi);
+
     merge(arr, lo, mid, hi);
 
 }
