@@ -30,5 +30,10 @@ int main(int argc, const char* argv[])
         arr[i]->dispatch(i);
     }
 
+
+    int msc[] = {14,1,11};
+    int msa[] = {4,3,1};
+
+
     return 0;
 }
