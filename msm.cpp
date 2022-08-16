@@ -8,7 +8,6 @@ typedef void (*_dispatch) (int);
 struct api {
     _dispatch dispatch;
     api(_dispatch d):dispatch(d){}
-    api(){}
 };
 
 
@@ -24,8 +23,8 @@ int main(int argc, const char* argv[])
 
     for (int i = 0; i < 4; ++i)
     {
-        arr[i] = new api();
-        arr[i]->dispatch = send;
+        arr[i] = new api(send);
+        //arr[i]->dispatch = send;
     }
 
     for (int i = 0; i < 4; ++i)
