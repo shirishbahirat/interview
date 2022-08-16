@@ -17,5 +17,12 @@ int main(int argc, const char* argv[])
 
 	api* arr[] = {nullptr, nullptr, nullptr, nullptr};
 
+	for (int i = 0; i < 4; ++i)
+	{
+		arr[i] = new api();
+		arr[i].dispatch = send;
+	}
+
+
 	return 0;
 }
