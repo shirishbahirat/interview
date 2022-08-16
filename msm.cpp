@@ -25,11 +25,11 @@ void merge(int arr[], int lo, int mid, int hi)
         if (arr[idx] < arr[idy]) 
         {
             zrr[idz++] = arr[idx++];
+            indxc++;
         }
         else 
         {
             zrr[idz++] = arr[idy++];
-            indxc++;
         }
     }
 
