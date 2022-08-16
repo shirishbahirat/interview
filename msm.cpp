@@ -37,9 +37,9 @@ int main(int argc, const char* argv[])
 
     int inversions = 0;
 
-    for (int i = 0; i < 6; ++i)
+    for (int i = 0; i < 7; ++i)
     {
-        for (int j = i; j < 6; ++j)
+        for (int j = i; j < 7; ++j)
         {
             if (msc[i] > msc[j])
             {
