@@ -32,8 +32,8 @@ int main(int argc, const char* argv[])
 
 
     int msc[] = {14,6,11,2,3,1,7};
+    int len = sizeof(msc)/sizeof(msc[0]);
     int msa[] = {4,3,1};
-
 
     int inversions = 0;
 
