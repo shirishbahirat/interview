@@ -19,7 +19,6 @@ void mergesort(int arr[], int lo, int hi)
     mergesort(arr, lo, mid);
     mergesort(arr, mid+1, hi);
 
-
 }
 
 void send(int idx)
@@ -61,6 +60,8 @@ int main(int argc, const char* argv[])
     }
 
     cout << inversions << endl;
+
+    mergesort(arr, 0, len);
 
     return 0;
 }
