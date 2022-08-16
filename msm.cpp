@@ -10,6 +10,18 @@ struct api {
 };
 
 
+void mergesort(int arr[], int lo, int hi)
+{
+    if (lo >= hi) return;
+
+    int mid = lo + (hi - lo)/2;
+
+    mergesort(arr, lo, mid);
+    mergesort(arr, mid+1, hi);
+
+
+}
+
 void send(int idx)
 {
     cout << "send " << idx << endl;
