@@ -15,7 +15,7 @@ void send(int idx)
 int main(int argc, const char* argv[])
 {
 
-
+	api* arr[] = {nullptr, nullptr, nullptr, nullptr};
 
 	return 0;
 }
