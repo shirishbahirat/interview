@@ -61,7 +61,7 @@ int main(int argc, const char* argv[])
 
     cout << inversions << endl;
 
-    mergesort(arr, 0, len);
+    mergesort(msc, 0, len);
 
     return 0;
 }
