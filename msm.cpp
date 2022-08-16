@@ -89,5 +89,12 @@ int main(int argc, const char* argv[])
 
     mergesort(msc, 0, len);
 
+    for (int i = 0; i < len; ++i)
+    {
+        cout << msc[i] << " ";
+    }
+
+    cout << endl;
+
     return 0;
 }
