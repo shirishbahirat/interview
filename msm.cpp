@@ -115,5 +115,11 @@ int main(int argc, const char* argv[])
     cout << endl;
     cout << indxc << endl;
 
+    cdb scsi;
+
+    scsi.cmd = 12;
+    scsi.ecc = 56;
+    scsi.crc = 16;
+
     return 0;
 }
