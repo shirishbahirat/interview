@@ -116,6 +116,7 @@ int main(int argc, const char* argv[])
     cout << indxc << endl;
 
     cdb scsi;
+    cdb* nvme = &scsi;
 
     scsi.cmd = 12;
     scsi.ecc = 56;
