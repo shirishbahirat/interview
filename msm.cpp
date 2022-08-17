@@ -9,6 +9,13 @@ struct api {
     api(_dispatch d):dispatch(d){}
 };
 
+struct cdb{
+    uint32_t cmd     : 8;
+    uint32_t ecc     :16;
+    uint32_t crc     : 8;
+};
+
+
 int indxc = 0;
 
 void merge(int arr[], int lo, int mid, int hi)
