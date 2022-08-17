@@ -122,9 +122,9 @@ int main(int argc, const char* argv[])
     scsi.ecc = 56;
     scsi.crc = 16;
 
-    cout << scsi.cmd << endl;
-    cout << scsi.ecc << endl;
-    cout << scsi.crc << endl;
+    cout << scsi.cmd << " " << nvme->cmd << endl;
+    cout << scsi.ecc << " " << nvme->ecc << endl;
+    cout << scsi.crc << " " << nvme->crc << endl;
 
     return 0;
 }
