@@ -122,6 +122,8 @@ int main(int argc, const char* argv[])
     scsi.crc = 16;
 
     cout << scsi.cmd << endl;
+    cout << scsi.ecc << endl;
+    cout << scsi.crc << endl;
 
     return 0;
 }
