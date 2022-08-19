@@ -23,6 +23,7 @@ void insert(int key, int data)
 		lfu[key] = idx;
 		arr[idx].data = data;
 		arr[idx].key = key;
+		idx++;
 	}
 
 
