@@ -19,15 +19,21 @@ map <int, int> lfu;
 
 void insert(int key, int data)
 {
+	int idy = idx;
+
 	if (lfu.find(key) == lfu.end())
 	{
 		lfu[key] = idx;
-		arr[idx].data = data;
-		arr[idx].key = key;
-		arr[idx].idx = idx;
 		idx++;
 	}
+	else
+	{
+		idy = lfu[key];
+	}
 
+	arr[idy].data = data;
+	arr[idy].key = key;
+	arr[idy].idx = idy;
 
 }
 
