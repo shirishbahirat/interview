@@ -19,7 +19,7 @@ map <int, int> lfu;
 
 void insert(int key, int data)
 {
-	if 
+	
 
 
 }
