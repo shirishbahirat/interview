@@ -13,7 +13,6 @@ struct node {
 node arr[10];
 int size = 10;
 int idx = 0;
-int lfu = 0;
 
 map <int, int> lfu;
 
