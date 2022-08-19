@@ -19,7 +19,7 @@ map <int, int> lfu;
 
 void insert(int key, int data)
 {
-	if (lfu.find(key) == mp.end())
+	if (lfu.find(key) == lfu.end())
 	{
 		lfu[key] = idx;
 		arr[idx].data = data;
