@@ -10,23 +10,25 @@ struct node {
 	int key;
 };
 
+node arr[10];
+int size = 10;
+int idx = 0;
+int lfu = 0;
+
 map <int, int> lfu;
 
 
 void insert(int key, int data)
 {
+	if 
 
 
-	
 }
 
 int main(int argc, const char* argv[])
 {
 
-	node arr[10];
-	int size = 10;
-	int idx = 0;
-	int lfu = 0;
+
 
 
 
