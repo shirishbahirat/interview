@@ -7,6 +7,7 @@ using namespace std;
 struct node {
 	int data;
 	int key;
+	int idx;
 };
 
 node arr[10];
@@ -23,6 +24,7 @@ void insert(int key, int data)
 		lfu[key] = idx;
 		arr[idx].data = data;
 		arr[idx].key = key;
+		arr[idx].idx = idx;
 		idx++;
 	}
 
