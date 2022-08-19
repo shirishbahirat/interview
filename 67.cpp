@@ -7,9 +7,10 @@ using namespace std;
 struct node {
 	int data;
 	int idx;
+	int key;
 };
 
-
+map <int, int> lfu;
 
 int main(int argc, const char* argv[])
 {
