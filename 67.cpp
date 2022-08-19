@@ -12,6 +12,14 @@ struct node {
 
 map <int, int> lfu;
 
+
+void insert(int key, int data)
+{
+
+
+	
+}
+
 int main(int argc, const char* argv[])
 {
 
