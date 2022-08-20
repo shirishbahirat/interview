@@ -33,7 +33,7 @@ void insert(int key, int data)
 	if (lfu.find(key) == lfu.end())
 	{
 		lfu[key] = idx;
-		idx++;
+		update();
 	}
 	else
 	{
