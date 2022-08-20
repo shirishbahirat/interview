@@ -56,7 +56,7 @@ void insert(int key, int data)
 int main(int argc, const char* argv[])
 {
 
-	for (int i = 0; int < siz; ++i)
+	for (int i = 0; i < siz; ++i)
 	{
 		val[i] = 0;
 	}
