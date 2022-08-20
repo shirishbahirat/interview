@@ -11,7 +11,7 @@ struct node {
 };
 
 node arr[10];
-int size = 10;
+int siz = 10;
 int idx = 0;
 
 map <int, int> lfu;
@@ -19,7 +19,7 @@ map <int, int> lfu;
 
 void update(void)
 {
-	if (idx < size)
+	if (idx < siz)
 	{
 		idx++;
 	}
