@@ -35,7 +35,6 @@ void insert(int key, int data)
 	arr[idy].key = key;
 	arr[idy].idx = idy;
 
-
 }
 
 int main(int argc, const char* argv[])
