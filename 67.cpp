@@ -25,7 +25,7 @@ void update(void)
 	}
 	else
 	{
-		
+
 	}
 
 }
@@ -37,7 +37,6 @@ void insert(int key, int data)
 	if (lfu.find(key) == lfu.end())
 	{
 		lfu[key] = idx;
-		update();
 	}
 	else
 	{
@@ -47,6 +46,9 @@ void insert(int key, int data)
 	arr[idy].data = data;
 	arr[idy].key = key;
 	arr[idy].idx = idy;
+
+	update();
+
 
 }
 
