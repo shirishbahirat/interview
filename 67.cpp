@@ -17,6 +17,15 @@ int idx = 0;
 map <int, int> lfu;
 
 
+void update(void)
+{
+	if (idx < size)
+	{
+		idx++;
+	}
+
+}
+
 void insert(int key, int data)
 {
 	int idy = idx;
