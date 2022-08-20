@@ -61,6 +61,5 @@ int main(int argc, const char* argv[])
 		val[i] = 0;
 	}
 
-
 	return 0;
 }
