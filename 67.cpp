@@ -61,7 +61,6 @@ void insert(int key, int data)
 
 	update(idy);
 
-
 }
 
 int main(int argc, const char* argv[])
