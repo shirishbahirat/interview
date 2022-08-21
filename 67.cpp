@@ -17,15 +17,24 @@ int idx = 0;
 
 map <int, int> lfu;
 
-
-void update(void)
+void update(int idw)
 {
+	int min_val = 0xFFFFFFF;
+
 	if (idx < siz)
 	{
 		idx++;
 	}
 	else
 	{
+		for (int i = 0; i < siz; ++i)
+		{
+			if (val[i] < min_val)
+			{
+				idx = i;
+				min_val = val[i];
+			}
+		}
 
 	}
 
@@ -48,7 +57,9 @@ void insert(int key, int data)
 	arr[idy].key = key;
 	arr[idy].idx = idy;
 
-	update();
+	val[idy]++;
+
+	update(idy);
 
 
 }
