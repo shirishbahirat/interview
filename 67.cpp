@@ -36,7 +36,6 @@ void update(int idw)
 			}
 		}
 	}
-
 }
 
 void insert(int key, int data)
