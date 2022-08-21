@@ -35,7 +35,6 @@ void update(int idw)
 				min_val = val[i];
 			}
 		}
-
 	}
 
 }
