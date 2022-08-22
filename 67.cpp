@@ -61,7 +61,7 @@ void insert(int key, int data)
 
 	val[idy]++;
 
-	cout << "inserted " << key << " " << data << " at " << idx << endl;
+	cout << "inserted " << key << " " << data << " at " << idx << " val " << val[idy] << endl;
 
 	update(idy);
 
