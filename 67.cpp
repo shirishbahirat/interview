@@ -61,6 +61,8 @@ void insert(int key, int data)
 
 	val[idy]++;
 
+	cout << "inserted " << key << " " << data << " at " << idx << endl;
+
 	update(idy);
 
 }
@@ -72,6 +74,8 @@ int main(int argc, const char* argv[])
 	{
 		val[i] = 0;
 	}
+
+	insert(100,101);
 
 	return 0;
 }
