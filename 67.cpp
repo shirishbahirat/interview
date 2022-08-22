@@ -75,7 +75,10 @@ int main(int argc, const char* argv[])
 		val[i] = 0;
 	}
 
-	insert(100,101);
+	for (int i = 0; i < 10; ++i)
+	{
+		insert(100,101);
+	}
 
 	return 0;
 }
