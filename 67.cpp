@@ -81,6 +81,8 @@ int main(int argc, const char* argv[])
 	}
 
 	insert(100,10000);
+	insert(100,10001);
+
 
 	return 0;
 }
