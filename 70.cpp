@@ -7,7 +7,7 @@ int round(int number)
 
 	while(number)
 	{
-		number =- (number%10);
+		number =/ (10);
 		cout << number << endl;
 	}
 
