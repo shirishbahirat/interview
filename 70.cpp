@@ -7,13 +7,12 @@ int round(int number)
 
 	while(number)
 	{
+		cout << number%10 << endl;
 		number /= (10);
-		cout << number << endl;
 	}
 
 	return 0;
 }
-
 
 int main(int argc, const char* argv[])
 {
