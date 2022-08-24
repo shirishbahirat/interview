@@ -14,7 +14,7 @@ int round(int number)
 		number /= (10);
 	}
 
-	cout << "ans " << sum << endl;
+	cout << "ans " << 10 - sum << endl;
 
 	return 0;
 }
