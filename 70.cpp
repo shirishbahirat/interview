@@ -10,7 +10,9 @@ int round(int number)
 	while(number)
 	{
 		cout << number%10 << endl;
+
 		sum += (number%10);
+
 		number /= (10);
 	}
 
