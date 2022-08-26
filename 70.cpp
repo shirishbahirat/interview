@@ -16,6 +16,7 @@ int round(int number)
 
 	cout << "ans " << 10 - sum << endl;
 
+
 	return 0;
 }
 
