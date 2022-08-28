@@ -7,7 +7,7 @@ int toss_biased(void)
 {
 
 	int data = rand();
-	cout << data/RAND_MAX << endl;
+	cout << (float)data/RAND_MAX << endl;
 	return 0;
 }
 
