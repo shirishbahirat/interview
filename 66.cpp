@@ -6,7 +6,7 @@ using namespace std;
 int toss_biased(void)
 {
 
-
+	int data = rand();
 	return 0;
 }
 
