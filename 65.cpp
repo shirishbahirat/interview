@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int mprint(void)
+int mprint(int arr[][])
 {
 
     int idx = 5;
@@ -22,7 +22,7 @@ int main(int argc, const char* argv[])
                     {11, 12, 13, 14, 15},
                     {16, 17, 18, 19, 20}};
 
-    mprint();
+    mprint(arr);
 
     return 0;
 }
