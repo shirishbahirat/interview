@@ -10,7 +10,6 @@ int toss_biased(void)
 
     cout << (float)data/RAND_MAX << " " << data << endl;
 
-
     return 0;
 }
 
