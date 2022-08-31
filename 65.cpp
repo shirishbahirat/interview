@@ -6,6 +6,10 @@ using namespace std;
 int mprint(void)
 {
 
+    int idx = 5;
+
+    for (int i = 0; i < idx; ++i)
+        cout << arr[0][i] << endl;
 
     return 0;
 }
