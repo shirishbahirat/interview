@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int mprint(int arr[][])
+int mprint(int arr[4][5])
 {
 
     int idx = 5;
