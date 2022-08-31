@@ -3,12 +3,9 @@
 
 using namespace std;
 
-int toss_biased(void)
+int mprint(void)
 {
 
-    int data = rand();
-
-    cout << (float)data/RAND_MAX << " " << data << endl;
 
     return 0;
 }
@@ -21,7 +18,7 @@ int main(int argc, const char* argv[])
                     {11, 12, 13, 14, 15},
                     {16, 17, 18, 19, 20}};
 
-    toss_biased();
+    mprint();
 
     return 0;
 }
