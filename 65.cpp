@@ -22,7 +22,7 @@ int main(int argc, const char* argv[])
                     {11, 12, 13, 14, 15},
                     {16, 17, 18, 19, 20}};
 
-    mprint(arr);
+    mprint(&arr);
 
     return 0;
 }
