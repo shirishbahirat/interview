@@ -8,8 +8,6 @@ int toss_biased(void)
 
     int data = rand();
 
-
-
     cout << (float)data/RAND_MAX << " " << data << endl;
 
     return 0;
