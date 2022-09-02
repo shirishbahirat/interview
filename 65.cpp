@@ -10,9 +10,9 @@ int mprint(int *arr, int m, int n)
      {
         for (int j = 0; j < n; j++)
         {
-           cout << *((arr +i*n) + j)<<" ";
+           cout << *((arr + i * n) + j) << " ";
         }
-        cout<<endl;
+        cout << endl;
      }
 
     return 0;
