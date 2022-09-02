@@ -3,15 +3,17 @@
 
 using namespace std;
 
-int mprint(int *arr)
+int mprint(int *arr, int m, int n)
 {
 
-    int idx = 5;
-
-    /*
-    for (int i = 0; i < idx; ++i)
-        cout << arr[0][i] << endl;
-    */
+    for (int i=0; i<m; i++)
+     {
+        for (int j=0; j<n; j++)
+        {
+           cout<<*((arr+i*n) + j)<<" ";
+        }
+        cout<<endl;
+     }
 
     return 0;
 }
@@ -24,7 +26,7 @@ int main(int argc, const char* argv[])
                     {11, 12, 13, 14, 15},
                     {16, 17, 18, 19, 20}};
 
-    mprint((int *)arr);
+    mprint((int *)arr), 5, 4;
 
     return 0;
 }
