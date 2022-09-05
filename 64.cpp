@@ -19,7 +19,6 @@ int knight(int *arr, int m, int n)
 }
 
 
-
 int main(int argc, const char* argv[])
 {
 
