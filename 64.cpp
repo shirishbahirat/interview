@@ -18,6 +18,7 @@ int knight(int *arr, int m, int n)
     return 0;
 }
 
+
 int main(int argc, const char* argv[])
 {
 
