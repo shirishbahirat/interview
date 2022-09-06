@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 int knight(int *arr, int m, int n)
 {
 
