@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 struct collection {
     int count;
     string name;
@@ -22,7 +21,6 @@ ostream& operator<<(ostream &c, collection &cl)
 {
     c << "count "<< cl.count << endl;
     c << "name  "<< cl.name << endl;
-
     return c;
 }
 
@@ -35,7 +33,6 @@ collection& operator +(collection& cla, collection& clb)
 
     return *clc;
 }
-
 
 int main(int argc, const char* argv[])
 {
