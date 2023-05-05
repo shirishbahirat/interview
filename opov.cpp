@@ -7,7 +7,9 @@ struct collection {
     int count;
     string name;
 
-    collection(int c, string n):count(c), name(n){}
+    collection(int c, string n):count(c), 
+        name(n){}
+
     ~collection(){}
 
     void operator +=(collection& cl)
